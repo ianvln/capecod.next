@@ -3,10 +3,12 @@ import { CSSProperties } from 'react'
 import Image from 'next/image'
 import backgroundImage from '../assets/background.png'
 import logo from '../assets/capecod-white.svg'
+import NavigationBar from '../components/general/nav/NavigationBar'
 
 const Home: NextPage = () => {
   return (
     <div style={welcomeBackground}>
+      <NavigationBar />
       <div style={dishesOverlayContainer}>
         
       </div>
@@ -28,7 +30,6 @@ const welcomeBackground: CSSProperties = {
   alignContent: 'center',
   justifyContent: 'center',
   position: 'relative',
-  zIndex: -2
 }
 
 const welcomeLogo: CSSProperties = {

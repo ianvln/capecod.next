@@ -1,0 +1,33 @@
+.navigationItem {
+    a {
+        transition: color 0.5s ease;
+    }
+
+    position: relative;
+    font-size: 0.95rem;
+
+    &:hover {
+        a {
+            color: #c59d5f;
+        }
+
+        &:after {
+            transform: scaleX(1);
+            transform-origin: bottom left;
+        }
+    }
+
+    &:after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        transform: scaleX(0);
+        height: 2px;
+        bottom: -5px;
+        left: 0;
+        background-color: #c59d5f;
+        transform-origin: bottom right;
+        transition: transform 0.25s ease-out;
+    }
+}
+
