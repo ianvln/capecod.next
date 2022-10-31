@@ -1,10 +1,11 @@
 import { DishSet } from "../../types/Menu";
 import DishCard from "./DishCard";
 import styles from './DishSetCard.module.scss';
+import { useSpring, animated } from 'react-spring'
 
 const DishSetCard = (props: { dishSet: DishSet }) => {
     const dishSet = props.dishSet;
-    
+
     return (
         <div className={styles.dishSetCard} key={dishSet.name}>
             <h2> { dishSet.name } </h2>
