@@ -1,44 +1,25 @@
-import { useEffect, useRef, useState } from "react";
-import { animated, useSpring } from "react-spring";
-import useIntersectionObserver from "../../effects/general/useIntersectionObserver";
+import { useRef } from "react";
 import { Menu } from "../../types/Menu";
+import FadeSlideIn from "../general/animation/FadeSlideIn";
 import DishSetCard from "./DishSetCard";
 import styles from './MenuCard.module.scss';
 
 const MenuCard = (props: { menu: Menu }) => {
+    const ref = useRef<HTMLDivElement>(null);
     const menu = props.menu;
     
-    const ref = useRef<HTMLDivElement | null>(null);
-    const entry = useIntersectionObserver(ref, {});
-    const isVisible = !!entry?.isIntersecting;
-
-    const [shouldAnimate, setShouldAnimate] = useState(false);
-
-    const dishSetCardAnimationProps = (dishSetIndex: number) => useSpring({ delay: 500 + dishSetIndex * 200, from: { opacity: 0, y: 100 }, to: { opacity: shouldAnimate ? 1 : 0, y: shouldAnimate ? 0 : 0 }});
-
-    useEffect(() => {
-        if (shouldAnimate) { 
-            return;
-        }
-
-        if (isVisible) {
-            setShouldAnimate(true);
-        }
-    }, [isVisible]);
-
     return (
         <>
-            <div ref={ref} className={styles.menu}>
+            <div className={styles.menu} ref={ref}>
                 {
                     menu.dishSets.map((ds, i) => (
-                        <animated.div style={dishSetCardAnimationProps(i)}>
-                            <div key={`dish-set-card-${i}`} className={styles.dishSetCard}>
+                            <FadeSlideIn key={`dish-set-card-${i}`} className={styles.dishSetCard} parentRef={ref} offsetDelayIndex={i}>
                                 <DishSetCard dishSet={ds} />
-                            </div>
-                        </animated.div>
+                            </FadeSlideIn>
                     ))
-                } 
+                }
             </div>
+            
         </>
     );
 }
