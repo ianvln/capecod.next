@@ -7,7 +7,6 @@ import NavigationBar from '../components/general/nav/NavigationBar'
 import { useSpring, animated } from 'react-spring'
 import { Menu } from '../types/Menu'
 import MenuCard from '../components/menu/MenuCard'
-import style from './index.module.scss';
 
 const Home: NextPage = () => {
   const welcomeLogoAnimation = useSpring({ 
