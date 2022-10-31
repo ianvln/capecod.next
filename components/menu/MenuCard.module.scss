@@ -1,0 +1,11 @@
+.menu {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.dishSetCard {
+    flex: 1 0 50%;
+}

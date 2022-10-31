@@ -1,0 +1,14 @@
+@import '../../styles/_variables.scss';
+
+.title {
+    margin: 0;
+}
+
+.heading {
+    display: flex;
+    justify-content: space-between;
+}
+
+.title {
+    color: $primary-color;
+}

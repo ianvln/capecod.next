@@ -5,6 +5,9 @@ import backgroundImage from '../assets/background.jpg'
 import logo from '../assets/capecod-white.svg'
 import NavigationBar from '../components/general/nav/NavigationBar'
 import { useSpring, animated } from 'react-spring'
+import { Menu } from '../types/Menu'
+import MenuCard from '../components/menu/MenuCard'
+import style from './index.module.scss';
 
 const Home: NextPage = () => {
   const welcomeLogoAnimation = useSpring({ 
@@ -25,24 +28,59 @@ const Home: NextPage = () => {
     to: { opacity: 1, x: 0 }
   });
 
+  const menu: Menu = {
+    dishSets: [
+      { 
+        name: 'Kleine menu',
+        dishes: [
+          { name: 'Banaan', description: 'Kiwi/citroen/etc', price: 5.75 },
+          { name: 'Test', description: 'Kiwi/citroen/etc', price: 5.75 },
+          { name: 'Woohoo', description: 'Kiwi/citroen/etc', price: 5.75 },
+        ]
+      },
+      { 
+        name: 'Grote menu',
+        dishes: [
+          { name: 'Banaan', description: 'Kiwi/citroen/etc', price: 5.75 },
+          { name: 'Test', description: 'Kiwi/citroen/etc', price: 5.75 },
+          { name: 'Woohoo', description: 'Kiwi/citroen/etc', price: 5.75 },
+        ]
+      },
+      { 
+        name: 'Test menu',
+        dishes: [
+          { name: 'Banaan', description: 'Kiwi/citroen/etc', price: 5.75 },
+          { name: 'Test', description: 'Kiwi/citroen/etc', price: 5.75 },
+          { name: 'Woohoo', description: 'Kiwi/citroen/etc', price: 5.75 },
+        ]
+      }
+    ]
+  }
+
   return (
-    <section style={welcomeBackground}>
-      <NavigationBar />
-      <div style={dishesOverlayContainer}>
+    <div>
+      <section style={welcomeBackground}>
+        <NavigationBar />
         
-      </div>
-      <div style={welcome}>
-          <animated.div style={welcomeLogoAnimation}>
-            <Image style={welcomeLogo} src={logo} width={250} height={250} />
-          </animated.div> 
-          <animated.div style={headerAnimation}>
-            <h1 style={header}> Cape Cod </h1>
-          </animated.div>
-          <animated.div style={subHeaderAnimation}>
-            <div style={subHeader}> Welkom </div>
-          </animated.div>
-      </div>
-    </section>
+        <div style={welcome}>
+            <animated.div style={welcomeLogoAnimation}>
+              <Image style={welcomeLogo} src={logo} width={250} height={250} />
+            </animated.div> 
+            <animated.div style={headerAnimation}>
+              <h1 style={header}> Cape Cod </h1>
+            </animated.div>
+            <animated.div style={subHeaderAnimation}>
+              <div style={subHeader}> Welkom </div>
+            </animated.div>
+        </div>
+      </section>
+
+      <section>
+        <h2 style={sectionHeaderStyle}> Suggesties </h2>
+        <MenuCard menu={menu} />
+      </section>
+    </div>
+    
   )
 }
 
@@ -68,25 +106,17 @@ const welcome: CSSProperties = {
   zIndex: 2
 }
 
-const dishesOverlayContainer: CSSProperties = {
-  position: 'absolute',
-  bottom: -150,
-  left: -50,
-  width: 700,
-  height: 500
-}
-
-const dishesOverlay: CSSProperties = {
-  filter: 'drop-shadow(12px 12px 20px #000)',
-  zIndex: -1
-}
-
 const header: CSSProperties = {
   fontSize: '4rem',
   fontFamily: 'Anton, sans-serif',
   letterSpacing: 2,
   textTransform: 'uppercase',
   margin: 0
+}
+
+const sectionHeaderStyle: CSSProperties = {
+  textAlign: 'center',
+  textTransform: 'uppercase'
 }
 
 const subHeader: CSSProperties = {
