@@ -1,11 +1,30 @@
 import type { NextPage } from 'next'
 import { CSSProperties } from 'react'
 import Image from 'next/image'
-import backgroundImage from '../assets/background.png'
+import backgroundImage from '../assets/background.jpg'
 import logo from '../assets/capecod-white.svg'
 import NavigationBar from '../components/general/nav/NavigationBar'
+import { useSpring, animated } from 'react-spring'
 
 const Home: NextPage = () => {
+  const welcomeLogoAnimation = useSpring({ 
+    delay: 500,
+    to: { opacity: 1 }, 
+    from: { opacity: 0 } 
+  });
+
+  const headerAnimation = useSpring({
+    delay: 750,
+    from: { opacity: 0, x: -50 },
+    to: { opacity: 1, x: 0 }
+  });
+
+  const subHeaderAnimation = useSpring({
+    delay: 1000,
+    from: { opacity: 0, x: 50 },
+    to: { opacity: 1, x: 0 }
+  });
+
   return (
     <div style={welcomeBackground}>
       <NavigationBar />
@@ -13,9 +32,15 @@ const Home: NextPage = () => {
         
       </div>
       <div style={welcome}>
-          <Image style={welcomeLogo} src={logo} width={250} height={250} />
-          <h1 style={capeCodHeader}> Cape Cod </h1>
-          <div style={capeCodSubHeader}> Welkom </div> 
+          <animated.div style={welcomeLogoAnimation}>
+            <Image style={welcomeLogo} src={logo} width={250} height={250} />
+          </animated.div> 
+          <animated.div style={headerAnimation}>
+            <h1 style={header}> Cape Cod </h1>
+          </animated.div>
+          <animated.div style={subHeaderAnimation}>
+            <div style={subHeader}> Welkom </div>
+          </animated.div>
       </div>
     </div>
   )
@@ -56,7 +81,7 @@ const dishesOverlay: CSSProperties = {
   zIndex: -1
 }
 
-const capeCodHeader: CSSProperties = {
+const header: CSSProperties = {
   fontSize: '4rem',
   fontFamily: 'Anton, sans-serif',
   letterSpacing: 2,
@@ -64,7 +89,7 @@ const capeCodHeader: CSSProperties = {
   margin: 0
 }
 
-const capeCodSubHeader: CSSProperties = {
+const subHeader: CSSProperties = {
   fontFamily: 'Herr Von Muellerhoff, cursive',
   fontSize: '4rem',
   marginTop: -20,

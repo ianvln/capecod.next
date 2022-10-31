@@ -1,7 +1,11 @@
+import classNames from "classnames";
 import { CSSProperties } from "react";
+import useSticky from "../../../effects/general/useSticky";
 import styles from './NavigationBar.module.scss';
 
 const NavigationBar = () => {
+    const { isSticky, stickyRef } = useSticky();
+
     const navigationItems = [
         { name: "welcome", title: 'Welkom',  href:'#welcome'},
         { name: "suggestions", title: 'Suggesties',  href:'#suggestions'},
@@ -10,31 +14,18 @@ const NavigationBar = () => {
     ]
     return (
         <>
-            <nav style={containerStyle}>
+            <nav className={classNames(styles.container, { [styles.sticky] : isSticky })} ref={stickyRef}>
                 <ul>
-                    { navigationItems.map((navigationItem => (<li className={styles.navigationItem} style={navigationItemStyle} key={navigationItem.name}> <a href={navigationItem.href}> {navigationItem.title} </a> </li>))) }
+                    { 
+                    navigationItems.map((navigationItem => (
+                        <li className={styles.navigationItem}  key={navigationItem.name}> 
+                            <a href={navigationItem.href}> {navigationItem.title} </a> 
+                        </li>)))
+                    }
                 </ul>
             </nav>
         </>
     )
-}
-
-const containerStyle: CSSProperties = {
-    width: '100%',
-    height: 50,
-    display: 'flex',
-    justifyContent: 'center',
-    position: 'absolute',
-    top: 50,
-    left: 0
-}
-
-const navigationItemStyle: CSSProperties = {
-    display: 'inline',
-    listStyle: 'none',
-    textTransform: 'uppercase',
-    color: '#fff',
-    margin: '0 10px',
 }
 
 export default NavigationBar;
