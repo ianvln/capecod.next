@@ -26,7 +26,7 @@ const Home: NextPage = () => {
   });
 
   return (
-    <div style={welcomeBackground}>
+    <section style={welcomeBackground}>
       <NavigationBar />
       <div style={dishesOverlayContainer}>
         
@@ -42,7 +42,7 @@ const Home: NextPage = () => {
             <div style={subHeader}> Welkom </div>
           </animated.div>
       </div>
-    </div>
+    </section>
   )
 }
 
