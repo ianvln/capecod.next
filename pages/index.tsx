@@ -1,12 +1,15 @@
 import type { NextPage } from 'next'
-import { CSSProperties } from 'react'
+import { CSSProperties, useRef } from 'react'
 import Image from 'next/image'
 import backgroundImage from '../assets/background.jpg'
+import appetizersImage from '../assets/appetizers.jpg'
+import dishImage from '../assets/dish.jpg'
 import logo from '../assets/capecod-white.svg'
 import NavigationBar from '../components/general/nav/NavigationBar'
 import { useSpring, animated } from 'react-spring'
 import { Menu } from '../types/Menu'
 import MenuCard from '../components/menu/MenuCard'
+import FadeSlideIn from '../components/general/animation/FadeSlideIn'
 
 const Home: NextPage = () => {
   const welcomeLogoAnimation = useSpring({ 
@@ -26,6 +29,9 @@ const Home: NextPage = () => {
     from: { opacity: 0, x: 50 },
     to: { opacity: 1, x: 0 }
   });
+
+  const teaser1Ref = useRef<HTMLDivElement>(null);
+  const teaser2Ref = useRef<HTMLDivElement>(null);
 
   const menu: Menu = {
     dishSets: [
@@ -74,9 +80,39 @@ const Home: NextPage = () => {
         </div>
       </section>
 
-      <section>
+      <section style={sectionStyle}>
         <h2 style={sectionHeaderStyle}> Suggesties </h2>
-        <MenuCard menu={menu} />
+        <MenuCard menu={menu} />        
+      </section>
+
+      <section style={sectionStyle}>
+        <div style={{ display: 'flex' }} ref={teaser1Ref}>
+          <div style={{ flex: '1 0 50%' }}>
+            <FadeSlideIn parentRef={teaser1Ref}>
+              <Image src={appetizersImage} layout="responsive" />
+            </FadeSlideIn>
+          </div>
+          <div style={{ flex: '1 0 50%', display: 'flex', alignItems: 'center', padding: 50}}>
+            <FadeSlideIn parentRef={teaser1Ref} offsetDelayIndex={2}>
+              <p style={{ fontSize: '1.75rem', fontWeight: 450, color: '#c59d5f', lineHeight: '2.4rem', letterSpacing: '0.2rem', fontStyle: 'italic' }}> 
+                Tongstrelende gerechten als kreeftschotels, oester- en visbereidingen, salades en pasta’s, geflankeerd door exclusieve wijnen, kazen en fijne vleeswaren
+              </p>
+            </FadeSlideIn>
+          </div>
+        </div>
+        <div style={{ display: 'flex', marginTop: 150 }} ref={teaser2Ref}>
+          <div style={{ flex: '1 0 50%', display: 'flex', alignItems: 'center', paddingLeft: 50 }}>
+            <FadeSlideIn parentRef={teaser2Ref} offsetDelayIndex={2}>
+              <h2> Heading </h2>
+              <p> Text </p>
+            </FadeSlideIn>
+          </div>
+          <div style={{ flex: '1 0 50%' }}>
+            <FadeSlideIn parentRef={teaser2Ref}>
+              <Image src={dishImage} layout="responsive" />
+            </FadeSlideIn>
+          </div>
+        </div>
       </section>
     </div>
     
@@ -92,6 +128,11 @@ const welcomeBackground: CSSProperties = {
   alignContent: 'center',
   justifyContent: 'center',
   position: 'relative',
+}
+
+const sectionStyle: CSSProperties = {
+  maxWidth: '1200px',
+  margin: '200px auto'
 }
 
 const welcomeLogo: CSSProperties = {

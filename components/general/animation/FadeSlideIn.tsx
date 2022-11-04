@@ -3,7 +3,7 @@ import { animated, useSpring } from "react-spring";
 import useIntersectionObserver from "../../../effects/general/useIntersectionObserver";
 
 
-const FadeSlideIn = (props: { offsetDelayIndex?: number, parentRef: RefObject<HTMLElement>, className: string, children: any }) => {
+const FadeSlideIn = (props: { offsetDelayIndex?: number, parentRef: RefObject<HTMLElement>, className?: string, children: any }) => {
     const entry = useIntersectionObserver(props.parentRef, {});
     const isVisible = !!entry?.isIntersecting;
 
