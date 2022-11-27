@@ -1,30 +1,28 @@
-import { useRef } from "react";
+import { Fade, Slide } from "react-awesome-reveal";
 import { Menu } from "../../types/Menu";
-import FadeSlideIn from "../general/animation/FadeSlideIn";
 import DishMenuCard from "./DishMenuCard";
 import DishSetCard from "./DishSetCard";
 import styles from './MenuCard.module.scss';
 
 const MenuCard = (props: { menu: Menu }) => {
-    const ref = useRef<HTMLDivElement>(null);
     const menu = props.menu;
     
     return (
         <>
-            <div className={styles.menuCard} ref={ref}>
+            <div className={styles.menuCard}>
                 {
                     menu.dishSets.map((ds, i) => (
-                        <FadeSlideIn key={`dish-set-card-${i}`} parentRef={ref} offsetDelayIndex={i}>
+                        <Fade key={`dish-set-card-${i}`} >
                             <DishSetCard dishSet={ds} />
-                        </FadeSlideIn>
+                        </Fade>
                     ))
                 }
                 <h2 className={styles.menusTitle}> Menu's </h2>
                 {
                     menu.dishMenus.map((dm, i) => (
-                            <FadeSlideIn key={`dish-set-card-${i}`} parentRef={ref} offsetDelayIndex={i + menu.dishSets.length}>
-                                <DishMenuCard dishMenu={dm} />
-                            </FadeSlideIn>
+                        <Fade key={`dish-menu-card-${i}`}>
+                            <DishMenuCard dishMenu={dm} />
+                        </Fade>
                     ))
                 }
             </div>
