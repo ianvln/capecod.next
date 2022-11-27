@@ -1,22 +1,16 @@
 import classNames from "classnames";
-import Link from "next/link";
 import { useEffect, useState } from "react";
 import useSticky from "../../../effects/general/useSticky";
-import { NavigationItem } from "../../../types/general/Navigation";
+import { NavigationItem, NAVIGATION_ITEMS } from "../../../types/general/Navigation";
 import styles from './NavigationBar.module.scss';
 
 const NavigationBar = () => {
-    const navigationItems: NavigationItem[] = [
-        { name: "welcome", title: 'Welkom',  href:'welcome'},
-        { name: "suggestions", title: 'Suggesties',  href:'suggestions'},
-    ]
-
     const { isSticky, stickyRef } = useSticky();
-    const [activeNavigationItem, setActiveNavigationItem] = useState<NavigationItem>(navigationItems[0]);
+    const [activeNavigationItem, setActiveNavigationItem] = useState<NavigationItem>(NAVIGATION_ITEMS[0]);
 
     const navigateTo = (navigationItem: NavigationItem) => {
         document.getElementById(navigationItem.href)?.scrollIntoView();
-        setActiveNavigationItem(navigationItems.find(ni => ni.href === navigationItem.href) ?? navigationItems[0]);
+        setActiveNavigationItem(NAVIGATION_ITEMS.find(ni => ni.href === navigationItem.href) ?? NAVIGATION_ITEMS[0]);
     }
 
     const isActive = (navigationItem: NavigationItem) => navigationItem.name === activeNavigationItem.name;
@@ -31,9 +25,9 @@ const NavigationBar = () => {
     }
 
     const updateActiveItem = () => {
-        let lastNavigationItemInView = navigationItems[0];
+        let lastNavigationItemInView = NAVIGATION_ITEMS[0];
 
-        navigationItems.forEach(ni => {
+        NAVIGATION_ITEMS.forEach(ni => {
             const section = document.getElementById(ni.href)
 
             if(isInViewport(section)) {
@@ -55,7 +49,7 @@ const NavigationBar = () => {
             <nav className={classNames(styles.container, { [styles.sticky] : isSticky })} ref={stickyRef}>
                 <ul>
                     { 
-                    navigationItems.map((navigationItem => (
+                    NAVIGATION_ITEMS.map((navigationItem => (
                         <li className={classNames(styles.navigationItem, { [styles.activeItem] : isActive(navigationItem) }, { [styles.inactiveItem] : !isActive(navigationItem) })} key={navigationItem.name}> 
                             <span onClick={() => navigateTo(navigationItem)}>{navigationItem.title}</span>
                         </li>)))

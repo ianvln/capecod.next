@@ -1,10 +1,12 @@
+@import '_variables.scss';
+
 html,
 body {
   padding: 0;
   margin: 0;
   font-family: Source Sans Pro, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  background-color: #0b131c;
+  background-color: $background-color;
 }
 
 h1, h2, h3, h4, p, div, span {

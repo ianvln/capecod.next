@@ -3,7 +3,7 @@ import { CSSProperties, } from 'react'
 import Image from 'next/image'
 import backgroundImage from '../assets/background.jpg'
 import logo from '../assets/capecod-white.svg'
-import NavigationBar from '../components/general/nav/NavigationBar'
+import MobileNavigationBar from '../components/general/nav/MobileNavigationBar'
 import { MENU } from '../types/Menu'
 import MenuCard from '../components/menu/MenuCard'
 import { Fade, Slide } from 'react-awesome-reveal'
@@ -12,7 +12,7 @@ const Home: NextPage = () => {
 
   return (
     <div>
-      <NavigationBar />
+      <MobileNavigationBar />
       <section id="welcome" style={welcomeBackground}>
         <div style={welcome}>
             <Fade>
