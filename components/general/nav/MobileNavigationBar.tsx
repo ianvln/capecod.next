@@ -17,11 +17,13 @@ const MobileNavigationBar = () => {
     }
 
     return (
-        <div>
-            <div className={styles.hamburger} onClick={() => toggle()}>
-                <div className={classNames(styles.hamburgerLine, styles.hamburgerLine1, { [styles.hamburgerLine1Open] : isOpen })}></div>
-                <div className={classNames(styles.hamburgerLine, styles.hamburgerLine2, { [styles.hamburgerLine2Open] : isOpen })}></div>
-                <div className={classNames(styles.hamburgerLine, styles.hamburgerLine3, { [styles.hamburgerLine3Open] : isOpen })}></div>
+        <>
+            <div className={styles.navigationContainer}>
+                <div className={styles.hamburger} onClick={() => toggle()}>
+                    <div className={classNames(styles.hamburgerLine, styles.hamburgerLine1, { [styles.hamburgerLine1Open] : isOpen })}></div>
+                    <div className={classNames(styles.hamburgerLine, styles.hamburgerLine2, { [styles.hamburgerLine2Open] : isOpen })}></div>
+                    <div className={classNames(styles.hamburgerLine, styles.hamburgerLine3, { [styles.hamburgerLine3Open] : isOpen })}></div>
+                </div>
             </div>
             { isOpen &&
                 <nav className={styles.navigation}>
@@ -36,8 +38,9 @@ const MobileNavigationBar = () => {
                         </Fade>
                     </ul>
                 </nav>
-        }
-        </div>
+            }
+        </>
+        
     )
     
 }
