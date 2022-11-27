@@ -10,6 +10,7 @@ export interface DishSet {
 
 export interface DishMenu {
     name: string;
+    description?: string;
     dishes: Dish[];
     price: number;
 }
@@ -130,7 +131,8 @@ export const MENU: Menu = {
     ],
     dishMenus: [
         { 
-            name: 'Menu Knipoog naar 2023 (Min 2P)', 
+            name: 'Knipoog naar 2023',
+            description: 'Minimum 2 personen',
             dishes: [
                 { name: 'Carpaccio van “Blonde d’Aquitaine”-parmezaan-eekhoorntjesbrood' },
                 { name: 'Blanket van fazantenboutjes-room met Calvados-eindejaarsgarnituur' },
@@ -139,7 +141,8 @@ export const MENU: Menu = {
             price: 30
         },
         { 
-            name: 'Ons feestmenu “Tussen strand en polder” (Min 2P)', 
+            name: '“Tussen strand en polder”',
+            description: 'Minimum 2 personen',
             dishes: [
                 { name: 'Gemarineerde Sint-Jacobsnootjes-knolselder-aardpeer-eekhoorntjesbrood' },
                 { name: 'Half kreeftje-bladspinazie-Nantuasaus' },
@@ -147,7 +150,7 @@ export const MENU: Menu = {
                 { name: 'Kaasbordje met zijn garnituren (+10 pp)' },
                 { name: 'Nagerecht naar keuze' }
             ],
-            price: 30
+            price: 60
         },
     ]
   }

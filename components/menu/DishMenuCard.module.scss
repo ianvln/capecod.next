@@ -1,0 +1,41 @@
+@import '../../styles/_variables.scss';
+
+.dishMenuHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.dishMenuPrice {
+    color: $primary-color;
+    font-size: 2rem;
+}
+
+.dishMenuPricePer {
+    font-size: 1.1rem;
+}
+
+.dishMenuCard {
+    border: $primary-color 5px solid;
+    padding: 5px 30px 30px 30px;
+    margin: 45px 0;
+}
+
+.dishMenuName {
+    font-size: 1.6rem;
+    letter-spacing: 2px;
+    margin-bottom: 5px;
+}
+
+.dishMenuDescription {
+    font-style: italic;
+}
+
+.dishMenuCardContent {
+    margin-top: 25px;
+}
+
+.menuLine {
+    border: $primary-color 1px solid;
+}

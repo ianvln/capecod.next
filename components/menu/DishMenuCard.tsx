@@ -7,8 +7,18 @@ const DishMenuCard = (props: { dishMenu: DishMenu }) => {
 
     return (
         <div className={styles.dishMenuCard} key={dishMenu.name}>
-            <h3> { dishMenu.name } <span> {dishMenu.price} </span> </h3>
-            <div>
+            <div className={styles.dishMenuHeader}>
+                <div>
+                    <h3 className={styles.dishMenuName}> { dishMenu.name } </h3>
+                    { dishMenu.description && <span className={styles.dishMenuDescription}> { dishMenu.description } </span> }
+                </div>
+                <div className={styles.dishMenuPrice}>
+                    {dishMenu.price} <span className={styles.dishMenuPricePer}> / persoon </span>
+                </div>
+            </div>
+            
+            <hr className={styles.menuLine} />
+            <div className={styles.dishMenuCardContent}>
                 {
                     dishMenu.dishes.map((d, i) => (
                         <div key={`dish-card-${i}`}>
