@@ -28,7 +28,7 @@ const Home: NextPage = () => {
         </div>
       </section>
 
-      <section style={sectionStyle}>
+      <section id="suggestions" style={sectionStyle}>
         <Fade>
           <h1 style={sectionTitleStyle}> Suggesties </h1>
         </Fade>
