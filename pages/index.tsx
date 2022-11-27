@@ -35,6 +35,20 @@ const Home: NextPage = () => {
         <MenuCard menu={MENU} />        
       </section>
 
+      <section id="contact" style={sectionStyle}>
+        <Fade>
+          <h1 style={sectionTitleStyle}> Contact </h1>
+        </Fade>
+        
+        <Fade style={{paddingLeft: 20}} triggerOnce cascade>
+          <p> Cape Cod | Lombardsijdestraat 7, 8620 Nieuwpoort </p>
+          <p> Tel: 058 23 39 19 </p>
+          <p> info@capecod.be </p>
+          <p> Ondernemingsnummer 0679 325 939 </p>
+        </Fade>
+        
+      </section>
+
     </div>
     
   )

@@ -1,5 +1,12 @@
 @import '../../../styles/_variables.scss';
 
+.mobileNavigationBar {
+    display: none;
+    @media screen and (max-width: 768px) {
+        display: block;
+    }
+}
+
 .navigationContainer {
     position: fixed;
     padding: 34px 40px;

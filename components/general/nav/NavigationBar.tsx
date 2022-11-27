@@ -45,7 +45,7 @@ const NavigationBar = () => {
     });
 
     return (
-        <>
+        <div className={styles.navigationBar}>
             <nav className={classNames(styles.container, { [styles.sticky] : isSticky })} ref={stickyRef}>
                 <ul>
                     { 
@@ -56,7 +56,7 @@ const NavigationBar = () => {
                     }
                 </ul>
             </nav>
-        </>
+        </div>
     )
 }
 

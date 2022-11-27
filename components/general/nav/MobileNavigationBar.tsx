@@ -17,7 +17,7 @@ const MobileNavigationBar = () => {
     }
 
     return (
-        <>
+        <div className={styles.mobileNavigationBar}>
             <div className={styles.navigationContainer}>
                 <div className={styles.hamburger} onClick={() => toggle()}>
                     <div className={classNames(styles.hamburgerLine, styles.hamburgerLine1, { [styles.hamburgerLine1Open] : isOpen })}></div>
@@ -39,7 +39,7 @@ const MobileNavigationBar = () => {
                     </ul>
                 </nav>
             }
-        </>
+        </div>
         
     )
     
