@@ -7,8 +7,9 @@ const DishSetCard = (props: { dishSet: DishSet }) => {
 
     return (
         <div className={styles.dishSetCard} key={dishSet.name}>
-            <h3> { dishSet.name } </h3>
-            <div>
+            <h3 className={styles.dishSetName}> { dishSet.name } </h3>
+            <hr />
+            <div className={styles.dishSetCardContent}>
                 {
                     dishSet.dishes.map((d, i) => (
                         <div key={`dish-card-${i}`} className={styles.dishCard}>

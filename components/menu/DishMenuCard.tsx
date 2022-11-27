@@ -11,7 +11,7 @@ const DishMenuCard = (props: { dishMenu: DishMenu }) => {
             <div>
                 {
                     dishMenu.dishes.map((d, i) => (
-                        <div key={`dish-card-${i}`} className={styles.dishCard}>
+                        <div key={`dish-card-${i}`}>
                             <DishCard dish={d} />
                         </div>
                 ))}
