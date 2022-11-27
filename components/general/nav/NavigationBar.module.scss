@@ -11,7 +11,8 @@
 }
 
 .navigationItem {
-    a {
+    span {
+        cursor: pointer;
         transition: color 0.5s ease;
     }
 
@@ -25,7 +26,7 @@
     font-weight: 500;
 
     &:hover {
-        a {
+        span {
             color: #c59d5f;
         }
 

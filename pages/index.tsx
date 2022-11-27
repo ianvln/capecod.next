@@ -12,9 +12,8 @@ const Home: NextPage = () => {
 
   return (
     <div>
-      <section style={welcomeBackground}>
-        <NavigationBar />
-        
+      <NavigationBar />
+      <section id="welcome" style={welcomeBackground}>
         <div style={welcome}>
             <Fade>
               <Image style={welcomeLogo} src={logo} width={250} height={250} />
