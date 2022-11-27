@@ -16,7 +16,7 @@ const MenuCard = (props: { menu: Menu }) => {
                             <DishSetCard key={`dish-set-card-${i}`} dishSet={ds} />
                         ))
                     }
-                    <h2 className={styles.menusTitle}> Menu's </h2>
+                    <h2 className={styles.menusTitle}> Menu&apos;s </h2>
                     {
                         menu.dishMenus.map((dm, i) => (
                             <DishMenuCard key={`dish-menu-card-${i}`} dishMenu={dm} />

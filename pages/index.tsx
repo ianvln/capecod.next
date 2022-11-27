@@ -16,7 +16,7 @@ const Home: NextPage = () => {
       <section id="welcome" style={welcomeBackground}>
         <div style={welcome}>
             <Fade>
-              <Image style={welcomeLogo} src={logo} width={250} height={250} />
+              <Image alt="Cape Cod Logo" style={welcomeLogo} src={logo} width={250} height={250} />
             </Fade> 
             <Slide direction='left'>
               <h1 style={header}> Cape Cod </h1>

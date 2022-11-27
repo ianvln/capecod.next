@@ -48,9 +48,9 @@ export const MENU: Menu = {
       { 
         name: 'Koude voorgerechten',
         dishes: [
-          { name: 'Carpaccio van “Blonde d’Aquitaine”-parmezaan', price: 10 },
-          { name: 'Carpaccio van “Blonde d’Aquitaine”-parmezaan-truffel uit Carpentras', price: 15 },
-          { name: 'Carpaccio van “Blonde d’Aquitaine”-parmezaan-eekhoorntjesbrood', price: 15 },
+          { name: 'Carpaccio van “Blonde d\'Aquitaine”-parmezaan', price: 10 },
+          { name: 'Carpaccio van “Blonde d\'Aquitaine”-parmezaan-truffel uit Carpentras', price: 15 },
+          { name: 'Carpaccio van “Blonde d\'Aquitaine”-parmezaan-eekhoorntjesbrood', price: 15 },
           { name: 'Gravlax-sausje met dille-winters slaatje', price: 17 },
           { name: 'Gekarameliseerde zalm-sesam-koriander', price: 17 },
           { name: 'Duo van onze zalmbereidingen', price: 20 },
@@ -102,7 +102,7 @@ export const MENU: Menu = {
           { name: 'Koninginnehapje met aardappelpuree (voor onze kleinsten)', price: 10 },
           { name: 'Blanket van fazantenboutjes-room met Calvados-eindejaarsgarnituur', price: 14 },
           { name: 'Duo van kwartels-saus met steranijs en sinaasappel-eindejaarsgarnituur', price: 14 },
-          { name: 'Duroc varkenshaasje – room van boschampignons-wintergroenten-gratinaardappelen', price: 15 },
+          { name: 'Duroc varkenshaasje - room van boschampignons-wintergroenten-gratinaardappelen', price: 15 },
           { name: 'Stoofpot van edelhert-Bourgogne wijn-eindejaarsgarnituur', price: 16 },
           { name: 'Wit van hoeveparelhoen “Grand veneur”-eindejaarsgarnituur', price: 20 },
           { name: 'Tournedos van Vlaamse hazenrug met zwarte pepersaus- honing- eindejaarsgarnituur', price: 25 },
@@ -114,7 +114,7 @@ export const MENU: Menu = {
         dishes: [
           { name: 'Quiche met belegen geitenkaas-walnoten-kastanjes-honing', price: 12 },
           { name: 'Quiche met jonagolden-rode biet-feta', price: 12 },
-          { name: 'Ravioli met fourme d’Ambert-kastanjes-noten', price: 14 },
+          { name: 'Ravioli met fourme d\'Ambert-kastanjes-noten', price: 14 },
           { name: 'Ravioli met truffelroom-boschampignons-parmezaan', price: 15 },
         ]
       },
@@ -134,7 +134,7 @@ export const MENU: Menu = {
             name: 'Knipoog naar 2023',
             description: 'Minimum 2 personen',
             dishes: [
-                { name: 'Carpaccio van “Blonde d’Aquitaine”-parmezaan-eekhoorntjesbrood' },
+                { name: 'Carpaccio van “Blonde d\'Aquitaine”-parmezaan-eekhoorntjesbrood' },
                 { name: 'Blanket van fazantenboutjes-room met Calvados-eindejaarsgarnituur' },
                 { name: 'Biscuit van zwarte chocolade' }
             ],
