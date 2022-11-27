@@ -1,9 +1,4 @@
-.menu {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-.dishSetCard {
-    flex: 1 0 50%;
+.menuCard {
+    max-width: 720px;
+    margin: 0 auto;
 }

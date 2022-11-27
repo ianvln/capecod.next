@@ -7,8 +7,8 @@ const DishCard = (props: { dish: Dish }) => {
     return (
         <>
             <div className={styles.heading}>
-                <h3 className={styles.title}> {dish.name} </h3>
-                <span className={styles.price}> &euro; {dish.price} </span>
+                <div className={styles.dishName}> {dish.name} </div> 
+                { dish.price && <span className={styles.price}> &euro; {dish.price} {dish.unit && <span> / {dish.unit} </span>} </span> }
             </div>
             { dish.description && <div className={styles.subHeading}> {dish.description} </div> }
         </>

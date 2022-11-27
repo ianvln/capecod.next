@@ -1,6 +1,7 @@
 import { useRef } from "react";
 import { Menu } from "../../types/Menu";
 import FadeSlideIn from "../general/animation/FadeSlideIn";
+import DishMenuCard from "./DishMenuCard";
 import DishSetCard from "./DishSetCard";
 import styles from './MenuCard.module.scss';
 
@@ -10,16 +11,22 @@ const MenuCard = (props: { menu: Menu }) => {
     
     return (
         <>
-            <div className={styles.menu} ref={ref}>
+            <div className={styles.menuCard} ref={ref}>
                 {
                     menu.dishSets.map((ds, i) => (
-                            <FadeSlideIn key={`dish-set-card-${i}`} className={styles.dishSetCard} parentRef={ref} offsetDelayIndex={i}>
-                                <DishSetCard dishSet={ds} />
+                        <FadeSlideIn key={`dish-set-card-${i}`} parentRef={ref} offsetDelayIndex={i}>
+                            <DishSetCard dishSet={ds} />
+                        </FadeSlideIn>
+                    ))
+                }
+                {
+                    menu.dishMenus.map((dm, i) => (
+                            <FadeSlideIn key={`dish-set-card-${i}`} parentRef={ref} offsetDelayIndex={i + menu.dishSets.length}>
+                                <DishMenuCard dishMenu={dm} />
                             </FadeSlideIn>
                     ))
                 }
             </div>
-            
         </>
     );
 }

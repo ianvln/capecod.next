@@ -7,7 +7,7 @@ import dishImage from '../assets/dish.jpg'
 import logo from '../assets/capecod-white.svg'
 import NavigationBar from '../components/general/nav/NavigationBar'
 import { useSpring, animated } from 'react-spring'
-import { Menu } from '../types/Menu'
+import { MENU } from '../types/Menu'
 import MenuCard from '../components/menu/MenuCard'
 import FadeSlideIn from '../components/general/animation/FadeSlideIn'
 
@@ -33,35 +33,6 @@ const Home: NextPage = () => {
   const teaser1Ref = useRef<HTMLDivElement>(null);
   const teaser2Ref = useRef<HTMLDivElement>(null);
 
-  const menu: Menu = {
-    dishSets: [
-      { 
-        name: 'Kleine menu',
-        dishes: [
-          { name: 'Banaan', description: 'Kiwi/citroen/etc', price: 5.75 },
-          { name: 'Test', description: 'Kiwi/citroen/etc', price: 5.75 },
-          { name: 'Woohoo', description: 'Kiwi/citroen/etc', price: 5.75 },
-        ]
-      },
-      { 
-        name: 'Grote menu',
-        dishes: [
-          { name: 'Banaan', description: 'Kiwi/citroen/etc', price: 5.75 },
-          { name: 'Test', description: 'Kiwi/citroen/etc', price: 5.75 },
-          { name: 'Woohoo', description: 'Kiwi/citroen/etc', price: 5.75 },
-        ]
-      },
-      { 
-        name: 'Test menu',
-        dishes: [
-          { name: 'Banaan', description: 'Kiwi/citroen/etc', price: 5.75 },
-          { name: 'Test', description: 'Kiwi/citroen/etc', price: 5.75 },
-          { name: 'Woohoo', description: 'Kiwi/citroen/etc', price: 5.75 },
-        ]
-      }
-    ]
-  }
-
   return (
     <div>
       <section style={welcomeBackground}>
@@ -82,7 +53,7 @@ const Home: NextPage = () => {
 
       <section style={sectionStyle}>
         <h2 style={sectionHeaderStyle}> Suggesties </h2>
-        <MenuCard menu={menu} />        
+        <MenuCard menu={MENU} />        
       </section>
 
       <section style={sectionStyle}>
@@ -101,10 +72,14 @@ const Home: NextPage = () => {
           </div>
         </div>
         <div style={{ display: 'flex', marginTop: 150 }} ref={teaser2Ref}>
-          <div style={{ flex: '1 0 50%', display: 'flex', alignItems: 'center', paddingLeft: 50 }}>
+          <div style={{ flex: '1 0 50%', display: 'flex', alignItems: 'center', padding: 50 }}>
             <FadeSlideIn parentRef={teaser2Ref} offsetDelayIndex={2}>
-              <h2> Heading </h2>
-              <p> Text </p>
+            <p style={{ fontSize: '4rem', fontWeight: 600, color: '#fff', fontStyle: 'italic', textAlign: 'center', margin: 0 }}> "" </p>
+              <p style={{ fontSize: '1.5rem', fontWeight: 450, color: '#fff', lineHeight: '2.4rem', letterSpacing: '0.2rem', fontStyle: 'italic' }}>
+                Traiteur Cape Cod is al bijna 25 jaar een referentie In Nieuwpoort. 
+                De zaak staat voornamelijk garant voor goed verzorgde afhaalkeuken, met oog voor detail en smaak. 
+                Maar het assortiment gaat enorm breed, van klassiekers met een moderne twist tot kaas en charcuterie en allerhande delicatessen.
+              </p>
             </FadeSlideIn>
           </div>
           <div style={{ flex: '1 0 50%' }}>
@@ -132,7 +107,7 @@ const welcomeBackground: CSSProperties = {
 
 const sectionStyle: CSSProperties = {
   maxWidth: '1200px',
-  margin: '200px auto'
+  margin: '200px auto',
 }
 
 const welcomeLogo: CSSProperties = {
