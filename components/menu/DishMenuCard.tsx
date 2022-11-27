@@ -13,7 +13,7 @@ const DishMenuCard = (props: { dishMenu: DishMenu }) => {
                     { dishMenu.description && <span className={styles.dishMenuDescription}> { dishMenu.description } </span> }
                 </div>
                 <div className={styles.dishMenuPrice}>
-                    {dishMenu.price} <span className={styles.dishMenuPricePer}> / persoon </span>
+                    &euro; {dishMenu.price} <span className={styles.dishMenuPricePer}> / persoon </span>
                 </div>
             </div>
             

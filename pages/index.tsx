@@ -52,7 +52,7 @@ const Home: NextPage = () => {
       </section>
 
       <section style={sectionStyle}>
-        <h2 style={sectionHeaderStyle}> Suggesties </h2>
+        <h1 style={sectionTitleStyle}> Suggesties </h1>
         <MenuCard menu={MENU} />        
       </section>
 
@@ -129,9 +129,11 @@ const header: CSSProperties = {
   margin: 0
 }
 
-const sectionHeaderStyle: CSSProperties = {
+const sectionTitleStyle: CSSProperties = {
   textAlign: 'center',
-  textTransform: 'uppercase'
+  textTransform: 'uppercase',
+  fontSize: '2rem',
+  letterSpacing: '2px'
 }
 
 const subHeader: CSSProperties = {

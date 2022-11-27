@@ -19,6 +19,7 @@ const MenuCard = (props: { menu: Menu }) => {
                         </FadeSlideIn>
                     ))
                 }
+                <h2 className={styles.menusTitle}> Menu's </h2>
                 {
                     menu.dishMenus.map((dm, i) => (
                             <FadeSlideIn key={`dish-set-card-${i}`} parentRef={ref} offsetDelayIndex={i + menu.dishSets.length}>
