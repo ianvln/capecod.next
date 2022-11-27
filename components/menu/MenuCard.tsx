@@ -17,7 +17,7 @@ const MenuCard = (props: { menu: Menu }) => {
                         </Fade>
                     ))
                 }
-                <h2 className={styles.menusTitle}> Menu's </h2>
+                <Fade> <h2 className={styles.menusTitle}> Menu's </h2> </Fade>
                 {
                     menu.dishMenus.map((dm, i) => (
                         <Fade key={`dish-menu-card-${i}`}>
