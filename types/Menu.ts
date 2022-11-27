@@ -77,6 +77,56 @@ export const MENU: Menu = {
           { name: 'Half dozijn Oisri oester-saus van Chablis-zeekraal', description: '(+10g Royal Belgian Caviar Platinum €25 extra', price: 20 },
         ]
       },
+      { 
+        name: 'Kreeftbereidingen (450 à 500gr)',
+        dishes: [
+          { name: 'Klassieke volledige kreeft “Belle vue”', price: 37.5 },
+          { name: 'Volledige kreeft-polderboter met look- verse tuinkruiden-pasta', price: 37.5 },
+          { name: 'Volledige kreeft-polderboter- room van boschampignons-pasta', price: 37.5 },
+        ]
+      },
+      { 
+        name: 'Visbereidingen (garnituren inbegrepen)',
+        dishes: [
+          { name: 'Vol au vent uit de Noordzee-bladerdeegje', price: 18 },
+          { name: 'Wit van zeewolf- room van fijne groenten', price: 19 },
+          { name: 'Nieuwpoortse tongrolletjes-roomsaus met Chablis-zeekraal-garnalen', price: 25 },
+          { name: 'Gebakken zeetong-paprika gevuld met Toscaanse groenten-krieltjes', price: 30 },
+          { name: 'Wit van tarbot en volledige kreeft-bladspinazie-Nantua saus', description: 'per 2 personen', price: 70 },
+        ]
+      },
+      { 
+        name: 'Vlees- en wildbereidingen',
+        dishes: [
+          { name: 'Koninginnehapje met aardappelpuree (voor onze kleinsten)', price: 10 },
+          { name: 'Blanket van fazantenboutjes-room met Calvados-eindejaarsgarnituur', price: 14 },
+          { name: 'Duo van kwartels-saus met steranijs en sinaasappel-eindejaarsgarnituur', price: 14 },
+          { name: 'Duroc varkenshaasje – room van boschampignons-wintergroenten-gratinaardappelen', price: 15 },
+          { name: 'Stoofpot van edelhert-Bourgogne wijn-eindejaarsgarnituur', price: 16 },
+          { name: 'Wit van hoeveparelhoen “Grand veneur”-eindejaarsgarnituur', price: 20 },
+          { name: 'Tournedos van Vlaamse hazenrug met zwarte pepersaus- honing- eindejaarsgarnituur', price: 25 },
+          { name: 'Filet van jong hert-"Grand Veneur"- eindejaarsgarnituur', price: 70 },
+        ]
+      },
+      { 
+        name: 'Vegetarische bereidingen',
+        dishes: [
+          { name: 'Quiche met belegen geitenkaas-walnoten-kastanjes-honing', price: 12 },
+          { name: 'Quiche met jonagolden-rode biet-feta', price: 12 },
+          { name: 'Ravioli met fourme d’Ambert-kastanjes-noten', price: 14 },
+          { name: 'Ravioli met truffelroom-boschampignons-parmezaan', price: 15 },
+        ]
+      },
+      { 
+        name: 'Nagerechten',
+        dishes: [
+          { name: 'Biscuit van zwarte chocolade', price: 4 },
+          { name: 'Bavarois van framboos', price: 4.5 },
+          { name: 'Citroentaartje met meringue', price: 4.5 },
+          { name: 'Moelleux van zwarte chocolade', price: 5 },
+          { name: 'Kaasbordje met zijn garnituren', price: 12 }
+        ]
+      },
     ],
     dishMenus: [
         { 

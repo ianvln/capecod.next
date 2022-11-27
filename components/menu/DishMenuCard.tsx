@@ -1,4 +1,5 @@
 import { DishMenu, } from "../../types/Menu";
+import DishCard from "./DishCard";
 import styles from './DishMenuCard.module.scss';
 
 const DishMenuCard = (props: { dishMenu: DishMenu }) => {
@@ -11,9 +12,7 @@ const DishMenuCard = (props: { dishMenu: DishMenu }) => {
                 {
                     dishMenu.dishes.map((d, i) => (
                         <div key={`dish-card-${i}`} className={styles.dishCard}>
-                            <div className={styles.heading}>
-                                {d.name}
-                            </div>
+                            <DishCard dish={d} />
                         </div>
                 ))}
             </div>
