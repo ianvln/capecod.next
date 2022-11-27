@@ -10,6 +10,19 @@
     z-index: 10;
 }
 
+.activeItem {
+    span {
+        color: #c59d5f;
+    }
+}
+
+.inactiveItem {
+    span {
+        color: #fff;
+    }
+}
+
+
 .navigationItem {
     span {
         cursor: pointer;
@@ -19,7 +32,6 @@
     display: inline;
     list-style: none;
     text-transform: uppercase;
-    color: #fff;
     margin: 0 10px;
     position: relative;
     font-size: 0.95rem;
