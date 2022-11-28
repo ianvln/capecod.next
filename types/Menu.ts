@@ -75,7 +75,7 @@ export const MENU: Menu = {
           { name: 'Half dozijn scampi-Indische curry-groentjes', price: 14 },
           { name: 'Sint-Jacobsnootjes in de schelp op grootmoeders wijze', price: 17 },
           { name: 'Half dozijn Oostendse oesters-Champagneroom met prei', price: 16 },
-          { name: 'Half dozijn Oisri oester-saus van Chablis-zeekraal', description: '(+10g Royal Belgian Caviar Platinum €25 extra', price: 20 },
+          { name: 'Half dozijn Oisri oester-saus van Chablis-zeekraal', description: '(+10g Royal Belgian Caviar Platinum €25 extra)', price: 20 },
         ]
       },
       { 
