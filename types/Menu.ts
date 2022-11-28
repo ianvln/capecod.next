@@ -64,7 +64,7 @@ export const MENU: Menu = {
           { name: 'Aspergeroomsoep', price: 7, unit: 'l' },
           { name: 'Roomsoep van boschampignons', price: 8, unit: 'l' },
           { name: 'Nieuwpoortse vissoep-rouille-croutons', price: 10, unit: 'l' },
-          { name: 'Bisque van kreef-kreeftenblokjes-Armagnac', price: 10, unit: 'l' },
+          { name: 'Bisque van kreeft-kreeftenblokjes-Armagnac', price: 16, unit: 'l' },
         ]
       },
       { 
