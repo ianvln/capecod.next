@@ -106,7 +106,7 @@ export const MENU: Menu = {
           { name: 'Stoofpot van edelhert-Bourgogne wijn-eindejaarsgarnituur', price: 16 },
           { name: 'Wit van hoeveparelhoen “Grand veneur”-eindejaarsgarnituur', price: 20 },
           { name: 'Tournedos van Vlaamse hazenrug met zwarte pepersaus- honing- eindejaarsgarnituur', price: 25 },
-          { name: 'Filet van jong hert-"Grand Veneur"- eindejaarsgarnituur', price: 70 },
+          { name: 'Filet van jong hert-"Grand Veneur"- eindejaarsgarnituur', price: 28 },
         ]
       },
       { 
