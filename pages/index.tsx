@@ -28,8 +28,14 @@ const Home: NextPage = () => {
       </section>
 
       <section id="suggestions" style={sectionStyle}>
-        <Fade>
+        <Fade triggerOnce>
           <h1 style={sectionTitleStyle}> Suggesties </h1>
+          <p> Voor meer inlichtingen en vragen kunt u langskomen in onze winkel of via 058 23 39 19 of info@capecod.be. </p>
+          <p> Bestel tijdig, zo kunnen we uw feestmaaltijd met de zorg behandelen die ze verdient. Bestellingen per mail zijn enkel geldig na onze bevestiging. </p>
+          <p> Uw bestellingen voor de Kerstdagen noteren wij ten laatste op dinsdag  20/12 om 18 uur. Voor de eindejaarsdagen noteren we de laatste bestellingen op woensdag 28/12 om 12uur. Na deze data kunnen bestellingen ook niet meer gewijzigd of geannuleerd worden. </p>
+          <p> Bestellingen op 24/12 en 31/12, kunnen afgehaald worden tussen 13u30 en 17u. </p>
+          <p> Op 25/12 en 1/1 kunnen de bestellingen afgehaald worden tussen 10 en 14u. </p>
+          <p> Sommige gerechten worden op porselein van het huis meegegeven, waarvoor een waarborg zal gevraagd worden. Els & Lieven en hun team, wensen u aangename eindejaarsfeesten. </p>
         </Fade>
         
         <MenuCard menu={MENU} />        
