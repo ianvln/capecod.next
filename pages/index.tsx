@@ -30,7 +30,7 @@ const Home: NextPage = () => {
       <section id="suggestions" style={sectionStyle}>
         <Fade triggerOnce>
           <h1 style={sectionTitleStyle}> Suggesties </h1>
-          <div style={{textAlign: 'center'}}>
+          <div style={{textAlign: 'center', maxWidth: 720}}>
             <p> Voor meer inlichtingen en vragen kunt u langskomen in onze winkel of via 058 23 39 19 of info@capecod.be. </p>
             <p> Bestel tijdig, zo kunnen we uw feestmaaltijd met de zorg behandelen die ze verdient. Bestellingen per mail zijn enkel geldig na onze bevestiging. </p>
             <p> Uw bestellingen voor de Kerstdagen noteren wij ten laatste op dinsdag  20/12 om 18 uur. Voor de eindejaarsdagen noteren we de laatste bestellingen op woensdag 28/12 om 12uur. Na deze data kunnen bestellingen ook niet meer gewijzigd of geannuleerd worden. </p>
