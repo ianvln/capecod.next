@@ -173,7 +173,7 @@ export const MENU: Menu = {
           { name: 'Quiche aux jonagolden-betterave rouge-feta (VG)', price: 12 },
           { name: 'Quiche classique-poireaux-lardons', price: 12 },
           { name: 'Terrines de foie d\'oie gras ', description: 'Terrines de foie d\'oie gras fait maison et les accompagenments sont disponible dans le magasin.' },
-          { name: 'Huîtres', description: 'Ruim aanbod aan holle en platte oesters volgens dagelijkse aanvoer zoals Oléron n3 (€1,95), Oostendse holle oester n3 (€1,95),  Oisri oester n3 (€2,75), Oostendse platte oester (€3,50), Cuvée Prestige n3 (€3,50), Gillardeau n3 (€3,75).' },
+          { name: 'Huîtres', description: 'Large gamme d\'huîtres creuses et plates selon l\'approvisionnement du jour comme Oléron n3 (€1,95), huître creuse d\'Ostende n3 (€1,95), huître d\'Oisri n3 (€2,75), huître plate d\'Ostende (€3,50), Cuvée Prestige n3 (€3,50), Gillardeau n3 (€3,75).' },
           { name: '"Royal Belgian Caviar"', description: '10g, 30g, 50g et 125g à commander d\'avance' },
         ]
       },
