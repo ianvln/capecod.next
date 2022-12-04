@@ -58,10 +58,10 @@ const NavigationBar = () => {
                 </ul>
                 <div className={styles.localizationMenu}>
                     <div className={styles.navigationItem}>
-                        <span> <Link href="/">NL</Link> </span>
+                        <span> <Link href="/" locale="nl">NL</Link> </span>
                     </div>
                     <div className={styles.navigationItem} style={{marginLeft: 10}}>
-                        <span> <Link href="/fr-be/">FR</Link> </span>
+                        <span> <Link href="/fr#"  locale="fr">FR</Link> </span>
                     </div>
                 </div>
             </nav>

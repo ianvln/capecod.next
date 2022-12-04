@@ -40,10 +40,10 @@ const MobileNavigationBar = () => {
                     </ul>
                     <div className={styles.localizationMenu}>
                         <div className={styles.navigationItem}>
-                            <span onClick={() => setIsOpen(false)}> <Link href="/">NL</Link> </span>
+                            <span onClick={() => setIsOpen(false)}> <Link href="/" locale="nl">NL</Link>  </span>
                         </div>
                         <div className={styles.navigationItem}>
-                            <span onClick={() => setIsOpen(false)}> <Link href="/fr-be/">FR</Link> </span>
+                            <span onClick={() => setIsOpen(false)}> <Link href="/fr#" locale="fr">FR</Link> </span>
                         </div>
                     </div>
                 </nav>
