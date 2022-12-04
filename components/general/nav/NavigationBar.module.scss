@@ -3,12 +3,11 @@
     @media screen and (min-width: 768px) {
         display: block;
     }
-    position: relative;
 }
 
 .localizationMenu {
     position: absolute;
-    top: 10px;
+    top: 0;
     right: 40px;
     height: 80px;
     display: flex;
