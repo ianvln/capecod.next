@@ -141,7 +141,7 @@ export const MENU: Menu = {
             price: 30
         },
         { 
-            name: '“Tussen strand en polder”',
+            name: '"Tussen strand en polder"',
             description: 'Minimum 2 personen',
             dishes: [
                 { name: 'Gemarineerde Sint-Jacobsnootjes-knolselder-aardpeer-eekhoorntjesbrood' },
@@ -149,6 +149,138 @@ export const MENU: Menu = {
                 { name: 'Wit van hoeveparelhoen “Grand Veneur”-eindejaarsgarnituur' },
                 { name: 'Kaasbordje met zijn garnituren (+10 pp)' },
                 { name: 'Nagerecht naar keuze' }
+            ],
+            price: 60
+        },
+    ]
+  }
+
+  export const MENU_FR: Menu = {
+    dishSets: [
+      { 
+        name: 'A l\'apéritif',
+        dishes: [
+          { name: 'Assortiment de 4 amuses bouche froids', price: 6.5 },
+          { name: 'Assortiment de 4 amuses bouche chauds', price: 6.5 },
+          { name: 'Assortiment de 4 amuse bouche festifs', price: 13 },
+        ]
+      },
+      { 
+        name: 'A partager',
+        dishes: [
+          { name: 'Assiette Royale de tapenades, tapas, trempettes, apéros, ...', price: 35 },
+          { name: 'Quiche au vieux fromage de chèvre-châtaignes-noix-miel (VG)', price: 12 },
+          { name: 'Quiche aux jonagolden-betterave rouge-feta (VG)', price: 12 },
+          { name: 'Quiche classique-poireaux-lardons', price: 12 },
+          { name: 'Terrines de foie d\'oie gras ', description: 'Terrines de foie d\'oie gras fait maison et les accompagenments sont disponible dans le magasin.' },
+          { name: 'Huîtres', description: 'Ruim aanbod aan holle en platte oesters volgens dagelijkse aanvoer zoals Oléron n3 (€1,95), Oostendse holle oester n3 (€1,95),  Oisri oester n3 (€2,75), Oostendse platte oester (€3,50), Cuvée Prestige n3 (€3,50), Gillardeau n3 (€3,75).' },
+          { name: '"Royal Belgian Caviar"', description: '10g, 30g, 50g et 125g à commander d\'avance' },
+        ]
+      },
+      { 
+        name: 'Entrées froides',
+        dishes: [
+          { name: 'Carpaccio de “Blonde d\'Aquitaine”-parmesan', price: 10 },
+          { name: 'Carpaccio de “Blonde d\'Aquitaine”-parmesan-cèpes', price: 15 },
+          { name: 'Carpaccio de “Blonde d\'Aquitaine”-parmesan-truffes de Carpentras', price: 15 },
+          { name: 'Gravlax-petite sauce à l\'aneth-salade de la saison', price: 17 },
+          { name: 'Saumon Norvégien caramélisé-sésame-coriandre', price: 17 },
+          { name: 'Le duo de nos préparations de saumon', price: 20 },
+          { name: 'Noix de Saint-Jacques marinées céleri-rave topinambours cèpes', price: 20 },
+          { name: 'Le cocktail Classique de crevettes de Nieuport, épluchés à la main', price: 25 },
+        ]
+      },
+      { 
+        name: 'Soupes',
+        dishes: [
+          { name: 'Crème d\'asperges', price: 7, unit: 'l' },
+          { name: 'Crème de champignons de bois', price: 8, unit: 'l' },
+          { name: 'Soupe de poisson de Nieuport-rouille-croutons', price: 10, unit: 'l' },
+          { name: 'Bisque de homard-batonnets de homard- Armagnac', price: 16, unit: 'l' },
+        ]
+      },
+      { 
+        name: 'Entrées chaudes',
+        dishes: [
+          { name: 'Bouchée au vol au vent de faisan', price: 10 },
+          { name: 'Demi douzaine de scampi-beurre de polders à l\'ail et aux herbes', price: 13 },
+          { name: 'Demi douzaine de scampi-curry Indien - wok de légumes	', price: 14 },
+          { name: 'Noix de Saint-Jacques dans leur coquille “Grand Mère”', price: 17 },
+          { name: 'Demi douzaine d\' huîtres d\'Ostende-crème de champagne et poireaux', price: 16 },
+          { name: 'Demi douzaine d\' huîtres Oisri- sauce au Chablis-salicornes', description: '(+10g Royal Belgian Caviar Platinum €25 extra)', price: 20 },
+        ]
+      },
+      { 
+        name: 'Homards (450 à 500gr)',
+        dishes: [
+          { name: 'Homard entier “Belle Vue”', price: 37.5 },
+          { name: 'Homard entier-beurre des polders à l\'ail et aux herbes-pâte', price: 37.5 },
+          { name: 'Homard entier-crème de champignons de bois-pâtes', price: 37.5 },
+        ]
+      },
+      { 
+        name: 'Poissons (garnitures comprises)',
+        dishes: [
+          { name: 'Bouchée au vol au vent de la Mer du Nord', price: 18 },
+          { name: 'Blanc de loup de mer-petits légumes', price: 19 },
+          { name: 'Filets de sole de Nieuport-crème de chablis-salicornes-crevettes', price: 25 },
+          { name: 'Sole meunière-poivron farçi aux légumes toscans-grenailles', price: 30 },
+          { name: 'Blanc de turbot et homard entier-épinards-sauce Nantua', description: 'par 2 personnes', price: 70 },
+        ]
+      },
+      { 
+        name: 'Viandes et gibiers (garnitures comprises)',
+        dishes: [
+          { name: 'Bouchée à la Reine ( pour nos petits convives)', price: 10 },
+          { name: 'Blanquette de cuisses de faisan-crème au calvados garniture de fin d\'année	', price: 14 },
+          { name: 'Duo de cailles-sauce à l\'anisétoilé et orange - garniture de fin d\'année	', price: 14 },
+          { name: 'Filet mignon de porc \'Duroc\'-crème de champignons de bois-légumes d\'hiver-gratin Dauphinois', price: 15 },
+          { name: 'Civet de cerf- vin de Bourgogne-garniture de fin d\'année', price: 16 },
+          { name: 'Blanc de pintadeau de ferme “Grand Veneur” -garniture de fin d\'année', price: 20 },
+          { name: 'Rable de lièvre-crème de poivre noir-miel-garniture de fin d\'année', price: 25 },
+          { name: 'Filet de cerf-“Grand Veneur” - garniture de fin d\'années', price: 28 },
+        ]
+      },
+      { 
+        name: 'Plats végétariens',
+        dishes: [
+          { name: 'Quiche au vieux fromage de chèvre-châtaigne-noix-miel', price: 12 },
+          { name: 'Quiche aux jonagolden-betterave rouge-feta', price: 12 },
+          { name: 'Ravioles à la Fourme d\'Ambert-châtaignes-noix', price: 14 },
+          { name: 'Raviloles aux truffes-champignons de bois-parmesan', price: 15 },
+        ]
+      },
+      { 
+        name: 'Nagerechten',
+        dishes: [
+          { name: 'Biscuit au chocolat noir', price: 4 },
+          { name: 'Bavarois aux framboises', price: 4.5 },
+          { name: 'Tarte au citron à la méringue', price: 4.5 },
+          { name: 'Moelleux au chocolat noir', price: 5 },
+          { name: 'Assiette de fromages avec ses garnitures', price: 12 }
+        ]
+      },
+    ],
+    dishMenus: [
+        { 
+            name: 'Menu Clin d\'oeuil à 2023',
+            description: 'Minimum 2 personnes',
+            dishes: [
+                { name: 'Carpaccio de “Blonde d\'Aquitaine”-parmesan-cèpes' },
+                { name: 'Blanquette de cuisses de faisan-crème au calvados garniture de fin d\'année' },
+                { name: 'Biscuit au chocolat noir' }
+            ],
+            price: 30
+        },
+        { 
+            name: '"Entre plage et polders"',
+            description: 'Minimum 2 personnes',
+            dishes: [
+                { name: 'Les noix de Saint-Jacques marinés-céleri rave-topinambour-cèpes' },
+                { name: 'Demi homard-épinards-sauce Nantua' },
+                { name: 'Blanc de pintadeau de ferme "Grand Veneur" -garniture de fin d’année ' },
+                { name: 'Assiette de fromages avec ses garnitures (+10 pp)' },
+                { name: 'Dessert au choix' }
             ],
             price: 60
         },
