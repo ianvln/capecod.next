@@ -31,11 +31,11 @@ const Home: NextPage = () => {
         <Fade triggerOnce>
           <h1 style={sectionTitleStyle}> Suggestions </h1>
           <div style={{textAlign: 'center', margin: '0 auto', maxWidth: 720}}>
-            <p> Pour plus d'infomations, n'hésitez pas de nous contacter via  via 058 23 39 19 ou info@capecod.be.</p>
+            <p> Pour plus d&apos;infomations, n&apos;hésitez pas de nous contacter via  via 058 23 39 19 ou info@capecod.be.</p>
             <p> Commandes par email sont valides après une réponse de notre part. </p>
-            <p> Nous prenons votre commande pour les fêtes de Noël au plus tard le mardi 20/12 a 18H. Nous prenons les toutes dernières commandes pour les fêtes de nouvel an, le mercredi 28/12 a 12h. près ces dates nous n'acceptons plus changements ni d'annulations. </p>
-            <p> Les commandes de 24/12 et 31/12 serons prêts à partir de 13h30 et à enlever jusq'a 17h. Les commandes de 25/12 et 1/1 serons prêts à 10h et à enlever jusq'a 14h. </p>
-            <p> Certains plats serons presentés sur de la porcelaine de Cape Cod, une garanti vous sera demandé. Els et Lieven, leur famille et toute l'équipe, vous souhaitent des excélentes fêtes! </p>
+            <p> Nous prenons votre commande pour les fêtes de Noël au plus tard le mardi 20/12 a 18H. Nous prenons les toutes dernières commandes pour les fêtes de nouvel an, le mercredi 28/12 a 12h. près ces dates nous n&apos;acceptons plus changements ni d&apos;annulations. </p>
+            <p> Les commandes de 24/12 et 31/12 serons prêts à partir de 13h30 et à enlever jusq&apos;a 17h. Les commandes de 25/12 et 1/1 serons prêts à 10h et à enlever jusq&apos;a 14h. </p>
+            <p> Certains plats serons presentés sur de la porcelaine de Cape Cod, une garanti vous sera demandé. Els et Lieven, leur famille et toute l&apos;équipe, vous souhaitent des excélentes fêtes! </p>
           </div>
         </Fade>
         
