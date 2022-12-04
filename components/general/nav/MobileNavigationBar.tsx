@@ -1,4 +1,5 @@
 import classNames from 'classnames';
+import Link from 'next/link';
 import { useState } from 'react';
 import { Fade } from 'react-awesome-reveal';
 import { NavigationItem, NAVIGATION_ITEMS } from '../../../types/general/Navigation';
@@ -37,6 +38,14 @@ const MobileNavigationBar = () => {
                             }
                         </Fade>
                     </ul>
+                    <div className={styles.localizationMenu}>
+                        <div className={styles.navigationItem}>
+                            <span onClick={() => setIsOpen(false)}> <Link href="/">NL</Link> </span>
+                        </div>
+                        <div className={styles.navigationItem}>
+                            <span onClick={() => setIsOpen(false)}> <Link href="/fr-be/">FR</Link> </span>
+                        </div>
+                    </div>
                 </nav>
             }
         </div>
