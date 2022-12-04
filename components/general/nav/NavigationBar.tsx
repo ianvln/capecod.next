@@ -22,7 +22,7 @@ const NavigationBar = () => {
         }
 
         const rect = element.getBoundingClientRect();
-        return rect.top <= window.innerHeight / 10;
+        return rect.top <= window.innerHeight;
     }
 
     const updateActiveItem = () => {
