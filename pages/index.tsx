@@ -2,6 +2,7 @@ import type { NextPage } from 'next'
 import { CSSProperties, } from 'react'
 import Image from 'next/image'
 import backgroundImage from '../assets/background.jpg'
+import warning from '../assets/warning.svg';
 import logo from '../assets/capecod-white.svg'
 import { MENU } from '../types/Menu'
 import MenuCard from '../components/menu/MenuCard'
@@ -24,6 +25,22 @@ const Home: NextPage = () => {
             <Slide direction='right'>
               <div style={subHeader}> Welkom </div>
             </Slide>
+            <Fade>
+              <div style={announcement}>
+                <div>
+                  <Image alt="Warning announcement" src={warning} width={50} height={50} />
+                </div>
+                <div>
+                  <p>
+                    Door een technische fout was ons emailadres (<a href="mailto:info@capecod.be">info@capecod.be</a>) tijdelijk onbereikbaar tussen zondag 04/12 en dinsdag 06/12. 
+                  </p>
+                  <p>
+                    Als je een bestelling hebt geplaatst, controleer dan zeker of je een bevestiging hebt gekregen.
+                  </p>
+                </div>
+                
+              </div>
+            </Fade>
         </div>
       </section>
 
@@ -103,6 +120,12 @@ const subHeader: CSSProperties = {
   fontSize: '4rem',
   marginTop: -20,
   color: '#c59d5f'
+}
+
+const announcement: CSSProperties = {
+  backgroundColor: 'rgba(52, 52, 52, 0.8)',
+  padding: 10,
+  maxWidth: 720
 }
 
 export default Home
