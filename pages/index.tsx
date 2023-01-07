@@ -4,8 +4,6 @@ import Image from 'next/image'
 import backgroundImage from '../assets/background.jpg'
 import warning from '../assets/warning.svg';
 import logo from '../assets/capecod-white.svg'
-import { MENU } from '../types/Menu'
-import MenuCard from '../components/menu/MenuCard'
 import { Fade, Slide } from 'react-awesome-reveal'
 import NavigationWrapper from '../components/general/nav/NavigationWrapper'
 
@@ -32,32 +30,12 @@ const Home: NextPage = () => {
                 </div>
                 <div>
                   <p>
-                    Door een technische fout was ons emailadres (<a href="mailto:info@capecod.be">info@capecod.be</a>) tijdelijk onbereikbaar tussen zondag 04/12 en dinsdag 06/12. 
-                  </p>
-                  <p>
-                    Als je een bestelling hebt geplaatst, controleer dan zeker of je een bevestiging hebt gekregen.
+                    Gesloten wegens medische redenen. Vanaf februari zijn we er weer!
                   </p>
                 </div>
-                
               </div>
             </Fade>
         </div>
-      </section>
-
-      <section id="suggestions" style={sectionStyle}>
-        <Fade triggerOnce>
-          <h1 style={sectionTitleStyle}> Suggesties </h1>
-          <div style={{textAlign: 'center', margin: '0 auto', maxWidth: 720}}>
-            <p> Voor meer inlichtingen en vragen kunt u langskomen in onze winkel of via 058 23 39 19 of info@capecod.be. </p>
-            <p> Bestel tijdig, zo kunnen we uw feestmaaltijd met de zorg behandelen die ze verdient. Bestellingen per mail zijn enkel geldig na onze bevestiging. </p>
-            <p> Uw bestellingen voor de Kerstdagen noteren wij ten laatste op dinsdag  20/12 om 18 uur. Voor de eindejaarsdagen noteren we de laatste bestellingen op woensdag 28/12 om 12uur. Na deze data kunnen bestellingen ook niet meer gewijzigd of geannuleerd worden. </p>
-            <p> Bestellingen op 24/12 en 31/12, kunnen afgehaald worden tussen 13u30 en 17u. </p>
-            <p> Op 25/12 en 1/1 kunnen de bestellingen afgehaald worden tussen 10 en 14u. </p>
-            <p> Sommige gerechten worden op porselein van het huis meegegeven, waarvoor een waarborg zal gevraagd worden. Els & Lieven en hun team, wensen u aangename eindejaarsfeesten. </p>
-          </div>
-        </Fade>
-        
-        <MenuCard menu={MENU} />        
       </section>
 
       <section id="contact" style={sectionStyle}>
