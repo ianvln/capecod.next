@@ -23,18 +23,6 @@ const Home: NextPage = () => {
             <Slide direction='right'>
               <div style={subHeader}> Welkom </div>
             </Slide>
-            <Fade>
-              <div style={announcement}>
-                <div>
-                  <Image alt="Warning announcement" src={warning} width={50} height={50} />
-                </div>
-                <div>
-                  <p>
-                    Gesloten wegens medische redenen. Vanaf februari zijn we er weer!
-                  </p>
-                </div>
-              </div>
-            </Fade>
         </div>
       </section>
 
