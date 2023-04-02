@@ -15,15 +15,15 @@ const Home: NextPage = () => {
       <NavigationWrapper />
       <section id="welcome" style={welcomeBackground}>
         <div style={welcome}>
-            <Fade>
-              <Image alt="Cape Cod Logo" style={welcomeLogo} src={logo} width={250} height={250} />
-            </Fade> 
-            <Slide direction='left'>
-              <h1 style={header}> Cape Cod </h1>
-            </Slide>
-            <Slide direction='right'>
-              <div style={subHeader}> Welkom </div>
-            </Slide>
+          <Fade>
+            <Image alt="Cape Cod Logo" style={welcomeLogo} src={logo} width={250} height={250} />
+          </Fade>
+          <Slide direction='left'>
+            <h1 style={header}> Cape Cod </h1>
+          </Slide>
+          <Slide direction='right'>
+            <div style={subHeader}> Welkom </div>
+          </Slide>
         </div>
       </section>
 
@@ -31,8 +31,8 @@ const Home: NextPage = () => {
         <Fade triggerOnce>
           <h1 style={sectionTitleStyle}> Suggesties </h1>
         </Fade>
-        
-        <MenuCard menu={MENU} />        
+
+        <MenuCard menu={MENU} />
       </section>
 
       <section id="contact" style={sectionStyle}>
@@ -44,7 +44,7 @@ const Home: NextPage = () => {
       </section>
 
     </div>
-    
+
   )
 }
 

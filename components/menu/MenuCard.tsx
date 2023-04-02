@@ -11,6 +11,7 @@ const MenuCard = (props: { menu: Menu }) => {
         <>
             <div className={styles.menuCard}>
                 <Fade triggerOnce damping={0.05} cascade>
+                <p style={{textAlign: 'center'}}> {menu.description} </p>
                     {
                         menu.dishSets.map((ds, i) => (
                             <DishSetCard key={`dish-set-card-${i}`} dishSet={ds} />
