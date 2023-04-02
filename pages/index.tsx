@@ -2,10 +2,11 @@ import type { NextPage } from 'next'
 import { CSSProperties, } from 'react'
 import Image from 'next/image'
 import backgroundImage from '../assets/background.jpg'
-import warning from '../assets/warning.svg';
 import logo from '../assets/capecod-white.svg'
 import { Fade, Slide } from 'react-awesome-reveal'
 import NavigationWrapper from '../components/general/nav/NavigationWrapper'
+import MenuCard from '../components/menu/MenuCard';
+import { MENU } from '../types/Menu';
 
 const Home: NextPage = () => {
 
@@ -24,6 +25,14 @@ const Home: NextPage = () => {
               <div style={subHeader}> Welkom </div>
             </Slide>
         </div>
+      </section>
+
+      <section id="suggestions" style={sectionStyle}>
+        <Fade triggerOnce>
+          <h1 style={sectionTitleStyle}> Suggesties </h1>
+        </Fade>
+        
+        <MenuCard menu={MENU} />        
       </section>
 
       <section id="contact" style={sectionStyle}>

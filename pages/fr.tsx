@@ -6,6 +6,8 @@ import logo from '../assets/capecod-white.svg'
 import warning from '../assets/warning.svg';
 import { Fade, Slide } from 'react-awesome-reveal'
 import NavigationWrapper from '../components/general/nav/NavigationWrapper'
+import MenuCard from '../components/menu/MenuCard'
+import { MENU_FR } from '../types/Menu'
 
 const Home: NextPage = () => {
 
@@ -23,19 +25,15 @@ const Home: NextPage = () => {
             <Slide direction='right'>
               <div style={subHeader}> Bienvenue </div>
             </Slide>
-            <Fade>
-              <div style={announcement}>
-                <div>
-                  <Image alt="Warning announcement" src={warning} width={50} height={50} />
-                </div>
-                <div>
-                  <p>
-                    Fermé pour des raisons médicales. Nous serons de retour à partir de février!
-                  </p>
-                </div>
-              </div>
-            </Fade>
         </div>
+      </section>
+
+      <section id="suggestions" style={sectionStyle}>
+        <Fade triggerOnce>
+          <h1 style={sectionTitleStyle}> Suggestions </h1>
+        </Fade>
+        
+        <MenuCard menu={MENU_FR} />        
       </section>
 
       <section id="contact" style={sectionStyle}>
