@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import useSticky from "../../../effects/general/useSticky";
 import { NavigationItem, NAVIGATION_ITEMS } from "../../../types/general/Navigation";
 import styles from './NavigationBar.module.scss';
+import { useTranslation } from 'react-i18next';
 
 const NavigationBar = () => {
     const { isSticky, stickyRef } = useSticky();
@@ -45,6 +46,8 @@ const NavigationBar = () => {
         return () => document.removeEventListener('scroll', updateActiveItem);
     });
 
+    const { t, i18n } = useTranslation();
+
     return (
         <div className={styles.navigationBar}>
             <nav className={classNames(styles.container, { [styles.sticky] : isSticky })} ref={stickyRef}>
@@ -52,7 +55,7 @@ const NavigationBar = () => {
                     { 
                     NAVIGATION_ITEMS.map((navigationItem => (
                         <li className={classNames(styles.navigationItem, { [styles.activeItem] : isActive(navigationItem) }, { [styles.inactiveItem] : !isActive(navigationItem) })} key={navigationItem.name}> 
-                            <span onClick={() => navigateTo(navigationItem)}>{navigationItem.title}</span>
+                            <span onClick={() => navigateTo(navigationItem)}>{t(navigationItem.title)}</span>
                         </li>)))
                     }
                 </ul>
