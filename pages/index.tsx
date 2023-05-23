@@ -27,14 +27,6 @@ const Home: NextPage = () => {
         </div>
       </section>
 
-      <section id="suggestions" style={sectionStyle}>
-        <Fade triggerOnce>
-          <h1 style={sectionTitleStyle}> Suggesties </h1>
-        </Fade>
-
-        <MenuCard menu={MENU} />
-      </section>
-
       <section id="contact" style={sectionStyle}>
         <h1 style={sectionTitleStyle}> Contact </h1>
         <p> Cape Cod | Lombardsijdestraat 7, 8620 Nieuwpoort </p>
