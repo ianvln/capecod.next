@@ -11,7 +11,7 @@ export const Promo = () => {
             <div style={promoText}>
                 <Image alt="Quotation mark" src={quotationMark} width={50} height={50} />
                 <p> 
-                Tongstrelende gerechten als kreeftschotels, oester- en visbereidingen, salades en pasta's, geflankeerd door exclusieve wijnen, kazen en fijne vleeswaren. 
+                Tongstrelende gerechten als kreeftschotels, oester- en visbereidingen, salades en pasta&apos;s, geflankeerd door exclusieve wijnen, kazen en fijne vleeswaren. 
                 </p>
             </div>
         </div>
