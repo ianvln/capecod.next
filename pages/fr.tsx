@@ -31,8 +31,8 @@ const Home: NextPage = () => {
         </div>
       </section>
 
-      <section id="openingsuren" style={sectionStyle}>
-        <h1 style={sectionTitleStyle}> Heures d'ouverture </h1>
+      <section id="openinghours" style={sectionStyle}>
+        <h1 style={sectionTitleStyle}> Heures d&apos;ouverture </h1>
         <div style={openingHoursStyle}>
           <OpeningHours language={Language.French} openingHours={OPENING_HOURS} />
         </div>

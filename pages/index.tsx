@@ -8,6 +8,7 @@ import NavigationWrapper from '../components/general/nav/NavigationWrapper'
 import OpeningHours from '../components/contact/OpeningHours'
 import { Language } from '../types/general/util/lang/language'
 import { OPENING_HOURS } from '../api/openinghours'
+import { Promo } from '../components/promo/Promo'
 
 const Home: NextPage = () => {
 
@@ -28,7 +29,11 @@ const Home: NextPage = () => {
         </div>
       </section>
 
-      <section id="openingsuren" style={sectionStyle}>
+      <section id="promo">
+        <Promo />
+      </section>
+
+      <section id="openinghours" style={sectionStyle}>
         <h1 style={sectionTitleStyle}> Openingsuren </h1>
         <div style={openingHoursStyle}>
           <OpeningHours language={Language.Dutch} openingHours={OPENING_HOURS} />

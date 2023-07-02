@@ -19,7 +19,7 @@ const OpeningHours = (props: OpeningHoursProps) => {
             <table style={tableStyle}>
                 <tbody>
                 { [...Array(7)].map((_, i) => (
-                    <tr style={rowStyle}>
+                    <tr key={`opening-hour-${i}`} style={rowStyle}>
                         <th style={headerStyle} align="left"> { getDayDescription(i, props.language) } </th>
                         { 
                             !props.openingHours[i as Day].isClosed && 
