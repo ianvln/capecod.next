@@ -5,8 +5,9 @@ import backgroundImage from '../assets/background.jpg'
 import logo from '../assets/capecod-white.svg'
 import { Fade, Slide } from 'react-awesome-reveal'
 import NavigationWrapper from '../components/general/nav/NavigationWrapper'
-import MenuCard from '../components/menu/MenuCard';
-import { MENU } from '../types/Menu';
+import OpeningHours from '../components/contact/OpeningHours'
+import { Language } from '../types/general/util/lang/language'
+import { OPENING_HOURS } from '../api/openinghours'
 
 const Home: NextPage = () => {
 
@@ -27,6 +28,13 @@ const Home: NextPage = () => {
         </div>
       </section>
 
+      <section id="openingsuren" style={sectionStyle}>
+        <h1 style={sectionTitleStyle}> Openingsuren </h1>
+        <div style={openingHoursStyle}>
+          <OpeningHours language={Language.Dutch} openingHours={OPENING_HOURS} />
+        </div>
+      </section>
+
       <section id="contact" style={sectionStyle}>
         <h1 style={sectionTitleStyle}> Contact </h1>
         <p> Cape Cod | Lombardsijdestraat 7, 8620 Nieuwpoort </p>
@@ -34,7 +42,6 @@ const Home: NextPage = () => {
         <p> info@capecod.be </p>
         <p> Ondernemingsnummer 0679 325 939 </p>
       </section>
-
     </div>
 
   )
@@ -93,6 +100,13 @@ const announcement: CSSProperties = {
   backgroundColor: 'rgba(52, 52, 52, 0.8)',
   padding: 10,
   maxWidth: 720
+}
+
+const openingHoursStyle: CSSProperties = {
+  maxWidth: 400,
+  display: 'flex',
+  alignContent: 'center',
+  margin: '0 auto'
 }
 
 export default Home

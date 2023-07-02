@@ -8,6 +8,9 @@ import { Fade, Slide } from 'react-awesome-reveal'
 import NavigationWrapper from '../components/general/nav/NavigationWrapper'
 import MenuCard from '../components/menu/MenuCard'
 import { MENU_FR } from '../types/Menu'
+import OpeningHours from '../components/contact/OpeningHours'
+import { Language } from '../types/general/util/lang/language'
+import { OPENING_HOURS } from '../api/openinghours'
 
 const Home: NextPage = () => {
 
@@ -25,6 +28,13 @@ const Home: NextPage = () => {
             <Slide direction='right'>
               <div style={subHeader}> Bienvenue </div>
             </Slide>
+        </div>
+      </section>
+
+      <section id="openingsuren" style={sectionStyle}>
+        <h1 style={sectionTitleStyle}> Heures d'ouverture </h1>
+        <div style={openingHoursStyle}>
+          <OpeningHours language={Language.French} openingHours={OPENING_HOURS} />
         </div>
       </section>
       
@@ -96,5 +106,13 @@ const announcement: CSSProperties = {
   padding: 10,
   maxWidth: 720
 }
+
+const openingHoursStyle: CSSProperties = {
+  maxWidth: 400,
+  display: 'flex',
+  alignContent: 'center',
+  margin: '0 auto'
+}
+
 
 export default Home
