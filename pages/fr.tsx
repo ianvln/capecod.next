@@ -38,7 +38,7 @@ const Home: NextPage = () => {
         
         <MenuCard menu={MENU_FR} />
         <p style={{textAlign: 'center'}}>
-          Veuillez passer vos commandes quelques jours à l'avance, certains plats doivent être commandés avec un minimum de 4 personnes.
+          Veuillez passer vos commandes quelques jours à l&apos;avance, certains plats doivent être commandés avec un minimum de 4 personnes.
         </p>  
       </section>
 
