@@ -9,6 +9,8 @@ import OpeningHours from '../components/contact/OpeningHours'
 import { Language } from '../types/general/util/lang/language'
 import { OPENING_HOURS } from '../api/openinghours'
 import { Promo } from '../components/promo/Promo'
+import MenuCard from '../components/menu/MenuCard'
+import { MENU } from '../types/Menu'
 
 const Home: NextPage = () => {
 
@@ -31,6 +33,17 @@ const Home: NextPage = () => {
 
       <section id="promo">
         <Promo />
+      </section>
+
+      <section id="suggestions" style={sectionStyle}>
+        <Fade triggerOnce>
+          <h1 style={sectionTitleStyle}> Suggesties </h1>
+        </Fade>
+        
+        <MenuCard menu={MENU} />
+        <p style={{textAlign: 'center'}}>
+          Bestellingen graag enkele dagen voordien doorgeven, sommige gerechten dienen met een minimum van 4 personen besteld te worden
+        </p>  
       </section>
 
       <section id="openinghours" style={sectionStyle}>

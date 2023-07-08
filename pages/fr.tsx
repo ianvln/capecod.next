@@ -31,6 +31,17 @@ const Home: NextPage = () => {
         </div>
       </section>
 
+      <section id="suggestions" style={sectionStyle}>
+        <Fade triggerOnce>
+          <h1 style={sectionTitleStyle}> Suggestions </h1>
+        </Fade>
+        
+        <MenuCard menu={MENU_FR} />
+        <p style={{textAlign: 'center'}}>
+          Veuillez passer vos commandes quelques jours à l'avance, certains plats doivent être commandés avec un minimum de 4 personnes.
+        </p>  
+      </section>
+
       <section id="openinghours" style={sectionStyle}>
         <h1 style={sectionTitleStyle}> Heures d&apos;ouverture </h1>
         <div style={openingHoursStyle}>
