@@ -27,44 +27,48 @@ export interface Dish {
 export const MENU: Menu = {
   dishSets: [
     {
-      name: 'Menu',
+      name: 'Voorgerechten',
       dishes: [
-        { name: 'Salade Niçoise', price: 3.25, unit: '100gr' },
-        { name: 'Pastasalade met gerookte zalm', price: 2.65, unit: '100gr' },
-        { name: 'Gegratineerde bouchot mosselen met Brugse kaas', price: 10 },
-        { name: 'Scampi met kruidenboter', price: 12.5 },
-        { name: 'Zomeroesters uit Oléron', price: 1.95 },
-        { name: 'Gegratineerde oester met prei en champagne', price: 16 },
-        { name: 'Tomaat met Nieuwpoortse garnalen en garnituur', price: 15 },
-        { name: 'Koude Noorse zalm met garnituur', price: 17.5 },
-        { name: 'Babykreeft Belle Vue', price: 27 },
-        { name: 'Babykreeft met look en kruidenboter. pasta', price: 27 },
-        { name: 'Zeewolf met fijne groenten. puree', price: 17 },
-        { name: 'Tongrolletjes met witte wijnsaus. zeekraal en garnalen. puree', price: 25 },
-        { name: 'Gebakken zeetong met slaatje en gebakken krieltjes', price: 25 },
-        { name: 'Varkenshaasje met Tierentijnmosterd. groentjes en krieltjes', price: 13 },
-        { name: 'Piepkuiken met dragonsaus. slaatje en gebakken krieltjes', price: 10 },
-        { name: 'Duo van kwartels met peertje en veenbessen. puree', price: 12.5 },
-        { name: 'Osso Bucco', price: 2.45, unit: '100gr' }
+        { name: 'Gebakken Sint-Jacobsnootjes/room van grondwitloof/spekchips', price: 16 },
+        { name: 'Half dozijn oesters/room van prei en champagne', price: 16 },
+        { name: 'Half dozijn scampi/polderboter met look en kruiden', price: 13 },
+        { name: 'Oesters uit Zeeland, Normandië, Oléron of Gilardeau, volgens aanvoer' },
+      ]
+    },
+    {
+      name: 'Hoofdgerechten',
+      dishes: [
+        { name: 'Zeewolf/fijne groenten', price: 17 },
+        { name: 'Kabeljauw/tomaat/courgette/basilicum', price: 14 },
+        { name: 'Tagliatelli/scampi/tomaat/courgette/basilicum', price: 15 },
+        { name: 'Zalm filet/tomaat/courgetti/basilicum', price: 18.5 },
+        { name: 'Tongrolletjes/witte wijnsaus/Nieuwpoortse garnalen', price: 25 },
+        { name: 'Volledige kreeft (450 à 500gr)/polderboter met look en kruiden', price: 37 },
+        { name: 'Frans piepkuikentje/gebakken krieltjes/dragonsaus/slaatje', price: 10 },
+        { name: 'Catalaans varkenshaasje/Tierentijnmosterd saus/erwten en wortelen', price: 13 },
+        { name: 'Civet van hert/najaarsfruit/Sint-Bernardus bier/selderpuree', price: 15 },
+        { name: 'Tournedos van hazenrug/room van zwarte peper/najaarsfruit/seldepuree', price: 25 },
+        { name: 'Filet van hert/najaarsfruit/gebakken witloof/selderpuree', price: 27.5 },
       ]
     }
   ],
   dishMenus: [
     {
-      name: 'Nieuwpoorts visschotel (minimum 4 personen)',
+      name: 'Nieuwpoorts visbuffet (minimum 6 personen)',
       dishes: [
         {
-          name: 'Assortiment aan koude vis- en schaaldierbereidingen',
-          description: '(met onder andere tomaat garnaal, gestoomde zalm, gerookte en gecarameliseerde zalm, gerookte paling, salade Niçoise, rivierkreeftjes,…) met groentjes, salades, sausjes, pastasalade en brood'
+          name: 'Uitgebreid buffet met onder andere:',
+          description: 'Tomaat met garnalen, rauwe gemarineerde zalm, gerookte Noorse zalm, Hollandse gerookte paling, salade Niçoise, visterrine, rivierkreeft. Salade, brood, groenten, salades en sausjes zijn voorzien.'
         },
       ],
       price: 30
     },
     {
-      name: 'Sint-Bernardus schotel: (minimum 4 personen)',
+      name: 'Sint-Bernardus buffet: (minimum 6 personen)',
       dishes: [
         {
-          name: 'Assortiment aan koude vis- en schaaldierbereidingen met extra tartaar van rund en truffel, Parma ham met cavaillon, fijne pur porc salamis en charcuterie, beenham, ...'
+          name: 'Uitgebreid buffet met alle gerechten als in visbuffet met volgende extra bereidingen:',
+          description: 'Tartaar van rundsvlees met truffel en parmesan, parmaham, pur porc salamis, ambachtelijk gekookte beenham, pastei en rillette. Brood, groenten, salades en sausjes zijn voorzien'
         }
       ],
       price: 35
@@ -75,44 +79,48 @@ export const MENU: Menu = {
 export const MENU_FR: Menu = {
   dishSets: [
     {
-      name: 'Menu',
+      name: 'Entrées',
       dishes: [
-        { name: 'Salade Niçoise', price: 3.25, unit: '100gr' },
-        { name: 'Salade de pâtes au saumon fumé', price: 2.65, unit: '100gr' },
-        { name: 'Moules bouchot gratinées au fromage de Bruges', price: 10 },
-        { name: 'Scampis au beurre d\'herbes', price: 12.5 },
-        { name: 'Huîtres estivales d\'Oléron', price: 1.95 },
-        { name: 'Huître gratinée aux poireaux et champagne', price: 16 },
-        { name: 'Tomate aux crevettes grises de Nieuport et garniture', price: 15 },
-        { name: 'Saumon norvégien froid avec garniture', price: 17.5 },
-        { name: 'Langouste Belle Vue', price: 27 },
-        { name: 'Langouste à l\'ail et au beurre d\'herbes. pâtes', price: 27 },
-        { name: 'Loup de mer aux légumes fins. purée', price: 17 },
-        { name: 'Filets de sole à la sauce au vin blanc. salicorne et crevettes. purée', price: 25 },
-        { name: 'Sole meunière avec salade et pommes de terre sautées', price: 25 },
-        { name: 'Filet de porc à la moutarde Tierentijn. légumes et pommes de terre', price: 13 },
-        { name: 'Poussin à la sauce à l\'estragon. salade et pommes de terre sautées', price: 10 },
-        { name: 'Duo de cailles avec poire et airelles. purée', price: 12.5 },
-        { name: 'Osso Bucco', price: 2.45, unit: '100gr' }
+        { name: 'Noix de Saint-Jacques poêlées/crème de chicon/chips de lard', price: 16 },
+        { name: 'Demi-douzaine d\'huîtres/crème de poireau et champagne', price: 16 },
+        { name: 'Demi-douzaine de scampis/beurre de polder à l\'ail et aux herbes', price: 13 },
+        { name: 'Huîtres de Zélande, Normandie, Oléron ou Gilardeau, selon l\'approvisionnement' },
+      ]
+    },
+    {
+      name: 'Plats Principaux',
+      dishes: [
+        { name: 'Loup de mer/légumes fins', price: 17 },
+        { name: 'Morue/tomate/courgette/basilic', price: 14 },
+        { name: 'Tagliatelles/scampis/tomate/courgette/basilic', price: 15 },
+        { name: 'Filet de saumon/tomate/courgettes/basilic', price: 18.5 },
+        { name: 'Filets de sole/sauce au vin blanc/crevettes de Nieuport', price: 25 },
+        { name: 'Homard entier (450 à 500g)/beurre de polder à l\'ail et aux herbes', price: 37 },
+        { name: 'Poussin français/petites pommes de terre sautées/sauce à l\'estragon/salade', price: 10 },
+        { name: 'Filet de porc catalan/sauce à la moutarde de Tierentijn/pois et carottes', price: 13 },
+        { name: 'Civet de cerf/fruits d\'automne/bière Saint-Bernard/purée de céleri', price: 15 },
+        { name: 'Tournedos de dos de lièvre/crème de poivre noir/fruits d\'automne/purée de céleri', price: 25 },
+        { name: 'Filet de cerf/fruits d\'automne/chicon braisé/purée de céleri', price: 27.5 },
       ]
     }
   ],
   dishMenus: [
     {
-      name: 'Assiette de poissons de Nieuport (minimum 4 personnes)',
+      name: 'Buffet de poissons de Nieuport (minimum 6 personnes)',
       dishes: [
         {
-          name: 'Assortiment de préparations de poissons et fruits de mer froids',
-          description: '(comprenant notamment tomate crevettes, saumon cuit à la vapeur, saumon fumé et caramélisé, anguille fumée, salade Niçoise, écrevisses,...) avec légumes, salades, sauces, salade de pâtes et pain'
+          name: 'Buffet complet comprenant notamment :',
+          description: 'Tomate aux crevettes, saumon mariné cru, saumon fumé norvégien, anguille fumée hollandaise, salade niçoise, terrine de poisson, écrevisse. Salade, pain, légumes, salades et sauces sont inclus.'
         },
       ],
       price: 30
     },
     {
-      name: 'Assiette de Sint-Bernardus : (minimum 4 personnes)',
+      name: 'Buffet Saint-Bernardus : (minimum 6 personnes)',
       dishes: [
         {
-          name: 'Assortiment de préparations de poissons et fruits de mer froids avec tartare supplémentaire de bœuf et truffe, jambon de Parme avec melon cavaillon, fines saucissons de porc pur et charcuterie, jambon cuit,...'
+          name: 'Buffet complet avec tous les plats du buffet de poissons ainsi que les préparations supplémentaires suivantes :',
+          description: 'Tartare de bœuf à la truffe et parmesan, jambon de Parme, saucissons pur porc, jambon cuit artisanal, pâté et rillettes. Pain, légumes, salades et sauces sont inclus.'
         }
       ],
       price: 35
