@@ -28,9 +28,6 @@ const Home: NextPage = () => {
           <Slide direction='right'>
             <div style={subHeader}> Welkom </div>
           </Slide>
-          <Fade>
-            <p> We zijn met verlof vanaf 25 september en zijn er terug op 20 oktober </p>
-          </Fade>
         </div>
       </section>
 
