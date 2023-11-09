@@ -13,5 +13,5 @@ export const OPENING_HOURS: Record<Day, OpeningHour> = {
     [Day.Thursday]: { startTime: '09:00', endTime: '18:00' },
     [Day.Friday]: { startTime: '09:00', endTime: '18:00' },
     [Day.Saturday]: { startTime: '09:00', endTime: '18:00' },
-    [Day.Sunday]: { startTime: '09:00', endTime: '16:00' }
+    [Day.Sunday]: { startTime: '09:00', endTime: '15:00' }
 }
