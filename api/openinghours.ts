@@ -7,11 +7,11 @@ export interface OpeningHour {
 }
 
 export const OPENING_HOURS: Record<Day, OpeningHour> = {
-    [Day.Monday]: { startTime: '09:00', endTime: '18:00' },
-    [Day.Tuesday]: { startTime: '09:00', endTime: '13:30' },
+    [Day.Monday]: { startTime: '09:00', endTime: '13:00' },
+    [Day.Tuesday]: { isClosed: true },
     [Day.Wednesday]: { isClosed: true },
     [Day.Thursday]: { startTime: '09:00', endTime: '18:00' },
     [Day.Friday]: { startTime: '09:00', endTime: '18:00' },
     [Day.Saturday]: { startTime: '09:00', endTime: '18:00' },
-    [Day.Sunday]: { startTime: '09:00', endTime: '18:00' }
+    [Day.Sunday]: { startTime: '09:00', endTime: '16:00' }
 }
