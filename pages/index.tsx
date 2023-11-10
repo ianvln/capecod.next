@@ -35,7 +35,7 @@ const Home: NextPage = () => {
         <Promo />
       </section>
 
-      <section id="suggestions-ye" style={sectionStyle}>
+      <section id="suggestions-ye" style={{...sectionStyle, paddingTop: 120}}>
         <Fade triggerOnce>
           <h1 style={sectionTitleStyle}> Feestsuggesties </h1>
         </Fade>
