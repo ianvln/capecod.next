@@ -48,7 +48,7 @@ const Home: NextPage = () => {
         
         <MenuCard menu={MENU_FR} />
         <p style={{textAlign: 'center'}}>
-          Certains plats doivent être commandés trois jours à l&apos;avance et pour un minimum de 4 personnes. Veuillez appeler pour plus d'explications.
+          Certains plats doivent être commandés trois jours à l&apos;avance et pour un minimum de 4 personnes. Veuillez appeler pour plus d&apos;explications.
         </p>  
       </section>
 
