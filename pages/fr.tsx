@@ -33,11 +33,11 @@ const Home: NextPage = () => {
 
       <section id="suggestions-ye" style={sectionStyle}>
         <Fade triggerOnce>
-          <h1 style={sectionTitleStyle}> Suggestions de fin d'année </h1>
+          <h1 style={sectionTitleStyle}> Suggestions de fin d&apos;année </h1>
         </Fade>
         
         <div className="primary" style={{textAlign: 'center', textTransform: 'uppercase'}}>
-          <a target="_blank" href="/pdf/feestuggesties-2023-FR.pdf"> Voir les suggestions de fin d'année </a> 
+          <a target="_blank" href="/pdf/feestuggesties-2023-FR.pdf"> Voir les suggestions de fin d&apos;année </a> 
         </div>
       </section>
 
