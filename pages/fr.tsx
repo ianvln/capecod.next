@@ -56,7 +56,7 @@ const Home: NextPage = () => {
         <h1 style={sectionTitleStyle}> Heures d&apos;ouverture </h1>
         <div style={openingHoursStyle}>
           <OpeningHours language={Language.French} openingHours={OPENING_HOURS} />
-          <p> D'autres horaires d&apos;ouverture pendant les vacances. </p>
+          <p> D&apos;autres horaires d&apos;ouverture pendant les vacances. </p>
         </div>
       </section>
       

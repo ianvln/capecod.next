@@ -6,7 +6,7 @@ export interface NavigationItem {
 
 export const NAVIGATION_ITEMS: NavigationItem[] = [
     { name: "welcome", title: 'Welkom',  href:'welcome'},
-    { name: "suggestions", title: 'Suggesties',  href:'suggestions'},
+    { name: "suggestions", title: 'Suggesties',  href:'suggestions-ye'},
     { name: "openinghours", title: 'Openingsuren',  href:'openinghours'},
     { name: "contact", title: 'Contact',  href:'contact'},
 ]
