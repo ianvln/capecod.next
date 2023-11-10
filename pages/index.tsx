@@ -35,6 +35,16 @@ const Home: NextPage = () => {
         <Promo />
       </section>
 
+      <section id="suggestions-ye" style={sectionStyle}>
+        <Fade triggerOnce>
+          <h1 style={sectionTitleStyle}> Feestsuggesties </h1>
+        </Fade>
+        
+        <div className="primary" style={{textAlign: 'center', textTransform: 'uppercase'}}>
+          <a target="_blank" href="/pdf/feestuggesties-2023-NL.pdf"> Bekijk de feestsuggesties </a> 
+        </div>
+      </section>
+
       <section id="suggestions" style={sectionStyle}>
         <Fade triggerOnce>
           <h1 style={sectionTitleStyle}> Suggesties </h1>
@@ -42,7 +52,7 @@ const Home: NextPage = () => {
         
         <MenuCard menu={MENU} />
         <p style={{textAlign: 'center'}}>
-          Bestellingen graag enkele dagen voordien doorgeven, sommige gerechten dienen met een minimum van 4 personen besteld te worden
+          Sommige gerechten moet drie dagen op voorhand besteld worden en met een minimum van 4 personen, graag telefoontje voor verdere uitlegBestellingen graag enkele dagen voordien doorgeven, sommige gerechten dienen met een minimum van 4 personen besteld te worden
         </p>  
       </section>
 

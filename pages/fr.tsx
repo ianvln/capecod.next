@@ -31,6 +31,16 @@ const Home: NextPage = () => {
         </div>
       </section>
 
+      <section id="suggestions-ye" style={sectionStyle}>
+        <Fade triggerOnce>
+          <h1 style={sectionTitleStyle}> Suggestions de fin d'année </h1>
+        </Fade>
+        
+        <div className="primary" style={{textAlign: 'center', textTransform: 'uppercase'}}>
+          <a target="_blank" href="/pdf/feestuggesties-2023-FR.pdf"> Voir les suggestions de fin d'année </a> 
+        </div>
+      </section>
+
       <section id="suggestions" style={sectionStyle}>
         <Fade triggerOnce>
           <h1 style={sectionTitleStyle}> Suggestions </h1>
@@ -38,7 +48,7 @@ const Home: NextPage = () => {
         
         <MenuCard menu={MENU_FR} />
         <p style={{textAlign: 'center'}}>
-          Veuillez passer vos commandes quelques jours à l&apos;avance, certains plats doivent être commandés avec un minimum de 4 personnes.
+          Certains plats doivent être commandés trois jours à l'avance et pour un minimum de 4 personnes. Veuillez appeler pour plus d'explications.
         </p>  
       </section>
 
@@ -46,6 +56,7 @@ const Home: NextPage = () => {
         <h1 style={sectionTitleStyle}> Heures d&apos;ouverture </h1>
         <div style={openingHoursStyle}>
           <OpeningHours language={Language.French} openingHours={OPENING_HOURS} />
+          <p> D'autres horaires d'ouverture pendant les vacances. </p>
         </div>
       </section>
       
