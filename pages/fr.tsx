@@ -19,25 +19,30 @@ const Home: NextPage = () => {
       <NavigationWrapper />
       <section id="welcome" style={welcomeBackground}>
         <div style={welcome}>
-            <Fade>
-              <Image alt="Cape Cod Logo" style={welcomeLogo} src={logo} width={250} height={250} />
-            </Fade> 
-            <Slide direction='left'>
-              <h1 style={header}> Cape Cod </h1>
-            </Slide>
-            <Slide direction='right'>
-              <div style={subHeader}> Bienvenue </div>
-            </Slide>
+          <Fade>
+            <Image alt="Cape Cod Logo" style={welcomeLogo} src={logo} width={250} height={250} />
+          </Fade>
+          <Slide direction='left'>
+            <h1 style={header}> Cape Cod </h1>
+          </Slide>
+          <Slide direction='right'>
+            <div style={subHeader}> Bienvenue </div>
+          </Slide>
+          <Fade>
+            <div style={{ fontSize: '1.2rem' }}>
+              <p> Exceptionnellement fermé le lundi 27 novembre </p>
+            </div>
+          </Fade>
         </div>
       </section>
 
-      <section id="suggestions-ye" style={{...sectionStyle, paddingTop: 120}}>
+      <section id="suggestions-ye" style={{ ...sectionStyle, paddingTop: 120 }}>
         <Fade triggerOnce>
           <h1 style={sectionTitleStyle}> Suggestions de fin d&apos;année </h1>
         </Fade>
-        
-        <div className="primary" style={{textAlign: 'center', textTransform: 'uppercase'}}>
-          <a target="_blank" href="/pdf/feestuggesties-2023-FR.pdf"> Voir les suggestions de fin d&apos;année </a> 
+
+        <div className="primary" style={{ textAlign: 'center', textTransform: 'uppercase' }}>
+          <a target="_blank" href="/pdf/feestuggesties-2023-FR.pdf"> Voir les suggestions de fin d&apos;année </a>
         </div>
       </section>
 
@@ -45,32 +50,35 @@ const Home: NextPage = () => {
         <Fade triggerOnce>
           <h1 style={sectionTitleStyle}> Suggestions </h1>
         </Fade>
-        
+
         <MenuCard menu={MENU_FR} />
-        <p style={{textAlign: 'center'}}>
-          Certains plats doivent être commandés trois jours à l&apos;avance et pour un minimum de 4 personnes. Veuillez appeler pour plus d&apos;explications.
-        </p>  
+        <div style={{ maxWidth: 720, margin: '0 auto', textAlign: 'center' }}>
+          <p style={{ textAlign: 'center' }}> Pour plus d'informations et pour passer vos commandes, vous pouvez vous rendre dans notre magasin ou nous contacter au 058/233919 -0498/63 39 99 ou à l'adresse info@capecod.be. </p>
+          <p style={{ textAlign: 'center' }}> Commandez à temps afin que nous puissions traiter votre repas de fête avec le soin qu'il mérite. Les commandes par e-mail ne sont valides qu'après notre confirmation. Nous enregistrons vos commandes pour les fêtes de Noël jusqu'au mercredi 20/12 à 18h. Pour les fêtes de fin d'année, nous prenons note des dernières commandes jusqu'au jeudi 28/12 à 12h. Après ces dates, les commandes NE PEUVENT PLUS ÊTRE MODIFIÉES OU ANNULÉES. Nous vous remercions d'avance pour votre compréhension. </p>
+          <p style={{ textAlign: 'center' }}> Les commandes pour le 24/12 et le 31/12 peuvent être retirées entre 13h30 et 17h. Pour le 25/12 et le 1/1, les commandes peuvent être retirées entre 10h et 13h. Els & Lieven ainsi que leur équipe vous souhaitent d'agréables et savoureuses fêtes de fin d'année. </p>
+        </div>
       </section>
 
       <section id="openinghours" style={sectionStyle}>
         <h1 style={sectionTitleStyle}> Heures d&apos;ouverture </h1>
         <div style={openingHoursStyle}>
           <OpeningHours language={Language.French} openingHours={OPENING_HOURS} />
-          <p> D&apos;autres horaires d&apos;ouverture pendant les vacances. </p>
         </div>
+        <p style={{ display: 'flex', justifyContent: 'center', fontStyle: 'italic'}}> Exceptionnellement fermé le lundi 27 novembre. </p>
       </section>
-      
+
       <section id="contact" style={sectionStyle}>
-        <h1 style={sectionTitleStyle}> Contact </h1>
-        <p> Cape Cod | Lombardsijdestraat 7, 8620 Nieuwpoort </p>
-        <p> Tel: 058 23 39 19 </p>
-        <p> info@capecod.be </p>
-        <p> Ondernemingsnummer 0679 325 939 </p>
-        
+        <div style={{ maxWidth: 720, margin: '0 auto' }} >
+          <h1 style={sectionTitleStyle}> Contact </h1>
+          <p> Cape Cod | Lombardsijdestraat 7, 8620 Nieuwpoort </p>
+          <p> Tel: 058 23 39 19 </p>
+          <p> info@capecod.be </p>
+          <p> Numéro d&apos;entreprise 0679 325 939 </p>
+        </div>
       </section>
 
     </div>
-    
+
   )
 }
 

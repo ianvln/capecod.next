@@ -28,6 +28,11 @@ const Home: NextPage = () => {
           <Slide direction='right'>
             <div style={subHeader}> Welkom </div>
           </Slide>
+          <Fade>
+            <div style={{ fontSize: '1.2rem' }}>
+              <p> Uitzonderlijk gesloten op maandag 27 november </p>
+            </div>
+          </Fade>
         </div>
       </section>
 
@@ -35,25 +40,17 @@ const Home: NextPage = () => {
         <Promo />
       </section>
 
-      <section id="suggestions-ye" style={{...sectionStyle, paddingTop: 120}}>
-        <Fade triggerOnce>
-          <h1 style={sectionTitleStyle}> Eindejaarsuggesties </h1>
-        </Fade>
-        
-        <div className="primary" style={{textAlign: 'center', textTransform: 'uppercase'}}>
-          <a target="_blank" href="/pdf/feestuggesties-2023-NL.pdf"> Bekijk de Eindejaarsuggesties </a> 
-        </div>
-      </section>
-
       <section id="suggestions" style={sectionStyle}>
         <Fade triggerOnce>
           <h1 style={sectionTitleStyle}> Suggesties </h1>
         </Fade>
-        
+
         <MenuCard menu={MENU} />
-        <p style={{textAlign: 'center'}}>
-          Sommige gerechten moet drie dagen op voorhand besteld worden en met een minimum van 4 personen, graag telefoontje voor verdere uitlegBestellingen graag enkele dagen voordien doorgeven, sommige gerechten dienen met een minimum van 4 personen besteld te worden
-        </p>  
+        <div style={{ maxWidth: 720, margin: '0 auto', textAlign: 'center' }}>
+          <p style={{textAlign: 'center' }}> Voor meer inlichtingen en het plaatsen van uw bestellingen kunt u langskomen in onze winkel of via 058/233919 -0498/63 39 99 of info@capecod.be. </p>
+          <p style={{textAlign: 'center' }}> Bestel tijdig, zo kunnen we uw feestmaaltijd met de zorg behandelen die ze verdient. Bestellingen per mail zijn enkel geldig na onze bevestiging. Uw bestellingen voor de Kerstdagen noteren wij ten laatste op woensdag 20/12 om 18 uur. Voor de eindejaarsdagen noteren we de laatste bestellingen op donderdag 28/12 om 12uur. Na deze data kunnen bestellingen ook NIET MEER GEWIJZIGD OF GEANNULEERD worden. Wij danken u alvast voor uw begrip. </p>
+          <p style={{textAlign: 'center' }}> Bestellingen op 24/12 en 31/12, kunnen afgehaald worden tussen 13u30 en 17u. Op 25/12 en 1/1 kunnen de bestellingen afgehaald worden tussen 10 en 13u.Els & Lieven en hun team, wensen u aangename en smaakvolle eindejaarsfeesten. </p>
+        </div>
       </section>
 
       <section id="openinghours" style={sectionStyle}>
@@ -61,14 +58,17 @@ const Home: NextPage = () => {
         <div style={openingHoursStyle}>
           <OpeningHours language={Language.Dutch} openingHours={OPENING_HOURS} />
         </div>
+        <p style={{ display: 'flex', justifyContent: 'center', fontStyle: 'italic'}}> Uitzonderlijk gesloten op maandag 27 november </p>
       </section>
 
       <section id="contact" style={sectionStyle}>
-        <h1 style={sectionTitleStyle}> Contact </h1>
-        <p> Cape Cod | Lombardsijdestraat 7, 8620 Nieuwpoort </p>
-        <p> Tel: 058 23 39 19 </p>
-        <p> info@capecod.be </p>
-        <p> Ondernemingsnummer 0679 325 939 </p>
+        <div style={{ maxWidth: 720, margin: '0 auto' }} >
+          <h1 style={sectionTitleStyle}> Contact </h1>
+          <p> Cape Cod | Lombardsijdestraat 7, 8620 Nieuwpoort </p>
+          <p> Tel: 058 23 39 19 </p>
+          <p> info@capecod.be </p>
+          <p> Ondernemingsnummer 0679 325 939 </p>
+        </div>
       </section>
     </div>
 
