@@ -53,9 +53,9 @@ const Home: NextPage = () => {
 
         <MenuCard menu={MENU_FR} />
         <div style={{ maxWidth: 720, margin: '0 auto', textAlign: 'center' }}>
-          <p style={{ textAlign: 'center' }}> Pour plus d'informations et pour passer vos commandes, vous pouvez vous rendre dans notre magasin ou nous contacter au 058/233919 -0498/63 39 99 ou à l'adresse info@capecod.be. </p>
-          <p style={{ textAlign: 'center' }}> Commandez à temps afin que nous puissions traiter votre repas de fête avec le soin qu'il mérite. Les commandes par e-mail ne sont valides qu'après notre confirmation. Nous enregistrons vos commandes pour les fêtes de Noël jusqu'au mercredi 20/12 à 18h. Pour les fêtes de fin d'année, nous prenons note des dernières commandes jusqu'au jeudi 28/12 à 12h. Après ces dates, les commandes NE PEUVENT PLUS ÊTRE MODIFIÉES OU ANNULÉES. Nous vous remercions d'avance pour votre compréhension. </p>
-          <p style={{ textAlign: 'center' }}> Les commandes pour le 24/12 et le 31/12 peuvent être retirées entre 13h30 et 17h. Pour le 25/12 et le 1/1, les commandes peuvent être retirées entre 10h et 13h. Els & Lieven ainsi que leur équipe vous souhaitent d'agréables et savoureuses fêtes de fin d'année. </p>
+          <p style={{ textAlign: 'center' }}> Pour plus d&apos;informations et pour passer vos commandes, vous pouvez vous rendre dans notre magasin ou nous contacter au 058/233919 -0498/63 39 99 ou à l&apos;adresse info@capecod.be. </p>
+          <p style={{ textAlign: 'center' }}> Commandez à temps afin que nous puissions traiter votre repas de fête avec le soin qu&apos;il mérite. Les commandes par e-mail ne sont valides qu&apos;après notre confirmation. Nous enregistrons vos commandes pour les fêtes de Noël jusqu&apos;au mercredi 20/12 à 18h. Pour les fêtes de fin d&apos;année, nous prenons note des dernières commandes jusqu&apos;au jeudi 28/12 à 12h. Après ces dates, les commandes NE PEUVENT PLUS ÊTRE MODIFIÉES OU ANNULÉES. Nous vous remercions d&apos;avance pour votre compréhension. </p>
+          <p style={{ textAlign: 'center' }}> Les commandes pour le 24/12 et le 31/12 peuvent être retirées entre 13h30 et 17h. Pour le 25/12 et le 1/1, les commandes peuvent être retirées entre 10h et 13h. Els & Lieven ainsi que leur équipe vous souhaitent d&apos;agréables et savoureuses fêtes de fin d&apos;année. </p>
         </div>
       </section>
 
