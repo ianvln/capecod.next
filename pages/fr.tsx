@@ -36,27 +36,22 @@ const Home: NextPage = () => {
         </div>
       </section>
 
-      <section id="suggestions-ye" style={{ ...sectionStyle, paddingTop: 120 }}>
-        <Fade triggerOnce>
-          <h1 style={sectionTitleStyle}> Suggestions de fin d&apos;année </h1>
-        </Fade>
-
-        <div className="primary" style={{ textAlign: 'center', textTransform: 'uppercase' }}>
-          <a target="_blank" href="/pdf/feestuggesties-2023-FR.pdf"> Voir les suggestions de fin d&apos;année </a>
-        </div>
-      </section>
-
       <section id="suggestions" style={sectionStyle}>
         <Fade triggerOnce>
           <h1 style={sectionTitleStyle}> Suggestions </h1>
         </Fade>
 
         <MenuCard menu={MENU_FR} />
-        <div style={{ maxWidth: 720, margin: '0 auto', textAlign: 'center' }}>
-          <p style={{ textAlign: 'center' }}> Pour plus d&apos;informations et pour passer vos commandes, vous pouvez vous rendre dans notre magasin ou nous contacter au 058/233919 -0498/63 39 99 ou à l&apos;adresse info@capecod.be. </p>
-          <p style={{ textAlign: 'center' }}> Commandez à temps afin que nous puissions traiter votre repas de fête avec le soin qu&apos;il mérite. Les commandes par e-mail ne sont valides qu&apos;après notre confirmation. Nous enregistrons vos commandes pour les fêtes de Noël jusqu&apos;au mercredi 20/12 à 18h. Pour les fêtes de fin d&apos;année, nous prenons note des dernières commandes jusqu&apos;au jeudi 28/12 à 12h. Après ces dates, les commandes NE PEUVENT PLUS ÊTRE MODIFIÉES OU ANNULÉES. Nous vous remercions d&apos;avance pour votre compréhension. </p>
-          <p style={{ textAlign: 'center' }}> Les commandes pour le 24/12 et le 31/12 peuvent être retirées entre 13h30 et 17h. Pour le 25/12 et le 1/1, les commandes peuvent être retirées entre 10h et 13h. Els & Lieven ainsi que leur équipe vous souhaitent d&apos;agréables et savoureuses fêtes de fin d&apos;année. </p>
-        </div>
+        <Fade triggerOnce>
+          <div style={{ maxWidth: 720, margin: '0 auto', textAlign: 'center' }}>
+            <p style={{ textAlign: 'center' }}> Pour plus d&apos;informations et pour passer vos commandes, vous pouvez vous rendre dans notre magasin ou nous contacter au 058/233919 -0498/63 39 99 ou à l&apos;adresse info@capecod.be. </p>
+            <p style={{ textAlign: 'center' }}> Commandez à temps afin que nous puissions traiter votre repas de fête avec le soin qu&apos;il mérite. Les commandes par e-mail ne sont valides qu&apos;après notre confirmation. Nous enregistrons vos commandes pour les fêtes de Noël jusqu&apos;au mercredi 20/12 à 18h. Pour les fêtes de fin d&apos;année, nous prenons note des dernières commandes jusqu&apos;au jeudi 28/12 à 12h. Après ces dates, les commandes NE PEUVENT PLUS ÊTRE MODIFIÉES OU ANNULÉES. Nous vous remercions d&apos;avance pour votre compréhension. </p>
+            <p style={{ textAlign: 'center' }}> Les commandes pour le 24/12 et le 31/12 peuvent être retirées entre 13h30 et 17h. Pour le 25/12 et le 1/1, les commandes peuvent être retirées entre 10h et 13h. Els & Lieven ainsi que leur équipe vous souhaitent d&apos;agréables et savoureuses fêtes de fin d&apos;année. </p>
+            <div className="primary" style={{ textAlign: 'center', textTransform: 'uppercase' }}>
+              <a target="_blank" href="/pdf/feestuggesties-2023-FR.pdf"> Voir les suggestions de fin d&apos;année (PDF) </a>
+            </div>
+          </div>
+        </Fade>
       </section>
 
       <section id="openinghours" style={sectionStyle}>
@@ -64,7 +59,7 @@ const Home: NextPage = () => {
         <div style={openingHoursStyle}>
           <OpeningHours language={Language.French} openingHours={OPENING_HOURS} />
         </div>
-        <p style={{ display: 'flex', justifyContent: 'center', fontStyle: 'italic'}}> Exceptionnellement fermé le lundi 27 novembre. </p>
+        <p style={{ display: 'flex', justifyContent: 'center', fontStyle: 'italic' }}> Exceptionnellement fermé le lundi 27 novembre. </p>
       </section>
 
       <section id="contact" style={sectionStyle}>

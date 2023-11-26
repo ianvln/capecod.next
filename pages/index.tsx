@@ -46,11 +46,17 @@ const Home: NextPage = () => {
         </Fade>
 
         <MenuCard menu={MENU} />
-        <div style={{ maxWidth: 720, margin: '0 auto', textAlign: 'center' }}>
-          <p style={{textAlign: 'center' }}> Voor meer inlichtingen en het plaatsen van uw bestellingen kunt u langskomen in onze winkel of via 058/233919 -0498/63 39 99 of info@capecod.be. </p>
-          <p style={{textAlign: 'center' }}> Bestel tijdig, zo kunnen we uw feestmaaltijd met de zorg behandelen die ze verdient. Bestellingen per mail zijn enkel geldig na onze bevestiging. Uw bestellingen voor de Kerstdagen noteren wij ten laatste op woensdag 20/12 om 18 uur. Voor de eindejaarsdagen noteren we de laatste bestellingen op donderdag 28/12 om 12uur. Na deze data kunnen bestellingen ook NIET MEER GEWIJZIGD OF GEANNULEERD worden. Wij danken u alvast voor uw begrip. </p>
-          <p style={{textAlign: 'center' }}> Bestellingen op 24/12 en 31/12, kunnen afgehaald worden tussen 13u30 en 17u. Op 25/12 en 1/1 kunnen de bestellingen afgehaald worden tussen 10 en 13u.Els & Lieven en hun team, wensen u aangename en smaakvolle eindejaarsfeesten. </p>
-        </div>
+
+        <Fade triggerOnce>
+          <div style={{ maxWidth: 720, margin: '0 auto', textAlign: 'center' }}>
+            <p style={{ textAlign: 'center' }}> Voor meer inlichtingen en het plaatsen van uw bestellingen kunt u langskomen in onze winkel of via 058/233919 -0498/63 39 99 of info@capecod.be. </p>
+            <p style={{ textAlign: 'center' }}> Bestel tijdig, zo kunnen we uw feestmaaltijd met de zorg behandelen die ze verdient. Bestellingen per mail zijn enkel geldig na onze bevestiging. Uw bestellingen voor de Kerstdagen noteren wij ten laatste op woensdag 20/12 om 18 uur. Voor de eindejaarsdagen noteren we de laatste bestellingen op donderdag 28/12 om 12uur. Na deze data kunnen bestellingen ook NIET MEER GEWIJZIGD OF GEANNULEERD worden. Wij danken u alvast voor uw begrip. </p>
+            <p style={{ textAlign: 'center' }}> Bestellingen op 24/12 en 31/12, kunnen afgehaald worden tussen 13u30 en 17u. Op 25/12 en 1/1 kunnen de bestellingen afgehaald worden tussen 10 en 13u.Els & Lieven en hun team, wensen u aangename en smaakvolle eindejaarsfeesten. </p>
+            <div className="primary" style={{ textAlign: 'center', textTransform: 'uppercase' }}>
+              <a target="_blank" href="/pdf/feestuggesties-2023-NL.pdf"> Bekijk de feestsuggesties in de PDF </a>
+            </div>
+          </div>
+        </Fade>
       </section>
 
       <section id="openinghours" style={sectionStyle}>
@@ -58,7 +64,7 @@ const Home: NextPage = () => {
         <div style={openingHoursStyle}>
           <OpeningHours language={Language.Dutch} openingHours={OPENING_HOURS} />
         </div>
-        <p style={{ display: 'flex', justifyContent: 'center', fontStyle: 'italic'}}> Uitzonderlijk gesloten op maandag 27 november </p>
+        <p style={{ display: 'flex', justifyContent: 'center', fontStyle: 'italic' }}> Uitzonderlijk gesloten op maandag 27 november </p>
       </section>
 
       <section id="contact" style={sectionStyle}>
