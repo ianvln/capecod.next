@@ -7,10 +7,11 @@ import { Fade, Slide } from 'react-awesome-reveal'
 import NavigationWrapper from '../components/general/nav/NavigationWrapper'
 import OpeningHours from '../components/contact/OpeningHours'
 import { Language } from '../types/general/util/lang/language'
-import { OPENING_HOURS } from '../api/openinghours'
+import { OPENING_HOURS, OPENING_HOURS_BY_DATE_AFTER_NYE, OPENING_HOURS_BY_DATE_AFTER_XMAS_BEFORE_NYE, OPENING_HOURS_BY_DATE_BEFORE_XMAS } from '../api/openinghours'
 import { Promo } from '../components/promo/Promo'
 import MenuCard from '../components/menu/MenuCard'
 import { MENU } from '../types/Menu'
+import OpeningHoursByDate from '../components/contact/OpeningHoursByDate'
 
 const Home: NextPage = () => {
 
@@ -29,15 +30,15 @@ const Home: NextPage = () => {
             <div style={subHeader}> Welkom </div>
           </Slide>
           <Fade>
-            <div style={{ fontSize: '1.2rem' }}>
-              <p> Uitzonderlijk gesloten op maandag 27 november </p>
+            <div style={{ maxWidth: 500, textShadow: '1px 1px 2px black', fontSize: '1.2rem' }}>
+              <p> Gesloten vanaf zondag 17 december tot en met woensdag 20 december. Bereikbaar via e-mail <a href="mailto:info@capecod.be">info@capecod.be</a> en GSM <a href="tel:+32498633999">0498 63 39 99</a> </p>
             </div>
           </Fade>
         </div>
       </section>
 
       <section id="promo">
-        <Promo />
+        <Promo language={Language.Dutch} />
       </section>
 
       <section id="suggestions" style={sectionStyle}>
@@ -64,7 +65,14 @@ const Home: NextPage = () => {
         <div style={openingHoursStyle}>
           <OpeningHours language={Language.Dutch} openingHours={OPENING_HOURS} />
         </div>
-        <p style={{ display: 'flex', justifyContent: 'center', fontStyle: 'italic' }}> Uitzonderlijk gesloten op maandag 27 november </p>
+        <h2 style={{textAlign: 'center', fontSize: '1.4rem'}}> Uitzonderlijke openingsuren tijdens de kerstvakantie </h2>
+        <div style={{...openingHoursStyle, marginTop: '2rem'}}>
+          <OpeningHoursByDate language={Language.Dutch} openingHours={OPENING_HOURS_BY_DATE_BEFORE_XMAS} />
+          <p> Bestellingen vanaf 13u30 tot 17u00 </p>
+          <OpeningHoursByDate language={Language.Dutch} openingHours={OPENING_HOURS_BY_DATE_AFTER_XMAS_BEFORE_NYE} />
+          <p> Bestellingen vanaf 13u30 tot 17u00 </p>
+          <OpeningHoursByDate language={Language.Dutch} openingHours={OPENING_HOURS_BY_DATE_AFTER_NYE} />
+        </div>
       </section>
 
       <section id="contact" style={sectionStyle}>
@@ -84,7 +92,7 @@ const Home: NextPage = () => {
 const welcomeBackground: CSSProperties = {
   background: `url(${backgroundImage.src})`,
   backgroundSize: 'cover',
-  border: '10px solid #c59d5f',
+  border: '0.625rem solid #c59d5f',
   display: 'grid',
   minHeight: '100vh',
   alignContent: 'center',
@@ -137,10 +145,13 @@ const announcement: CSSProperties = {
 }
 
 const openingHoursStyle: CSSProperties = {
-  maxWidth: 400,
+  maxWidth: 500,
   display: 'flex',
+  flexDirection: 'column',
   alignContent: 'center',
-  margin: '0 auto'
+  margin: '0 auto',
+  padding: '0.5rem',
+  border: '0.312rem solid #c59d5f',
 }
 
 export default Home

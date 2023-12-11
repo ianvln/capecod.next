@@ -10,7 +10,9 @@ import MenuCard from '../components/menu/MenuCard'
 import { MENU_FR } from '../types/Menu'
 import OpeningHours from '../components/contact/OpeningHours'
 import { Language } from '../types/general/util/lang/language'
-import { OPENING_HOURS } from '../api/openinghours'
+import { OPENING_HOURS, OPENING_HOURS_BY_DATE_AFTER_NYE, OPENING_HOURS_BY_DATE_AFTER_XMAS_BEFORE_NYE, OPENING_HOURS_BY_DATE_BEFORE_XMAS } from '../api/openinghours'
+import OpeningHoursByDate from '../components/contact/OpeningHoursByDate'
+import { Promo } from '../components/promo/Promo'
 
 const Home: NextPage = () => {
 
@@ -29,13 +31,17 @@ const Home: NextPage = () => {
             <div style={subHeader}> Bienvenue </div>
           </Slide>
           <Fade>
-            <div style={{ fontSize: '1.2rem' }}>
-              <p> Exceptionnellement fermé le lundi 27 novembre </p>
-            </div>
+          <div style={{ maxWidth: 500, textShadow: '1px 1px 2px black', fontSize: '1.2rem' }}>
+              <p>Fermé du dimanche 17 décembre au mercredi 20 décembre. Joignable par e-mail à l'adresse <a href="mailto:info@capecod.be">info@capecod.be</a> et par téléphone portable au <a href="tel:+32498633999">0498 63 39 99</a>.</p>
+          </div>
           </Fade>
         </div>
       </section>
 
+      <section id="promo">
+        <Promo language={Language.French} />
+      </section>
+      
       <section id="suggestions" style={sectionStyle}>
         <Fade triggerOnce>
           <h1 style={sectionTitleStyle}> Suggestions </h1>
@@ -59,7 +65,14 @@ const Home: NextPage = () => {
         <div style={openingHoursStyle}>
           <OpeningHours language={Language.French} openingHours={OPENING_HOURS} />
         </div>
-        <p style={{ display: 'flex', justifyContent: 'center', fontStyle: 'italic' }}> Exceptionnellement fermé le lundi 27 novembre. </p>
+        <h2 style={{textAlign: 'center', fontSize: '1.4rem'}}> Horaires d'ouverture exceptionnels pendant les vacances de Noël. </h2>
+        <div style={{...openingHoursStyle, marginTop: '2rem'}}>
+          <OpeningHoursByDate language={Language.French} openingHours={OPENING_HOURS_BY_DATE_BEFORE_XMAS} />
+          <p> Commandes de 13h30 à 17h00 </p>
+          <OpeningHoursByDate language={Language.French} openingHours={OPENING_HOURS_BY_DATE_AFTER_XMAS_BEFORE_NYE} />
+          <p> Commandes de 13h30 à 17h00 </p>
+          <OpeningHoursByDate language={Language.French} openingHours={OPENING_HOURS_BY_DATE_AFTER_NYE} />
+        </div>
       </section>
 
       <section id="contact" style={sectionStyle}>
@@ -133,10 +146,13 @@ const announcement: CSSProperties = {
 }
 
 const openingHoursStyle: CSSProperties = {
-  maxWidth: 400,
+  maxWidth: 500,
   display: 'flex',
+  flexDirection: 'column',
   alignContent: 'center',
-  margin: '0 auto'
+  margin: '0 auto',
+  padding: '0.5rem',
+  border: '0.312rem solid #c59d5f',
 }
 
 
