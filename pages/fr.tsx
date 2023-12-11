@@ -32,7 +32,7 @@ const Home: NextPage = () => {
           </Slide>
           <Fade>
           <div style={{ maxWidth: 500, textShadow: '1px 1px 2px black', fontSize: '1.2rem' }}>
-              <p>Fermé du dimanche 17 décembre au mercredi 20 décembre. Joignable par e-mail à l'adresse <a href="mailto:info@capecod.be">info@capecod.be</a> et par téléphone portable au <a href="tel:+32498633999">0498 63 39 99</a>.</p>
+              <p>Fermé du dimanche 17 décembre au mercredi 20 décembre. Joignable par e-mail à l&apos;adresse <a href="mailto:info@capecod.be">info@capecod.be</a> et par téléphone portable au <a href="tel:+32498633999">0498 63 39 99</a>.</p>
           </div>
           </Fade>
         </div>
@@ -65,7 +65,7 @@ const Home: NextPage = () => {
         <div style={openingHoursStyle}>
           <OpeningHours language={Language.French} openingHours={OPENING_HOURS} />
         </div>
-        <h2 style={{textAlign: 'center', fontSize: '1.4rem'}}> Horaires d'ouverture exceptionnels pendant les vacances de Noël. </h2>
+        <h2 style={{textAlign: 'center', fontSize: '1.4rem'}}> Horaires d&apos;ouverture exceptionnels pendant les vacances de Noël. </h2>
         <div style={{...openingHoursStyle, marginTop: '2rem'}}>
           <OpeningHoursByDate language={Language.French} openingHours={OPENING_HOURS_BY_DATE_BEFORE_XMAS} />
           <p> Commandes de 13h30 à 17h00 </p>
