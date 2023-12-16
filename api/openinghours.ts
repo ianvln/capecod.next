@@ -29,7 +29,7 @@ export const OPENING_HOURS_BY_DATE_BEFORE_XMAS: OpeningHourByDate[] = [
     { dateNl: 'Zondag 17 december', isClosed: true, dateFr: 'Dimanche 17 décembre' },
     { dateNl: 'Maandag 18 december', isClosed: true, dateFr: 'Lundi 18 décembre' },
     { dateNl: 'Dinsdag 19 december', isClosed: true, dateFr: 'Mardi 19 décembre' },
-    { dateNl: 'Woensdag 20 december', startTime: '09:00', endTime: '17:30', dateFr: 'Mercredi 20 décembre' },
+    { dateNl: 'Woensdag 20 december', isClosed: true, dateFr: 'Mercredi 20 décembre' },
     { dateNl: 'Donderdag 21 december', startTime: '09:00', endTime: '17:30', dateFr: 'Jeudi 21 décembre' },
     { dateNl: 'Vrijdag 22 december', startTime: '09:00', endTime: '17:30', dateFr: 'Vendredi 22 décembre' },
     { dateNl: 'Zaterdag 23 december', startTime: '09:00', endTime: '17:30', dateFr: 'Samedi 23 décembre' },
@@ -42,7 +42,7 @@ export const OPENING_HOURS_BY_DATE_AFTER_XMAS_BEFORE_NYE: OpeningHourByDate[] = 
     { dateNl: 'Woensdag 27 december', startTime: '09:00', endTime: '17:30', dateFr: 'Mercredi 27 décembre' },
     { dateNl: 'Donderdag 28 december', startTime: '09:00', endTime: '17:30', dateFr: 'Jeudi 28 décembre' },
     { dateNl: 'Vrijdag 29 december', startTime: '09:00', endTime: '17:30', dateFr: 'Vendredi 29 décembre' },
-    { dateNl: 'Zaterdag 30 december', startTime: '09:00', endTime: '17:30', dateFr: 'Samedi 30 décembre' },
+    { dateNl: 'Zaterdag 30 december', startTime: '09:00', endTime: '13:30', dateFr: 'Samedi 30 décembre' },
     { dateNl: 'Zondag 31 december', startTime: '08:00', endTime: '16:30', dateFr: 'Dimanche 31 décembre' }
 ];
 
