@@ -234,7 +234,7 @@ export const MENU_FR: Menu = {
     {
       name: 'Préparations de poissons (garnitures incluses)',
       dishes: [
-        { name: 'Ragoût de poissons de Lieven de la mer du Nord', price: 19.5 },
+        { name: 'La marmite de la mer du Nord de Lieven', price: 19.5 },
         { name: 'Blanc de loup de mer-crème de légumes fins', price: 19.5 },
         { name: 'Filet de saumon norvégien-crème de chicon- lard fumé', price: 21 },
         { name: 'Rouleaux de sole de Nieuport-crème de Chablis-crevettes à la crème de chicon', price: 25 },
@@ -244,11 +244,11 @@ export const MENU_FR: Menu = {
     {
       name: 'Préparations de viandes et gibiers (garnitures incluses)',
       dishes: [
-        { name: 'Croquette royale avec purée de pommes de terre (pour les tout-petits)', price: 11 },
+        { name: 'Bouchée à la Reine (pour nos petits convives)', price: 11 },
         { name: 'Filet de porc Duroc-sauce aux champignons des bois-légumes d\'hiver-gratin dauphinois', price: 15.5 },
         { name: 'Ragoût de cerf de Virginie-vin de Bourgogne-garniture de fin d\'année-purée de céleri-rave', price: 17.5 },
         { name: 'Gigot d\'agneau à l\'ail et au romarin-tajine de légumes d\'hiver-gratin dauphinois', price: 18.5 },
-        { name: 'Blanc de poulet de ferme-\'Fine Champagne\'-garniture de fin d\'année-gratin dauphinois', price: 21.5 },
+        { name: 'Blanc de pintadeau de ferme \'Fine Champagne\'-garniture de fin d\'année-gratin Dauphinois', price: 21.5 },
         { name: 'Entrecôte de veau à l\'ail et au romarin-tajine de légumes d\'hiver-gratin dauphinois', price: 25 },
         { name: 'Tournedos de dos de lièvre des Polders-crème de miel & poivre noir-garniture de fin d\'année-purée de céleri-rave', price: 25 },
         { name: 'Filet de cerf Grand Veneur-garniture de fin d\'année-purée de céleri-rave', price: 29.5 },
