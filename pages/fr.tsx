@@ -30,6 +30,9 @@ const Home: NextPage = () => {
           <Slide direction='right'>
             <div style={subHeader}> Bienvenue </div>
           </Slide>
+          <Fade>
+            <div style={announcement}> Le magasin est fermé à partir de 6 janvier</div>
+          </Fade>
         </div>
       </section>
 
@@ -50,6 +53,7 @@ const Home: NextPage = () => {
           <p> Commandes de 13h30 à 17h00 </p>
           <OpeningHoursByDate language={Language.French} openingHours={OPENING_HOURS_BY_DATE_AFTER_NYE} />
         </div>
+        <div style={{textAlign: 'center', marginTop: '1.2rem', fontSize: '1.2rem'}}> Le magasin est fermé à partir de 6 janvier </div>
       </section>
 
       <section id="contact" style={sectionStyle}>

@@ -29,13 +29,16 @@ const Home: NextPage = () => {
           <Slide direction='right'>
             <div style={subHeader}> Welkom </div>
           </Slide>
+          <Fade>
+            <div style={announcement}> Gesloten vanaf 6 januari </div>
+          </Fade>
         </div>
       </section>
 
       <section id="promo">
         <Promo language={Language.Dutch} />
       </section>
-      
+
       <section id="openinghours" style={sectionStyle}>
         <h1 style={sectionTitleStyle}> Openingsuren </h1>
         <div style={openingHoursStyle}>
@@ -49,6 +52,7 @@ const Home: NextPage = () => {
           <p> Bestellingen vanaf 13u30 tot 17u00 </p>
           <OpeningHoursByDate language={Language.Dutch} openingHours={OPENING_HOURS_BY_DATE_AFTER_NYE} />
         </div>
+        <div style={{textAlign: 'center', marginTop: '1.2rem', fontSize: '1.2rem'}}> Gesloten vanaf 6 januari </div>
       </section>
 
       <section id="contact" style={sectionStyle}>
