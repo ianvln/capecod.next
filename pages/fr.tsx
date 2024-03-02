@@ -3,11 +3,8 @@ import { CSSProperties, } from 'react'
 import Image from 'next/image'
 import backgroundImage from '../assets/background.jpg'
 import logo from '../assets/capecod-white.svg'
-import warning from '../assets/warning.svg';
 import { Fade, Slide } from 'react-awesome-reveal'
 import NavigationWrapper from '../components/general/nav/NavigationWrapper'
-import MenuCard from '../components/menu/MenuCard'
-import { MENU_FR } from '../types/Menu'
 import OpeningHours from '../components/contact/OpeningHours'
 import { Language } from '../types/general/util/lang/language'
 import { OPENING_HOURS, OPENING_HOURS_BY_DATE_AFTER_NYE, OPENING_HOURS_BY_DATE_AFTER_XMAS_BEFORE_NYE, OPENING_HOURS_BY_DATE_BEFORE_XMAS } from '../api/openinghours'
@@ -30,9 +27,6 @@ const Home: NextPage = () => {
           <Slide direction='right'>
             <div style={subHeader}> Bienvenue </div>
           </Slide>
-          <Fade>
-            <div style={announcement}> Le magasin est fermé à partir de 6 janvier</div>
-          </Fade>
         </div>
       </section>
 
@@ -45,15 +39,6 @@ const Home: NextPage = () => {
         <div style={openingHoursStyle}>
           <OpeningHours language={Language.French} openingHours={OPENING_HOURS} />
         </div>
-        <h2 style={{textAlign: 'center', fontSize: '1.4rem'}}> Horaires d&apos;ouverture exceptionnels pendant les vacances de Noël. </h2>
-        <div style={{...openingHoursStyle, marginTop: '2rem'}}>
-          <OpeningHoursByDate language={Language.French} openingHours={OPENING_HOURS_BY_DATE_BEFORE_XMAS} />
-          <p> Commandes de 13h30 à 17h00 </p>
-          <OpeningHoursByDate language={Language.French} openingHours={OPENING_HOURS_BY_DATE_AFTER_XMAS_BEFORE_NYE} />
-          <p> Commandes de 13h30 à 17h00 </p>
-          <OpeningHoursByDate language={Language.French} openingHours={OPENING_HOURS_BY_DATE_AFTER_NYE} />
-        </div>
-        <div style={{textAlign: 'center', marginTop: '1.2rem', fontSize: '1.2rem'}}> Le magasin est fermé à partir de 6 janvier </div>
       </section>
 
       <section id="contact" style={sectionStyle}>
