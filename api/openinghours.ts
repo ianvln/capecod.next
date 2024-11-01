@@ -15,13 +15,13 @@ export interface OpeningHourByDate {
 }
 
 export const OPENING_HOURS: Record<Day, OpeningHour> = {
-    [Day.Monday]: { startTime: '09:00', endTime: '13:00' },
+    [Day.Monday]: { startTime: '09:00', endTime: '18:45' },
     [Day.Tuesday]: { isClosed: true },
     [Day.Wednesday]: { isClosed: true },
-    [Day.Thursday]: { startTime: '09:00', endTime: '18:00' },
-    [Day.Friday]: { startTime: '09:00', endTime: '18:00' },
-    [Day.Saturday]: { startTime: '09:00', endTime: '18:00' },
-    [Day.Sunday]: { startTime: '09:00', endTime: '15:00' }
+    [Day.Thursday]: { startTime: '09:00', endTime: '18:45' },
+    [Day.Friday]: { startTime: '09:00', endTime: '18:45' },
+    [Day.Saturday]: { startTime: '09:00', endTime: '18:45' },
+    [Day.Sunday]: { startTime: '09:00', endTime: '18:45' }
 }
 
 export const OPENING_HOURS_BY_DATE_BEFORE_XMAS: OpeningHourByDate[] = [
