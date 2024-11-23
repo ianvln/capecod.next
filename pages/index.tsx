@@ -78,7 +78,7 @@ const Home: NextPage = () => {
               Els, Dries & Lieven en hun team, wensen u aangename en smaakvolle eindejaarsfeesten.
             </p>
             <div className="primary" style={{textAlign: 'center', textTransform: 'uppercase'}}>
-              <a target="_blank" href="/pdf/feestuggesties-2024-NL.pdf">
+              <a target="_blank" href="/pdf/feestsuggesties-2024-NL.pdf">
                 Bekijk de feestsuggesties in de PDF
               </a>
             </div>
