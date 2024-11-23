@@ -192,7 +192,7 @@ export const MENU_FR = {
         { name: "Pour les enfants : Boulettes à la sauce tomate et purée", price: 10 },
         { name: "Filet de porc aux champignons des bois, légumes d'hiver et gratin", price: 16.5 },
         { name: "Filet de dinde à la sauce porto, légumes d'hiver et gratin", price: 14.5 },
-        { name: "Civet de faisan au calvados, garniture de fête et purée de céleri-rave", price: 16.5 },
+        { name: "Blanquette de faisan au calvados, garniture de fête et purée de céleri-rave", price: 16.5 },
         { name: "Pintade fermière à la sauce ‘Fine Champagne’, garniture de fête et gratin", price: 22.5 },
         { name: "Noisettes de cerf ‘Grand Veneur’, garniture de fête et purée de céleri-rave", price: 29.5 }
       ]

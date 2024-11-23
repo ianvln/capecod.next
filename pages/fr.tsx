@@ -94,10 +94,10 @@ const Home: NextPage = () => {
       <section id="contact" style={sectionStyle}>
         <div style={{maxWidth: 720, margin: '0 auto'}}>
           <h1 style={sectionTitleStyle}> Contact </h1>
-          <p> Cape Cod | Lombardsijdestraat 7, 8620 Nieuwpoort </p>
+          <p> Cape Cod | Lombardsijdestraat 7J, 8620 Nieuwpoort </p>
           <p> Tel: 058 23 39 19 </p>
           <p> info@capecod.be </p>
-          <p> Numéro d&apos;entreprise 0679 325 939 </p>
+          <p> Numéro d&apos;entreprise 0772 371 309 </p>
         </div>
       </section>
 
