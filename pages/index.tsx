@@ -57,29 +57,9 @@ const Home: NextPage = () => {
               belletje doen
               via 058/233919 - 0498/63 39 99. Mailen kan ook via info@capecod.be.
             </p>
-            <p style={{textAlign: 'center'}}>
-              Bestel tijdig, zo kunnen we uw feestmaaltijd met de zorg behandelen die ze verdient.
-              Bestellingen per mail zijn enkel geldig na onze bevestiging.
-            </p>
-            <p style={{textAlign: 'center'}}>
-              Hieronder vindt u een richtdatum waarop we onze bestellingen afsluiten. Bij extreme drukte is het mogelijk
-              dat we
-              dit vroeger moeten doen, om onze gekende kwaliteit te kunnen garanderen.
-            </p>
-            <p style={{textAlign: 'center'}}>
-              Uw bestellingen voor de Kerstdagen noteren wij ten allerlaatste op donderdag 19/12 om 18 uur.
-              Voor de eindejaarsdagen noteren we de allerlaatste bestellingen op vrijdag 27/12 om 12 uur.
-              Na deze data kunnen bestellingen ook <strong>NIET MEER GEWIJZIGD OF GEANNULEERD</strong> worden.
-              Wij danken u alvast voor uw begrip.
-            </p>
-            <p style={{textAlign: 'center'}}>
-              Bestellingen op 24/12 en 31/12, kunnen afgehaald worden tussen 13u30 en 17u.
-              Op 25/12 en 1/1 kunnen de bestellingen afgehaald worden tussen 10 en 13u.
-              Els, Dries & Lieven en hun team, wensen u aangename en smaakvolle eindejaarsfeesten.
-            </p>
             <div className="primary" style={{textAlign: 'center', textTransform: 'uppercase'}}>
-              <a target="_blank" href="/pdf/feestsuggesties-2024-NL.pdf">
-                Bekijk de feestsuggesties in de PDF
+              <a target="_blank" href="/pdf/valentijn-menu-2025-nl.pdf">
+                Bekijk de suggesties in PDF
               </a>
             </div>
           </div>

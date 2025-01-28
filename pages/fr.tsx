@@ -58,33 +58,9 @@ const Home: NextPage = () => {
               appeler
               au 058/233919 - 0498/63 39 99. Vous pouvez également envoyer un mail à info@capecod.be.
             </p>
-            <p style={{textAlign: 'center'}}>
-              Commandez à temps, afin que nous puissions préparer votre repas de fête avec le soin qu&apos;il mérite.
-              Les commandes par mail ne sont valables qu&apos;après notre confirmation.
-            </p>
-            <p style={{textAlign: 'center'}}>
-              Vous trouverez ci-dessous une date limite indicative pour nos commandes. En cas d&apos;affluence
-              exceptionnelle, il est
-              possible que nous devions clôturer les commandes plus tôt afin de garantir notre qualité reconnue.
-            </p>
-            <p style={{textAlign: 'center'}}>
-              Nous acceptons vos commandes pour les fêtes de Noël jusqu&apos;au jeudi 19/12 à 18h au plus tard.
-              Pour les fêtes de fin d&apos;année, les dernières commandes seront prises jusqu&apos;au vendredi 27/12 à
-              12h.
-              Après ces dates, les commandes ne pourront plus être <strong>MODIFIÉES OU ANNULÉES</strong>. Nous vous
-              remercions
-              pour votre compréhension.
-            </p>
-            <p style={{textAlign: 'center'}}>
-              Les commandes du 24/12 et du 31/12 peuvent être retirées entre 13h30 et 17h.
-              Les commandes du 25/12 et du 1/1 peuvent être retirées entre 10h et 13h.
-              Els, Dries et Lieven ainsi que leur équipe vous souhaitent de joyeuses fêtes de fin d&apos;année pleines
-              de
-              saveurs.
-            </p>
             <div className="primary" style={{textAlign: 'center', textTransform: 'uppercase'}}>
-              <a target="_blank" href="/pdf/feestsuggesties-2024-FR.pdf">
-                Consultez les suggestions de fêtes au format PDF
+              <a target="_blank" href="/pdf/valentijn-menu-2025-fr.pdf">
+                Consultez les suggestions au format PDF
               </a>
             </div>
           </div>
