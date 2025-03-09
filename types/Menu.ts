@@ -24,7 +24,6 @@ export interface Dish {
 }
 
 export const MENU = {
-  description: 'Valentijnsmenu met speciale gerechten voor de gelegenheid',
   dishSets: [
     {
       name: 'Voorgerechten',
@@ -43,7 +42,6 @@ export const MENU = {
       dishes: [
         { name: 'Halve Canadese kreeft met room van boschampignons en tagliatelle', price: 21 },
         { name: 'Scampi met tagliatelle en knoflooksaus met lente-ui', price: 15 },
-        { name: 'Skrei, eekhoorntjesbrood en groene asperges, stoemp van groenten', price: 20 },
         { name: 'Vispannetje van Chef Dries, kreeftensaus en stoemp van groenten', price: 19 },
         { name: 'Volledige Canadese kreeft met kruidenboter en tagliatelle', price: 39 },
         { name: 'Kwartels met steranijssaus, conferencepeer en veenbessen, gratinaardappelen', price: 14 },
@@ -62,9 +60,8 @@ export const MENU = {
   ],
   dishMenus: [
     {
-      name: 'Valentijnsmenu (voor 2 personen)',
+      name: 'Menu (voor 2 personen)',
       price: 70,
-      description: 'Speciaal samengesteld Valentijnsmenu',
       dishes: [
         { name: 'Gebakken Sint-Jacobsschelpen met room van boschampignons' },
         { name: 'Lamsbout met rozemarijn en knoflook, wintergroenten en gratinaardappelen' },
@@ -75,7 +72,7 @@ export const MENU = {
 };
 
 export const MENU_FR = {
-  description: 'Menu spécial Saint-Valentin pour l’occasion',
+
   dishSets: [
     {
       name: 'Entrées',
@@ -94,7 +91,6 @@ export const MENU_FR = {
       dishes: [
         { name: 'Demi-homard canadien avec crème de champignons des bois et tagliatelles', price: 21 },
         { name: 'Scampi avec tagliatelles et sauce à l’ail et ciboulette', price: 15 },
-        { name: 'Skrei, cèpes et asperges vertes, stoemp de légumes', price: 20 },
         { name: 'Cassolette de poisson du Chef Dries, sauce au homard et stoemp de légumes', price: 19 },
         { name: 'Homard canadien entier avec beurre à l’ail et aux herbes, tagliatelles', price: 39 },
         { name: 'Cailles avec sauce à l’anis étoilé, poire conférence et canneberges, gratin dauphinois', price: 14 },
@@ -113,9 +109,8 @@ export const MENU_FR = {
   ],
   dishMenus: [
     {
-      name: 'Menu Saint-Valentin (pour 2 personnes)',
+      name: 'Menu (pour 2 personnes)',
       price: 70,
-      description: 'Menu spécial conçu pour la Saint-Valentin',
       dishes: [
         { name: 'Noix de Saint-Jacques poêlées avec crème de champignons des bois' },
         { name: 'Gigot d’agneau au romarin et à l’ail, légumes d’hiver et gratin dauphinois' },

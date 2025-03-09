@@ -59,7 +59,7 @@ const Home: NextPage = () => {
               au 058/233919 - 0498/63 39 99. Vous pouvez également envoyer un mail à info@capecod.be.
             </p>
             <div className="primary" style={{textAlign: 'center', textTransform: 'uppercase'}}>
-              <a target="_blank" href="/pdf/valentijn-menu-2025-fr.pdf">
+              <a target="_blank" href="/pdf/menu-fr.pdf">
                 Consultez les suggestions au format PDF
               </a>
             </div>
