@@ -58,17 +58,7 @@ export const MENU = {
       ]
     }
   ],
-  dishMenus: [
-    {
-      name: 'Menu (voor 2 personen)',
-      price: 70,
-      dishes: [
-        { name: 'Gebakken Sint-Jacobsschelpen met room van boschampignons' },
-        { name: 'Lamsbout met rozemarijn en knoflook, wintergroenten en gratinaardappelen' },
-        { name: 'Nagerecht naar keuze' }
-      ]
-    }
-  ]
+  dishMenus: []
 };
 
 export const MENU_FR = {
@@ -107,15 +97,5 @@ export const MENU_FR = {
       ]
     }
   ],
-  dishMenus: [
-    {
-      name: 'Menu (pour 2 personnes)',
-      price: 70,
-      dishes: [
-        { name: 'Noix de Saint-Jacques poêlées avec crème de champignons des bois' },
-        { name: 'Gigot d’agneau au romarin et à l’ail, légumes d’hiver et gratin dauphinois' },
-        { name: 'Dessert au choix' }
-      ]
-    }
-  ]
+  dishMenus: []
 };
