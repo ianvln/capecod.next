@@ -53,13 +53,19 @@ const Home: NextPage = () => {
         <Fade triggerOnce>
           <div style={{maxWidth: 720, margin: '0 auto', textAlign: 'center'}}>
             <p style={{textAlign: 'center'}}>
+              Buffets à commander pour un minimum de 6 personnes,
+              garnitures, salades, sauces et pain inclus.
+              Certains plats sont à commander pour un minimum de 2 ou 4 personnes,
+              et ce, quelques jours à l’avance.
+            </p>
+            <p style={{textAlign: 'center'}}>
               Pour plus d&apos;informations et/ou pour passer vos commandes, vous pouvez passer dans notre magasin ou
               nous
               appeler
               au 058/233919 - 0498/63 39 99. Vous pouvez également envoyer un mail à info@capecod.be.
             </p>
             <div className="primary" style={{textAlign: 'center', textTransform: 'uppercase'}}>
-              <a target="_blank" href="/pdf/menu-fr.pdf">
+              <a target="_blank" href="/pdf/menu-nlfr.pdf">
                 Consultez les suggestions au format PDF
               </a>
             </div>

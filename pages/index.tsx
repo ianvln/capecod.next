@@ -53,12 +53,21 @@ const Home: NextPage = () => {
         <Fade triggerOnce>
           <div style={{maxWidth: 720, margin: '0 auto', textAlign: 'center'}}>
             <p style={{textAlign: 'center'}}>
+              Buffetten te bestellen met een minimum van 6personen,
+              garnituren, slaatjes, sausjes en brood inbegrepen.
+              Sommige gerechten zijn met een minimum van 2 of 4 personen
+              te bestellen, dit enkele dagen op voorhand.
+            </p>
+            <p style={{textAlign: 'center'}}>
+
+            </p>
+            <p style={{textAlign: 'center'}}>
               Voor meer inlichtingen en/of het plaatsen van uw bestellingen kunt u langskomen in onze winkel of een
               belletje doen
               via 058/233919 - 0498/63 39 99. Mailen kan ook via info@capecod.be.
             </p>
             <div className="primary" style={{textAlign: 'center', textTransform: 'uppercase'}}>
-              <a target="_blank" href="/pdf/menu-nl.pdf">
+              <a target="_blank" href="/pdf/menu-nlfr.pdf">
                 Bekijk de suggesties in PDF
               </a>
             </div>
