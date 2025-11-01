@@ -52,20 +52,30 @@ const Home: NextPage = () => {
 
         <Fade triggerOnce>
           <div style={{maxWidth: 720, margin: '0 auto', textAlign: 'center'}}>
-            <p style={{textAlign: 'center'}}>
-              Buffets à commander pour un minimum de 6 personnes,
-              garnitures, salades, sauces et pain inclus.
-              Certains plats sont à commander pour un minimum de 2 ou 4 personnes,
-              et ce, quelques jours à l’avance.
-            </p>
-            <p style={{textAlign: 'center'}}>
-              Pour plus d&apos;informations et/ou pour passer vos commandes, vous pouvez passer dans notre magasin ou
-              nous
-              appeler
-              au 058/233919 - 0498/63 39 99. Vous pouvez également envoyer un mail à info@capecod.be.
-            </p>
+              <p style={{textAlign: 'center'}}>
+                  Pour plus d’informations, n’hésitez pas de nous contacter via 058 23 39 19 ou info@capecod.be.
+              </p>
+              <p style={{textAlign: 'center'}}>
+              Commandez à temps, afin que nous puissions préparer votre repas de fête avec tout le soin qu’il mérite.
+              Commandes par email sont valides après une confirmation de notre part.
+              </p>
+
+              <p style={{textAlign: 'center'}}>
+              Nous prenons votre commande pour les fêtes de Noël au plus tard le dimanche 21/12 a 12H.
+              Nous prenons les dernières commandes pour les fêtes de nouvel an, le dimanche 28/12 a 12h.
+              Après ces dates nous n’acceptons plus CHANGEMENTS ni D’ANNULATIONS.
+              </p>
+
+              <p style={{textAlign: 'center'}}>
+              Les commandes de 24/12 et 31/12 serons prêts à partir de 13h30 et à enlever jusqu’à 17h.
+              Les commandes de 25/12 et 1/1 serons prêts à 10h et à enlever jusqu’à 13h.
+              </p>
+
+              <p style={{textAlign: 'center'}}>
+              Els, Lieven et Dries, et toute l’équipe, vous souhaitent des excellentes fêtes!
+              </p>
             <div className="primary" style={{textAlign: 'center', textTransform: 'uppercase'}}>
-              <a target="_blank" href="/pdf/menu-nlfr.pdf">
+              <a target="_blank" href="/pdf/menu-fr.pdf">
                 Consultez les suggestions au format PDF
               </a>
             </div>

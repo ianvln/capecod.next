@@ -52,22 +52,32 @@ const Home: NextPage = () => {
 
         <Fade triggerOnce>
           <div style={{maxWidth: 720, margin: '0 auto', textAlign: 'center'}}>
-            <p style={{textAlign: 'center'}}>
-              Buffetten te bestellen met een minimum van 6personen,
-              garnituren, slaatjes, sausjes en brood inbegrepen.
-              Sommige gerechten zijn met een minimum van 2 of 4 personen
-              te bestellen, dit enkele dagen op voorhand.
-            </p>
-            <p style={{textAlign: 'center'}}>
+              <p style={{textAlign: 'center'}}>
+              Voor meer inlichtingen en vragen kunt u langskomen in onze winkel of via 058/233919 of info@capecod.be.
+                  </p>
 
-            </p>
-            <p style={{textAlign: 'center'}}>
-              Voor meer inlichtingen en/of het plaatsen van uw bestellingen kunt u langskomen in onze winkel of een
-              belletje doen
-              via 058/233919 - 0498/63 39 99. Mailen kan ook via info@capecod.be.
-            </p>
+
+              <p style={{textAlign: 'center'}}>
+              Bestel tijdig, zo kunnen we uw feestmaaltijd met de zorg behandelen die ze verdient.
+              Bestellingen per mail zijn enkel geldig na onze bevestiging.
+                  </p>
+
+              <p style={{textAlign: 'center'}}>
+              Uw bestellingen voor de Kerstdagen noteren wij ten laatste op zondag 21/12 om 12 uur.
+              Voor de eindejaarsdagen noteren we de laatste bestellingen op zondag 28/12 om 12 uur.
+              Na deze data kunnen bestellingen ook niet meer gewijzigd of geannuleerd worden.
+                  </p>
+
+              <p style={{textAlign: 'center'}}>
+              Bestellingen(24/12 en 31/12) kunnen afgehaald worden tussen 13u30 en 17u.
+              Op 25/12 en 1/1 kunnen de bestellingen enkel afgehaald worden tussen 10u en 13u.
+                  </p>
+
+              <p style={{textAlign: 'center'}}>
+              Dries, Els & Lieven en hun team, wensen u aangename eindejaarsfeesten.
+              </p>
             <div className="primary" style={{textAlign: 'center', textTransform: 'uppercase'}}>
-              <a target="_blank" href="/pdf/menu-nlfr.pdf">
+              <a target="_blank" href="/pdf/menu-nl.pdf">
                 Bekijk de suggesties in PDF
               </a>
             </div>
