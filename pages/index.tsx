@@ -29,6 +29,15 @@ const Home: NextPage = () => {
           <Slide direction='right'>
             <div style={subHeader}> Welkom</div>
           </Slide>
+          <Fade triggerOnce>
+            <div style={{maxWidth: 720, margin: '0 auto', textAlign: 'center'}}>
+              <p style={{textAlign: 'center'}}>
+                Met veel enthousiasme kondigen we aan dat Dries vanaf maandag de winkel van Cape Cod overneemt.
+                Hij staat klaar om jullie te ontvangen met dezelfde kwaliteit, service en passie die jullie gewend zijn.
+                Spring gerust eens binnen en geef hem een warm welkom!
+              </p>
+            </div>
+          </Fade>
         </div>
       </section>
 
@@ -41,48 +50,6 @@ const Home: NextPage = () => {
         <div style={openingHoursStyle}>
           <OpeningHours language={Language.Dutch} openingHours={OPENING_HOURS}/>
         </div>
-      </section>
-
-      <section id="suggestions" style={sectionStyle}>
-        <Fade triggerOnce>
-          <h1 style={sectionTitleStyle}> Suggesties </h1>
-        </Fade>
-
-        <MenuCard menu={MENU}/>
-
-        <Fade triggerOnce>
-          <div style={{maxWidth: 720, margin: '0 auto', textAlign: 'center'}}>
-              <p style={{textAlign: 'center'}}>
-              Voor meer inlichtingen en vragen kunt u langskomen in onze winkel of via 058/233919 of info@capecod.be.
-                  </p>
-
-
-              <p style={{textAlign: 'center'}}>
-              Bestel tijdig, zo kunnen we uw feestmaaltijd met de zorg behandelen die ze verdient.
-              Bestellingen per mail zijn enkel geldig na onze bevestiging.
-                  </p>
-
-              <p style={{textAlign: 'center'}}>
-              Uw bestellingen voor de Kerstdagen noteren wij ten laatste op zondag 21/12 om 12 uur.
-              Voor de eindejaarsdagen noteren we de laatste bestellingen op zondag 28/12 om 12 uur.
-              Na deze data kunnen bestellingen ook niet meer gewijzigd of geannuleerd worden.
-                  </p>
-
-              <p style={{textAlign: 'center'}}>
-              Bestellingen(24/12 en 31/12) kunnen afgehaald worden tussen 13u30 en 17u.
-              Op 25/12 en 1/1 kunnen de bestellingen enkel afgehaald worden tussen 10u en 13u.
-                  </p>
-
-              <p style={{textAlign: 'center'}}>
-              Dries, Els & Lieven en hun team, wensen u aangename eindejaarsfeesten.
-              </p>
-            <div className="primary" style={{textAlign: 'center', textTransform: 'uppercase'}}>
-              <a target="_blank" href="/pdf/menu-nl.pdf">
-                Bekijk de suggesties in PDF
-              </a>
-            </div>
-          </div>
-        </Fade>
       </section>
 
       <section id="contact" style={sectionStyle}>
