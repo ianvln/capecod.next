@@ -42,14 +42,14 @@ const Home: NextPage = () => {
             </div>
           </div>
 
-          <a href="#news" className={styles.scrollCue} aria-hidden tabIndex={-1}><span /></a>
+          <a href="#about" className={styles.scrollCue} aria-hidden tabIndex={-1}><span /></a>
         </section>
 
-        <section id="news" className={styles.news} aria-labelledby="news-title">
-          <Reveal className={styles.newsInner}>
-            <p className="eyebrow">{t.news.eyebrow}</p>
-            <h2 id="news-title" className={styles.newsTitle}>{t.news.title}</h2>
-            <p className={styles.newsText}>{t.news.text}</p>
+        <section id="about" className={styles.about} aria-labelledby="about-title">
+          <Reveal className={styles.aboutInner}>
+            <p className="eyebrow">{t.about.eyebrow}</p>
+            <h2 id="about-title" className={styles.aboutTitle}>{t.about.title}</h2>
+            <p className={styles.aboutText}>{t.about.text}</p>
           </Reveal>
         </section>
 

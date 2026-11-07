@@ -152,15 +152,15 @@
     }
 }
 
-/* News */
+/* About */
 
-.news {
+.about {
     background: $paper-color;
     color: $ink-color;
     padding: clamp(4rem, 9vw, 7rem) $gutter;
 }
 
-.newsInner {
+.aboutInner {
     max-width: 760px;
     margin: 0 auto;
     text-align: center;
@@ -170,12 +170,12 @@
     }
 }
 
-.newsTitle {
+.aboutTitle {
     margin: 1rem 0 1.5rem;
     font-size: clamp(2.2rem, 5vw, 3.25rem);
 }
 
-.newsText {
+.aboutText {
     font-family: var(--font-serif);
     font-size: clamp(1.3rem, 2.6vw, 1.65rem);
     line-height: 1.5;

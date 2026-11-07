@@ -27,13 +27,13 @@ export const fr: Messages = {
         ctaHours: 'Heures d’ouverture',
         ctaCall: 'Appelez-nous'
     },
-    news: {
-        eyebrow: 'Nouvelles',
-        title: 'Un nouveau chapitre',
+    about: {
+        eyebrow: 'À propos',
+        title: 'Traiteur dans l\u2019âme',
         text:
-            'Nous avons le plaisir de vous annoncer que Dries reprendra la boutique Cape Cod à partir de lundi. ' +
-            'Il se fera un plaisir de vous accueillir avec la même qualité, le même service et la même passion que vous connaissez. ' +
-            'N’hésitez pas à passer lui dire bonjour et à lui réserver un accueil chaleureux !'
+            'Chez Cape Cod, Dries vous accueille avec la même qualité, le même service et la même passion que vous connaissez. ' +
+            'D\u2019un plateau d\u2019huîtres fraîches à un menu de fête complet : nous préparons tout avec soin et sommes heureux de vous conseiller. ' +
+            'N\u2019hésitez pas à passer nous voir !'
     },
     offer: {
         eyebrow: 'Notre offre',

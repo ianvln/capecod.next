@@ -25,13 +25,13 @@ export const nl = {
         ctaHours: 'Openingsuren',
         ctaCall: 'Bel ons'
     },
-    news: {
-        eyebrow: 'Nieuws',
-        title: 'Een nieuw hoofdstuk',
+    about: {
+        eyebrow: 'Over ons',
+        title: 'Traiteur in hart en nieren',
         text:
-            'Met veel enthousiasme kondigen we aan dat Dries vanaf maandag de winkel van Cape Cod overneemt. ' +
-            'Hij staat klaar om jullie te ontvangen met dezelfde kwaliteit, service en passie die jullie gewend zijn. ' +
-            'Spring gerust eens binnen en geef hem een warm welkom!'
+            'Bij Cape Cod ontvangt Dries jullie met dezelfde kwaliteit, service en passie die jullie gewend zijn. ' +
+            'Van een schotel verse oesters tot een volledig feestmenu: we bereiden alles met zorg en denken graag met jullie mee. ' +
+            'Spring gerust eens binnen!'
     },
     offer: {
         eyebrow: 'Ons aanbod',
