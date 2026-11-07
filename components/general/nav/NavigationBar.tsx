@@ -1,11 +1,13 @@
 import classNames from "classnames";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import { useTranslation } from "../../../i18n/useTranslation";
 import useSticky from "../../../effects/general/useSticky";
 import { NavigationItem, NAVIGATION_ITEMS } from "../../../types/general/Navigation";
 import styles from './NavigationBar.module.scss';
 
 const NavigationBar = () => {
+    const { t, locale } = useTranslation();
     const { isSticky, stickyRef } = useSticky();
     const [activeNavigationItem, setActiveNavigationItem] = useState<NavigationItem>(NAVIGATION_ITEMS[0]);
 
@@ -52,16 +54,16 @@ const NavigationBar = () => {
                     { 
                     NAVIGATION_ITEMS.map((navigationItem => (
                         <li className={classNames(styles.navigationItem, { [styles.activeItem] : isActive(navigationItem) }, { [styles.inactiveItem] : !isActive(navigationItem) })} key={navigationItem.name}> 
-                            <span onClick={() => navigateTo(navigationItem)}>{navigationItem.title}</span>
+                            <span onClick={() => navigateTo(navigationItem)}>{t.nav[navigationItem.name]}</span>
                         </li>)))
                     }
                 </ul>
                 <div className={styles.localizationMenu}>
-                    <div className={styles.navigationItem}>
-                        <span> <Link href="/" locale="nl">NL</Link> </span>
+                    <div className={classNames(styles.navigationItem, { [styles.activeItem] : locale === 'nl' })}>
+                        <span> <Link href="/" locale="nl" hrefLang="nl" lang="nl">NL</Link> </span>
                     </div>
-                    <div className={styles.navigationItem} style={{marginLeft: 10}}>
-                        <span> <Link href="/fr#"  locale="fr">FR</Link> </span>
+                    <div className={classNames(styles.navigationItem, { [styles.activeItem] : locale === 'fr' })} style={{marginLeft: 10}}>
+                        <span> <Link href="/" locale="fr" hrefLang="fr" lang="fr">FR</Link> </span>
                     </div>
                 </div>
             </nav>

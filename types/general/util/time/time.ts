@@ -1,4 +1,4 @@
-import { Language } from "../lang/language";
+import type { Messages } from "../../../../i18n";
 
 export enum Day {
     Monday,
@@ -10,29 +10,12 @@ export enum Day {
     Sunday
 }
 
-export const getDayDescription = (day: Day, language: Language) => {
-    const dayDescriptionsNl = {
-        [Day.Sunday]: 'Zondag',
-        [Day.Monday]: 'Maandag',
-        [Day.Tuesday]: 'Dinsdag',
-        [Day.Wednesday]: 'Woensdag',
-        [Day.Thursday]: 'Donderdag',
-        [Day.Friday]: 'Vrijdag',
-        [Day.Saturday]: 'Zaterdag'
-    }
-
-    const dayDescriptionsFr = {
-        [Day.Sunday]: 'Dimanche',
-        [Day.Monday]: 'Lundi',
-        [Day.Tuesday]: 'Mardi',
-        [Day.Wednesday]: 'Mecredi',
-        [Day.Thursday]: 'Jeudi',
-        [Day.Friday]: 'Vendredi',
-        [Day.Saturday]: 'Samedi'
-    }
-
-    switch(language) {
-        case Language.Dutch: return dayDescriptionsNl[day];
-        case Language.French: return dayDescriptionsFr[day];
-    }
+export const DAY_KEYS: Record<Day, keyof Messages['days']> = {
+    [Day.Monday]: 'monday',
+    [Day.Tuesday]: 'tuesday',
+    [Day.Wednesday]: 'wednesday',
+    [Day.Thursday]: 'thursday',
+    [Day.Friday]: 'friday',
+    [Day.Saturday]: 'saturday',
+    [Day.Sunday]: 'sunday'
 }

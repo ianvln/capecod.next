@@ -1,11 +1,12 @@
+import type { Messages } from "../../i18n";
+
 export interface NavigationItem {
-    name: string;
-    title: string;
+    name: keyof Messages['nav'];
     href: string;
 }
 
 export const NAVIGATION_ITEMS: NavigationItem[] = [
-    { name: "welcome", title: 'Welkom',  href:'welcome'},
-    { name: "openinghours", title: 'Openingsuren',  href:'openinghours'},
-    { name: "contact", title: 'Contact',  href:'contact'},
+    { name: "welcome", href: 'welcome' },
+    { name: "openinghours", href: 'openinghours' },
+    { name: "contact", href: 'contact' },
 ]

@@ -2,21 +2,18 @@ import { CSSProperties } from "react"
 import Image from 'next/image'
 import dishImage from '../../assets/dish.jpg'
 import quotationMark from '../../assets/quotation-mark.svg'
-import { Language } from "../../types/general/util/lang/language"
+import { useTranslation } from "../../i18n/useTranslation"
 
-interface PromoProps {
-    language: Language;
-}
+export const Promo = () => {
+    const { t } = useTranslation();
 
-export const Promo = (props: PromoProps) => {
     return (
         <div style={promoStyle}>
             <div style={promoImage}>
             </div>
             <div style={promoText}>
-                <Image alt="Quotation mark" src={quotationMark} width={50} height={50} />
-                {props.language === Language.Dutch && (<p>  Tongstrelende gerechten als kreeftschotels, oester- en visbereidingen, salades en pasta&apos;s, geflankeerd door exclusieve wijnen, kazen en fijne vleeswaren. </p>)}
-                {props.language === Language.French && (<p> Des plats délicieux tels que des plateaux de homard, des préparations d&apos;huîtres et de poissons, des salades et des pâtes, accompagnés de vins exclusifs, de fromages et de charcuteries fines. </p>)}
+                <Image alt={t.alt.quotationMark} src={quotationMark} width={50} height={50} />
+                <p> {t.promo} </p>
             </div>
         </div>
     )

@@ -1,3 +1,5 @@
+import type { Locale } from "../i18n";
+
 export interface Menu {
   description?: string;
   dishSets: DishSet[];
@@ -23,7 +25,7 @@ export interface Dish {
   unit?: string;
 }
 
-export const MENU: Menu = {
+const MENU_NL: Menu = {
     description: "Onze suggesties voor het eindejaar 2025",
     dishSets: [
         {
@@ -163,7 +165,7 @@ export const MENU: Menu = {
     dishMenus: []
 };
 
-export const MENU_FR: Menu = {
+const MENU_FR: Menu = {
     description: "Suggestions de fin d’année 2025",
     dishSets: [
         {
@@ -322,3 +324,5 @@ export const MENU_FR: Menu = {
     ],
     dishMenus: []
 };
+
+export const MENUS: Record<Locale, Menu> = { nl: MENU_NL, fr: MENU_FR };

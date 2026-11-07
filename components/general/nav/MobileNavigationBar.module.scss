@@ -94,3 +94,9 @@
         }
     }
 }
+
+.activeItem {
+    span {
+        color: $primary-color;
+    }
+}

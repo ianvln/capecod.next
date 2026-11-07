@@ -1,32 +1,28 @@
 import { CSSProperties } from "react";
 import { OpeningHourByDate } from "../../api/openinghours";
-import { Language } from "../../types/general/util/lang/language";
+import { useTranslation } from "../../i18n/useTranslation";
 
 interface OpeningHoursProps {
     openingHours: OpeningHourByDate[]
-    language: Language;
 }
 
-const CLOSED_IN_DUTCH = 'Gesloten';
-const CLOSED_IN_FRENCH = 'Fermée';
+const OpeningHoursByDate = (props: OpeningHoursProps) => {
+    const { t, locale } = useTranslation();
 
-const getClosedInLanguage = (language: Language) => language === Language.Dutch ? CLOSED_IN_DUTCH : CLOSED_IN_FRENCH;
-
-const OpeningHours = (props: OpeningHoursProps) => {
     return (
         <>
             <table style={tableStyle}>
                 <tbody>
                 { props.openingHours.map((o) => (
-                    <tr key={`opening-hour-${o.dateNl}`} style={rowStyle}>
-                        <th style={headerStyle} align="left"> { props.language === Language.Dutch ? o.dateNl : o.dateFr } </th>
+                    <tr key={`opening-hour-${o.date.nl}`} style={rowStyle}>
+                        <th style={headerStyle} align="left"> { o.date[locale] } </th>
                         { 
                             !o.isClosed && 
                                 (<td align="right"> { o.startTime } - { o.endTime } </td>)
                         }
                         {
                             o.isClosed &&
-                                (<td align="right"> { getClosedInLanguage(props.language) } </td>)
+                                (<td align="right"> { t.openingHours.closed } </td>)
                         }
                     </tr>
                 ))}
@@ -49,4 +45,4 @@ const headerStyle: CSSProperties = {
     fontWeight: 'normal'
 }
 
-export default OpeningHours;
+export default OpeningHoursByDate;
