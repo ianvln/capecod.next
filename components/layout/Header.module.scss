@@ -1,0 +1,201 @@
+@import '../../styles/_variables.scss';
+
+.header {
+    position: fixed;
+    inset: 0 0 auto 0;
+    z-index: 50;
+
+    // The blurred background lives on a pseudo-element: backdrop-filter on the header itself would
+    // make it the containing block for the fixed-position mobile navigation overlay.
+    &::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+        background-color: rgba($background-color, 0.88);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        box-shadow: 0 1px 0 rgba($primary-color, 0.25);
+        opacity: 0;
+        transition: opacity 0.35s ease;
+    }
+}
+
+.solid::before {
+    opacity: 1;
+}
+
+.inner {
+    max-width: $content-width;
+    height: $header-height;
+    margin: 0 auto;
+    padding: 0 $gutter;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    position: relative;
+    z-index: 2;
+    font-family: var(--font-serif);
+    font-size: 1.5rem;
+    letter-spacing: 0.04em;
+    color: $text-light;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+}
+
+.links {
+    display: flex;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.link {
+    position: relative;
+    padding: 0.5rem 0;
+    font-size: 0.8rem;
+    font-weight: 500;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: rgba($text-light, 0.8);
+    transition: color 0.25s ease;
+
+    &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 1px;
+        background: $primary-color;
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform 0.3s ease;
+    }
+
+    &:hover, &.active {
+        color: $text-light;
+
+        &::after {
+            transform: scaleX(1);
+        }
+    }
+}
+
+.languages {
+    display: flex;
+    border: 1px solid rgba($primary-color, 0.5);
+    border-radius: 999px;
+    padding: 2px;
+}
+
+.language {
+    padding: 0.3rem 0.7rem;
+    border-radius: 999px;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    color: rgba($text-light, 0.75);
+    transition: background-color 0.25s ease, color 0.25s ease;
+
+    &:hover {
+        color: $text-light;
+    }
+}
+
+.languageActive {
+    background-color: $primary-color;
+    color: $background-color;
+
+    &:hover {
+        color: $background-color;
+    }
+}
+
+.toggle {
+    display: none;
+    position: relative;
+    z-index: 2;
+    width: 44px;
+    height: 44px;
+    margin-right: -10px;
+    padding: 0;
+    background: none;
+    border: 0;
+    cursor: pointer;
+
+    span {
+        position: absolute;
+        left: 11px;
+        width: 22px;
+        height: 2px;
+        border-radius: 2px;
+        background: $text-light;
+        transition: transform 0.3s ease, opacity 0.2s ease;
+
+        &:nth-child(1) { top: 15px; }
+        &:nth-child(2) { top: 21px; }
+        &:nth-child(3) { top: 27px; }
+    }
+}
+
+.toggleOpen span {
+    &:nth-child(1) { transform: translateY(6px) rotate(45deg); }
+    &:nth-child(2) { opacity: 0; }
+    &:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
+}
+
+@media (max-width: $breakpoint-nav) {
+    .toggle {
+        display: block;
+    }
+
+    .nav {
+        position: fixed;
+        inset: 0;
+        z-index: 1;
+        flex-direction: column;
+        justify-content: center;
+        gap: 3rem;
+        background-color: $background-color;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s ease, visibility 0.3s;
+    }
+
+    .navOpen {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .links {
+        flex-direction: column;
+        align-items: center;
+        gap: 1.25rem;
+    }
+
+    .link {
+        font-family: var(--font-serif);
+        font-size: 2rem;
+        font-weight: 400;
+        letter-spacing: 0.02em;
+        text-transform: none;
+    }
+
+    .language {
+        padding: 0.5rem 1.1rem;
+        font-size: 0.9rem;
+    }
+}

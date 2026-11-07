@@ -1,39 +1,34 @@
-import { Fade, Slide } from "react-awesome-reveal";
-import { Menu } from "../../types/Menu";
 import { useTranslation } from "../../i18n/useTranslation";
+import { Menu } from "../../types/Menu";
+import Reveal from "../general/reveal/Reveal";
 import DishMenuCard from "./DishMenuCard";
 import DishSetCard from "./DishSetCard";
 import styles from './MenuCard.module.scss';
 
-const MenuCard = (props: { menu: Menu }) => {
-    const menu = props.menu;
+const MenuCard = ({ menu }: { menu: Menu }) => {
     const { t } = useTranslation();
-    
+
     return (
-        <>
-            <div className={styles.menuCard}>
-                <Fade triggerOnce damping={0.05} cascade>
-                <p style={{textAlign: 'center'}}> {menu.description} </p>
-                    {
-                        menu.dishSets.map((ds, i) => (
-                            <DishSetCard key={`dish-set-card-${i}`} dishSet={ds} />
-                        ))
-                    }
+        <div className={styles.menu}>
+            {menu.description && <p className={styles.description}>{menu.description}</p>}
 
-                  {menu.dishMenus.length > 0 && (
-                    <>
-                      <h2 className={styles.menusTitle}> {t.menu.menus} </h2>
-                      {
-                        menu.dishMenus.map((dm, i) => (
-                          <DishMenuCard key={`dish-menu-card-${i}`} dishMenu={dm} />
-                        ))
-                      }
-                    </>
-                  )}
+            {menu.dishSets.map((ds, i) => (
+                <Reveal key={`dish-set-${i}`}>
+                    <DishSetCard dishSet={ds} />
+                </Reveal>
+            ))}
 
-                </Fade>
-            </div>
-        </>
+            {menu.dishMenus.length > 0 && (
+                <>
+                    <h2 className={styles.menusTitle}>{t.menu.menus}</h2>
+                    {menu.dishMenus.map((dm, i) => (
+                        <Reveal key={`dish-menu-${i}`}>
+                            <DishMenuCard dishMenu={dm} />
+                        </Reveal>
+                    ))}
+                </>
+            )}
+        </div>
     );
 }
 

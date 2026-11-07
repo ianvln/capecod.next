@@ -1,32 +1,41 @@
 @import '../../styles/_variables.scss';
 
-.title {
-    margin: 0;
-    color: $primary-color;
+.dish {
+    padding: 0.7rem 0;
 }
 
-.heading {
+.row {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    align-items: baseline;
+    gap: 0.75rem;
 }
 
-.subHeading {
-    font-size: 0.875rem;
-    font-style: italic;
+.name {
+    flex: 0 1 auto;
 }
 
-.dishName {
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    font-weight: 300;
+.leader {
+    flex: 1 1 2rem;
+    min-width: 1rem;
+    border-bottom: 1px dotted rgba($primary-color, 0.55);
+    transform: translateY(-0.3rem);
 }
 
 .price {
-    font-weight: 300;
     flex-shrink: 0;
+    color: $primary-color;
+    font-variant-numeric: tabular-nums;
+    white-space: nowrap;
 }
 
-.dishCard {
-    margin-bottom: 15px;
+.unit {
+    color: $text-muted;
+    font-size: 0.85em;
+}
+
+.description {
+    margin-top: 0.2rem;
+    color: $text-muted;
+    font-size: 0.9rem;
+    font-style: italic;
 }

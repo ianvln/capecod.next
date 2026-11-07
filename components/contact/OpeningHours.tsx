@@ -1,49 +1,40 @@
-import { CSSProperties } from "react";
+import classNames from "classnames";
 import { OpeningHour } from "../../api/openinghours";
+import useShopTime from "../../effects/general/useShopTime";
 import { useTranslation } from "../../i18n/useTranslation";
-import { Day, DAY_KEYS } from "../../types/general/util/time/time";
+import { Day, DAYS, DAY_KEYS } from "../../types/general/util/time/time";
+import styles from './OpeningHours.module.scss';
 
 interface OpeningHoursProps {
     openingHours: Record<Day, OpeningHour>;
 }
 
-const OpeningHours = (props: OpeningHoursProps) => {
+const OpeningHours = ({ openingHours }: OpeningHoursProps) => {
     const { t } = useTranslation();
+    const now = useShopTime();
 
     return (
-        <>
-            <table style={tableStyle}>
-                <tbody>
-                { [...Array(7)].map((_, i) => (
-                    <tr key={`opening-hour-${i}`} style={rowStyle}>
-                        <th style={headerStyle} align="left"> { t.days[DAY_KEYS[i as Day]] } </th>
-                        { 
-                            !props.openingHours[i as Day].isClosed && 
-                                (<td align="right"> { props.openingHours[i as Day].startTime } - { props.openingHours[i as Day].endTime } </td>)
-                        }
-                        {
-                            props.openingHours[i as Day].isClosed &&
-                                (<td align="right"> { t.openingHours.closed } </td>)
-                        }
+        <table className={styles.table}>
+            <tbody>
+            {DAYS.map(day => {
+                const hour = openingHours[day];
+                const isToday = now?.day === day;
+
+                return (
+                    <tr key={day} className={classNames(styles.row, { [styles.today]: isToday, [styles.closed]: hour.isClosed })}>
+                        <th scope="row" className={styles.day}>
+                            {t.days[DAY_KEYS[day]]}
+                            {isToday && <span className={styles.todayBadge}>{t.openingHours.today}</span>}
+                        </th>
+                        <td className={styles.hours}>
+                            {hour.isClosed ? t.openingHours.closed : <>{hour.startTime} – {hour.endTime}</>}
+                        </td>
                     </tr>
-                ))}
-                </tbody>
-            </table>
-        </>
-    )
-}
-
-const tableStyle: CSSProperties = {
-    width: '100%'
-}
-
-const rowStyle: CSSProperties = {
-    height: 30
-}
-
-const headerStyle: CSSProperties = {
-    textTransform: 'uppercase',
-    fontWeight: 'normal'
+                );
+            })}
+            </tbody>
+        </table>
+    );
 }
 
 export default OpeningHours;

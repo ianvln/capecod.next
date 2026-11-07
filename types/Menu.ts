@@ -1,5 +1,8 @@
 import type { Locale } from "../i18n";
 
+/** Toggle the seasonal suggestions section (and its navigation item) on the home page. */
+export const SHOW_MENU = false;
+
 export interface Menu {
   description?: string;
   dishSets: DishSet[];

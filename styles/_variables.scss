@@ -1,2 +1,14 @@
 $primary-color: #c59d5f;
+$primary-light: #dcc191;
 $background-color: #0b131c;
+$surface-color: #111c28;
+$paper-color: #f5efe5;
+$ink-color: #1c232b;
+$text-light: #f4efe7;
+$text-muted: rgba(244, 239, 231, 0.7);
+
+$content-width: 1200px;
+$gutter: clamp(1.25rem, 4vw, 2.5rem);
+$header-height: 76px;
+$breakpoint-nav: 900px;
+$breakpoint-md: 860px;

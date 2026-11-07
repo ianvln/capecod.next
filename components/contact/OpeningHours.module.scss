@@ -1,0 +1,54 @@
+@import '../../styles/_variables.scss';
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.row {
+    border-bottom: 1px solid rgba($text-light, 0.1);
+
+    &:last-child {
+        border-bottom: 0;
+    }
+}
+
+.day,
+.hours {
+    padding: 0.85rem 0;
+    font-weight: 400;
+}
+
+.day {
+    text-align: left;
+}
+
+.hours {
+    text-align: right;
+    font-variant-numeric: tabular-nums;
+    white-space: nowrap;
+}
+
+.closed .hours {
+    color: rgba($text-light, 0.6);
+}
+
+.today {
+    .day,
+    .hours {
+        color: $primary-color;
+        font-weight: 600;
+    }
+}
+
+.todayBadge {
+    margin-left: 0.6rem;
+    padding: 0.15rem 0.5rem;
+    border-radius: 999px;
+    background: rgba($primary-color, 0.15);
+    font-size: 0.65rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    vertical-align: middle;
+}

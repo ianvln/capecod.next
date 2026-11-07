@@ -1,32 +1,25 @@
-import { DishMenu, } from "../../types/Menu";
 import { useTranslation } from "../../i18n/useTranslation";
+import { DishMenu } from "../../types/Menu";
 import DishCard from "./DishCard";
 import styles from './DishMenuCard.module.scss';
 
-const DishMenuCard = (props: { dishMenu: DishMenu }) => {
-    const dishMenu = props.dishMenu;
-    const { t } = useTranslation();
+const DishMenuCard = ({ dishMenu }: { dishMenu: DishMenu }) => {
+    const { t, locale } = useTranslation();
+    const price = new Intl.NumberFormat(`${locale}-BE`, { style: 'currency', currency: 'EUR' }).format(dishMenu.price);
 
     return (
-        <div className={styles.dishMenuCard} key={dishMenu.name}>
-            <div className={styles.dishMenuHeader}>
+        <div className={styles.dishMenu}>
+            <div className={styles.header}>
                 <div>
-                    <h3 className={styles.dishMenuName}> { dishMenu.name } </h3>
-                    { dishMenu.description && <span className={styles.dishMenuDescription}> { dishMenu.description } </span> }
+                    <h3 className={styles.name}>{dishMenu.name}</h3>
+                    {dishMenu.description && <p className={styles.description}>{dishMenu.description}</p>}
                 </div>
-                <div className={styles.dishMenuPrice}>
-                    &euro; {dishMenu.price} <span className={styles.dishMenuPricePer}> / {t.menu.perPerson} </span>
+                <div className={styles.price}>
+                    {price} <span className={styles.per}>/ {t.menu.perPerson}</span>
                 </div>
             </div>
-            
-            <hr className={styles.menuLine} />
-            <div className={styles.dishMenuCardContent}>
-                {
-                    dishMenu.dishes.map((d, i) => (
-                        <div key={`dish-card-${i}`}>
-                            <DishCard dish={d} />
-                        </div>
-                ))}
+            <div className={styles.dishes}>
+                {dishMenu.dishes.map((d, i) => <DishCard key={`dish-${i}`} dish={d} />)}
             </div>
         </div>
     );

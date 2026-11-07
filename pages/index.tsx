@@ -1,130 +1,127 @@
 import type { NextPage } from 'next'
-import { CSSProperties, } from 'react'
 import Image from 'next/image'
-import backgroundImage from '../assets/background.jpg'
-import logo from '../assets/capecod-white.svg'
-import { Fade, Slide } from 'react-awesome-reveal'
-import NavigationWrapper from '../components/general/nav/NavigationWrapper'
-import OpeningHours from '../components/contact/OpeningHours'
+import { CONTACT } from '../api/contact'
 import { OPENING_HOURS } from '../api/openinghours'
-import { Promo } from '../components/promo/Promo'
+import heroImage from '../assets/background.jpg'
+import logo from '../assets/capecod-white.svg'
+import OpeningHours from '../components/contact/OpeningHours'
+import OpenStatus from '../components/contact/OpenStatus'
+import Reveal from '../components/general/reveal/Reveal'
+import Footer from '../components/layout/Footer'
+import Header from '../components/layout/Header'
+import MenuCard from '../components/menu/MenuCard'
+import Offer from '../components/offer/Offer'
+import StructuredData from '../components/seo/StructuredData'
 import { useTranslation } from '../i18n/useTranslation'
+import { MENUS, SHOW_MENU } from '../types/Menu'
+import styles from '../styles/Home.module.scss'
 
 const Home: NextPage = () => {
-  const { t } = useTranslation();
+  const { t, locale } = useTranslation()
 
   return (
-    <div>
-      <NavigationWrapper/>
-      <section id="welcome" style={welcomeBackground}>
-        <div style={welcome}>
-          <Fade>
-            <Image alt={t.alt.logo} style={welcomeLogo} src={logo} width={250} height={250}/>
-          </Fade>
-          <Slide direction='left'>
-            <h1 style={header}> Cape Cod </h1>
-          </Slide>
-          <Slide direction='right'>
-            <div style={subHeader}> {t.welcome.title}</div>
-          </Slide>
-          <Fade triggerOnce>
-            <div style={{maxWidth: 720, margin: '0 auto', textAlign: 'center'}}>
-              <p style={{textAlign: 'center'}}>
-                {t.welcome.announcement}
-              </p>
+    <>
+      <StructuredData />
+      <Header />
+
+      <main id="main">
+        <section id="welcome" className={styles.hero}>
+          <Image src={heroImage} alt="" fill priority placeholder="blur" sizes="100vw" className={styles.heroImage} />
+          <div className={styles.heroOverlay} aria-hidden />
+
+          <div className={styles.heroContent}>
+            <Image src={logo} alt={t.alt.logo} width={132} height={110} className={styles.heroLogo} priority />
+            <p className="eyebrow">{t.hero.eyebrow}</p>
+            <h1 className={styles.heroTitle}>Cape Cod</h1>
+            <p className={styles.heroWelcome}>{t.hero.welcome}</p>
+            <p className={styles.heroTagline}>{t.hero.tagline}</p>
+            <OpenStatus openingHours={OPENING_HOURS} />
+            <div className={styles.actions}>
+              <a href="#openinghours" className="button button-primary">{t.hero.ctaHours}</a>
+              <a href={CONTACT.phoneHref} className="button button-ghost">{t.hero.ctaCall} · {CONTACT.phone}</a>
             </div>
-          </Fade>
-        </div>
-      </section>
+          </div>
 
-      <section id="promo">
-        <Promo/>
-      </section>
+          <a href="#news" className={styles.scrollCue} aria-hidden tabIndex={-1}><span /></a>
+        </section>
 
-      <section id="openinghours" style={sectionStyle}>
-        <h1 style={sectionTitleStyle}> {t.openingHours.title} </h1>
-        <div style={openingHoursStyle}>
-          <OpeningHours openingHours={OPENING_HOURS}/>
-        </div>
-      </section>
+        <section id="news" className={styles.news} aria-labelledby="news-title">
+          <Reveal className={styles.newsInner}>
+            <p className="eyebrow">{t.news.eyebrow}</p>
+            <h2 id="news-title" className={styles.newsTitle}>{t.news.title}</h2>
+            <p className={styles.newsText}>{t.news.text}</p>
+          </Reveal>
+        </section>
 
-      <section id="contact" style={sectionStyle}>
-        <div style={{maxWidth: 720, margin: '0 auto'}}>
-          <h1 style={sectionTitleStyle}> {t.contact.title} </h1>
-          <p> Cape Cod | Lombardsijdestraat 7J, 8620 Nieuwpoort </p>
-          <p> Tel: 058 23 39 19 </p>
-          <p> info@capecod.be </p>
-          <p> {t.contact.companyNumber} 0772 371 309 </p>
-        </div>
-      </section>
-    </div>
+        <section id="offer" className={styles.section}>
+          <div className={styles.container}>
+            <Offer />
+          </div>
+        </section>
 
+        {SHOW_MENU && (
+          <section id="menu" className={styles.section} aria-labelledby="menu-title">
+            <div className={styles.container}>
+              <Reveal className={styles.sectionHeader}>
+                <p className="eyebrow">{t.offer.eyebrow}</p>
+                <h2 id="menu-title" className={styles.sectionTitle}>{t.nav.menu}</h2>
+              </Reveal>
+              <MenuCard menu={MENUS[locale]} />
+            </div>
+          </section>
+        )}
+
+        <section id="openinghours" className={`${styles.section} ${styles.hoursSection}`} aria-labelledby="hours-title">
+          <div className={`${styles.container} ${styles.split}`}>
+            <Reveal>
+              <p className="eyebrow">{t.openingHours.eyebrow}</p>
+              <h2 id="hours-title" className={styles.sectionTitle}>{t.openingHours.title}</h2>
+              <OpenStatus openingHours={OPENING_HOURS} className={styles.hoursStatus} />
+            </Reveal>
+            <Reveal className={styles.hoursCard} delay={120}>
+              <OpeningHours openingHours={OPENING_HOURS} />
+            </Reveal>
+          </div>
+        </section>
+
+        <section id="contact" className={styles.contact} aria-labelledby="contact-title">
+          <div className={`${styles.container} ${styles.split}`}>
+            <Reveal>
+              <p className="eyebrow">{t.contact.eyebrow}</p>
+              <h2 id="contact-title" className={styles.sectionTitle}>{t.contact.title}</h2>
+              <address className={styles.address}>
+                {CONTACT.name}<br />
+                {CONTACT.street}<br />
+                {CONTACT.postalCode} {CONTACT.city}
+              </address>
+              <a href={CONTACT.mapsUrl} target="_blank" rel="noopener noreferrer" className={`button ${styles.directions}`}>
+                {t.contact.directions} ↗
+              </a>
+            </Reveal>
+
+            <Reveal delay={120}>
+              <dl className={styles.details}>
+                <div>
+                  <dt>{t.contact.phone}</dt>
+                  <dd><a href={CONTACT.phoneHref}>{CONTACT.phone}</a></dd>
+                </div>
+                <div>
+                  <dt>{t.contact.email}</dt>
+                  <dd><a href={`mailto:${CONTACT.email}`}>{CONTACT.email}</a></dd>
+                </div>
+                <div>
+                  <dt>{t.contact.companyNumber}</dt>
+                  <dd>{CONTACT.companyNumber}</dd>
+                </div>
+              </dl>
+            </Reveal>
+          </div>
+        </section>
+      </main>
+
+      <Footer />
+    </>
   )
-}
-
-const welcomeBackground: CSSProperties = {
-  background: `url(${backgroundImage.src})`,
-  backgroundSize: 'cover',
-  border: '0.625rem solid #c59d5f',
-  display: 'grid',
-  minHeight: '100vh',
-  alignContent: 'center',
-  justifyContent: 'center',
-  position: 'relative',
-}
-
-const sectionStyle: CSSProperties = {
-  maxWidth: '1200px',
-  margin: '200px auto',
-}
-
-const welcomeLogo: CSSProperties = {
-  color: '#fff',
-  fill: '#fff',
-}
-
-const welcome: CSSProperties = {
-  color: '#fff',
-  textAlign: 'center',
-  zIndex: 2
-}
-
-const header: CSSProperties = {
-  fontSize: '4rem',
-  fontFamily: 'Anton, sans-serif',
-  letterSpacing: 2,
-  textTransform: 'uppercase',
-  margin: 0
-}
-
-const sectionTitleStyle: CSSProperties = {
-  textAlign: 'center',
-  textTransform: 'uppercase',
-  fontSize: '2rem',
-  letterSpacing: '2px'
-}
-
-const subHeader: CSSProperties = {
-  fontFamily: 'Herr Von Muellerhoff, cursive',
-  fontSize: '4rem',
-  marginTop: -20,
-  color: '#c59d5f'
-}
-
-const announcement: CSSProperties = {
-  backgroundColor: 'rgba(52, 52, 52, 0.8)',
-  padding: 10,
-  maxWidth: 720
-}
-
-const openingHoursStyle: CSSProperties = {
-  maxWidth: 500,
-  display: 'flex',
-  flexDirection: 'column',
-  alignContent: 'center',
-  margin: '0 auto',
-  padding: '0.5rem',
-  border: '0.312rem solid #c59d5f',
 }
 
 export default Home

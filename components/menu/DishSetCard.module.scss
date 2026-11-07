@@ -1,13 +1,15 @@
-.dishSetCard {
-    margin: 75px 0;
+@import '../../styles/_variables.scss';
+
+.dishSet {
+    margin: 3.5rem 0;
 }
 
-.dishSetName {
-    font-size: 1.6rem;
-    letter-spacing: 2px;
-    margin-bottom: 15px;
+.name {
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid rgba($primary-color, 0.4);
+    font-size: 1.75rem;
 }
 
-.dishSetCardContent {
-    margin-top: 25px;
+.dishes {
+    margin-top: 0.75rem;
 }

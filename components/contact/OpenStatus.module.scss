@@ -1,0 +1,40 @@
+@import '../../styles/_variables.scss';
+
+.status {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    min-height: 2.25rem;
+    padding: 0.4rem 1rem;
+    border: 1px solid rgba($text-light, 0.2);
+    border-radius: 999px;
+    background: rgba($background-color, 0.45);
+    backdrop-filter: blur(6px);
+    font-size: 0.85rem;
+    letter-spacing: 0.02em;
+    color: $text-light;
+}
+
+.placeholder {
+    visibility: hidden;
+    min-width: 12rem;
+}
+
+.dot {
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
+    background: #c46a5a;
+}
+
+.open .dot {
+    background: #6fbf8e;
+    box-shadow: 0 0 0 0 rgba(#6fbf8e, 0.6);
+    animation: pulse 2.4s infinite;
+}
+
+@keyframes pulse {
+    0% { box-shadow: 0 0 0 0 rgba(#6fbf8e, 0.55); }
+    70% { box-shadow: 0 0 0 8px rgba(#6fbf8e, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(#6fbf8e, 0); }
+}

@@ -1,48 +1,30 @@
-import { CSSProperties } from "react";
+import classNames from "classnames";
 import { OpeningHourByDate } from "../../api/openinghours";
 import { useTranslation } from "../../i18n/useTranslation";
+import styles from './OpeningHours.module.scss';
 
-interface OpeningHoursProps {
-    openingHours: OpeningHourByDate[]
+interface OpeningHoursByDateProps {
+    openingHours: OpeningHourByDate[];
 }
 
-const OpeningHoursByDate = (props: OpeningHoursProps) => {
+/** Opening hours for specific dates, e.g. around the holidays. */
+const OpeningHoursByDate = ({ openingHours }: OpeningHoursByDateProps) => {
     const { t, locale } = useTranslation();
 
     return (
-        <>
-            <table style={tableStyle}>
-                <tbody>
-                { props.openingHours.map((o) => (
-                    <tr key={`opening-hour-${o.date.nl}`} style={rowStyle}>
-                        <th style={headerStyle} align="left"> { o.date[locale] } </th>
-                        { 
-                            !o.isClosed && 
-                                (<td align="right"> { o.startTime } - { o.endTime } </td>)
-                        }
-                        {
-                            o.isClosed &&
-                                (<td align="right"> { t.openingHours.closed } </td>)
-                        }
-                    </tr>
-                ))}
-                </tbody>
-            </table>
-        </>
-    )
-}
-
-const tableStyle: CSSProperties = {
-    width: '100%'
-}
-
-const rowStyle: CSSProperties = {
-    height: 30
-}
-
-const headerStyle: CSSProperties = {
-    textTransform: 'uppercase',
-    fontWeight: 'normal'
+        <table className={styles.table}>
+            <tbody>
+            {openingHours.map(o => (
+                <tr key={o.date.nl} className={classNames(styles.row, { [styles.closed]: o.isClosed })}>
+                    <th scope="row" className={styles.day}>{o.date[locale]}</th>
+                    <td className={styles.hours}>
+                        {o.isClosed ? t.openingHours.closed : <>{o.startTime} – {o.endTime}</>}
+                    </td>
+                </tr>
+            ))}
+            </tbody>
+        </table>
+    );
 }
 
 export default OpeningHoursByDate;

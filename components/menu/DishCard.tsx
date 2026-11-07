@@ -1,16 +1,31 @@
+import { useTranslation } from "../../i18n/useTranslation";
 import { Dish } from "../../types/Menu";
 import styles from './DishCard.module.scss';
 
-const DishCard = (props: { dish: Dish }) => {
-    const dish = props.dish;
-    
+const formatPrice = (price: string | number, locale: string) =>
+    typeof price === 'string'
+        ? price
+        : new Intl.NumberFormat(`${locale}-BE`, { style: 'currency', currency: 'EUR' }).format(price);
+
+const DishCard = ({ dish }: { dish: Dish }) => {
+    const { locale } = useTranslation();
+    const hasPrice = dish.price !== undefined && dish.price !== '';
+
     return (
-        <div className={styles.dishCard}>
-            <div className={styles.heading}>
-                <div className={styles.dishName}> {dish.name} </div> 
-                { dish.price && <span className={styles.price}> { typeof dish.price !== 'string' && <span> &euro; </span> } {dish.price} {dish.unit && <span> / {dish.unit} </span>} </span> }
+        <div className={styles.dish}>
+            <div className={styles.row}>
+                <span className={styles.name}>{dish.name}</span>
+                {hasPrice && (
+                    <>
+                        <span className={styles.leader} aria-hidden />
+                        <span className={styles.price}>
+                            {formatPrice(dish.price!, locale)}
+                            {dish.unit && <span className={styles.unit}> / {dish.unit}</span>}
+                        </span>
+                    </>
+                )}
             </div>
-            { dish.description && <div className={styles.subHeading}> {dish.description} </div> }
+            {dish.description && <p className={styles.description}>{dish.description}</p>}
         </div>
     );
 }

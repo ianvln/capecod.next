@@ -1,0 +1,85 @@
+@import '../../styles/_variables.scss';
+
+.offer {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: clamp(2.5rem, 6vw, 6rem);
+    align-items: center;
+
+    @media (max-width: $breakpoint-md) {
+        grid-template-columns: 1fr;
+    }
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(2, clamp(150px, 22vw, 260px));
+    gap: 1rem;
+}
+
+.figure {
+    position: relative;
+    margin: 0;
+    overflow: hidden;
+    border-radius: 4px;
+    background: $surface-color;
+}
+
+.figureTall {
+    grid-row: span 2;
+}
+
+.image {
+    object-fit: cover;
+    transition: transform 1.2s cubic-bezier(0.2, 0.7, 0.2, 1);
+
+    .figure:hover & {
+        transform: scale(1.04);
+    }
+}
+
+.title {
+    margin: 1rem 0 1.5rem;
+    font-size: clamp(2.4rem, 5vw, 3.75rem);
+}
+
+.intro {
+    color: $text-muted;
+    font-size: 1.15rem;
+}
+
+.items {
+    margin: 2.5rem 0 0;
+    padding: 0;
+    list-style: none;
+}
+
+.item {
+    border-top: 1px solid rgba($primary-color, 0.25);
+
+    > div {
+        display: flex;
+        gap: 1.5rem;
+        padding: 1.4rem 0;
+    }
+}
+
+.number {
+    flex-shrink: 0;
+    width: 2rem;
+    padding-top: 0.2rem;
+    font-family: var(--font-serif);
+    font-size: 1.1rem;
+    font-style: italic;
+    color: $primary-color;
+}
+
+.itemTitle {
+    font-size: 1.6rem;
+}
+
+.itemText {
+    margin-top: 0.35rem;
+    color: $text-muted;
+}
