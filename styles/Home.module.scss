@@ -181,6 +181,17 @@
     line-height: 1.5;
 }
 
+/* Menu */
+
+.menuSection {
+    background: $paper-color;
+    color: $ink-color;
+
+    .sectionHeader :global(.eyebrow) {
+        color: darken($primary-color, 18%);
+    }
+}
+
 /* Opening hours */
 
 .hoursSection {
