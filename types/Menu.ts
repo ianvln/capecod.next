@@ -1,7 +1,7 @@
 import type { Locale } from "../i18n";
 
 /** Toggle the seasonal suggestions section (and its navigation item) on the home page. */
-export const SHOW_MENU = false;
+export const SHOW_MENU = true;
 
 export interface Menu {
   description?: string;
@@ -29,139 +29,116 @@ export interface Dish {
 }
 
 const MENU_NL: Menu = {
-    description: "Onze suggesties voor het eindejaar 2025",
+    description: "Onze suggesties voor het eindejaar 2026 \n\nBestel eenvoudig via info@capecod.be. Je bestelling is definitief na onze bevestiging. \nKERST: bestel vóór 20/12 om 12u - EINDEJAAR: bestel vóór 27/12 om 12u\nAfhalen 24/12 en 31/12 tussen 13u30 tot 17u of 25/12 en 01/01 tussen 9u tot 11u.",
+
     dishSets: [
         {
-            name: "Hapjes om het feest smaakvol te openen",
+            name: "HAPJES om het feest smaakvol te openen",
             dishes: [
-                { name: "Assortiment van 4 koude hapjes", price: 7.5 },
-                { name: "Assortiment van 4 warme hapjes", price: 7.5 },
+                { name: "Assortiment van 4 koude hapjes", price: 8.5 },
+                { name: "Assortiment van 4 warme hapjes", price: 8.5 },
                 { name: "Assortiment van 4 luxe feesthapjes", price: 15 }
             ]
         },
         {
-            name: "Hartige gebakjes om te delen",
+            name: "QUICHES om te delen (4-6 personen)",
             dishes: [
-                { name: "Klassieke quiche met spek en prei", price: 12 },
-                { name: "Feestelijke quiche met boschampignons en truffel", price: 15 },
-                { name: "Pittige quiche met chorizo en knolselder", price: 15 },
-                { name: "Pinsa met beukenzwam, coppa en mozzarella", price: 15 },
-                { name: "Pinsa met Brugse brokkelkaas, zoete aardappel, knolselder en honing", price: 15 }
+                { name: "Quiche met boschampignons en truffel", price: 17 },
+                { name: "Quiche met chorizo en knolselder", price: 17 },
+                { name: "Quiche met spek en prei", price: 15 },
+                { name: "Quiche met gerookte zalm en Mimolette kaas", price: 17 }
             ]
         },
         {
-            name: "Geen feest zonder OESTERS, KAVIAAR, GANZENLEVER, KROKETTEN,…",
+            name: "OESTERS, KAVIAAR, GANZELEVER en KROKETTEN",
             dishes: [
-                { name: "Marennes d’Olérons Nr3", price: 2.75, unit: "per stuk" },
-                { name: "Ierse Oisri Nr3", price: 3, unit: "per stuk" },
-                { name: "Gilardeau N3", price: 4.25, unit: "per stuk" },
+                { name: "Gilardeau n° 3", price: 4.5, unit: "per stuk" },
+                { name: "Marennes d’Olérons n° 3", price: 3, unit: "per stuk" },
+                { name: "Warme Oléron n° 3 oesters met prei en champagne", price: 23, description: "6 stuks" },
                 {
                     name: "Kaviaar ‘Heritage’ Oscietra en Beluga",
-                    description: "Beschikbaar in 30, 50 of 125gr"
+                    description: "keuze uit 30, 50 of 125 gram"
                 },
-                {
-                    name: "Onze huisbereide ganzenleverterrines, garnaal- en kaaskroketten"
-                }
+                { name: "Huisbereide ganzenleverterrines" },
+                { name: "Garnaalkroketten" }
             ]
         },
         {
-            name: "Koude voorgerechten (fris en makkelijk op te dienen)",
-            dishes: [
-                { name: "Carpaccio van wit blauw rund, parmezaan", price: 12.5 },
-                { name: "Carpaccio van wit blauw rund, parmezaan en truffel", price: 16.5 },
-                { name: "Tataki van wit blauw rund met Oosterse garnituren", price: 16.5 },
-                { name: "Gebrande Schotse zalm met winters slaatje", price: 17.5 },
-                { name: "Klassieke cocktail met handgepelde Nieuwpoortse garnalen", price: 32 },
-                { name: "Klassieke cocktail met Canadese kreeft", price: 32 }
-            ]
-        },
-        {
-            name: "Soepen",
+            name: "SOEPEN",
             dishes: [
                 { name: "Aspergeroomsoep", price: 9 },
-                { name: "Roomsoep met boschampignons", price: 9 },
-                { name: "Vissoep met rouille en croutons", price: 12 },
-                { name: "Bisque van kreeft met stukjes kreeft en armagnac", price: 17 }
+                { name: "Boschampignonsoep", price: 9 },
+                { name: "Bisque van kreeft met stukjes kreeft en Armagnac", price: 18 }
             ]
         },
         {
-            name: "Warme voorgerechten (al jaren onze feestelijke klassiekers)",
+            name: "KOUDE VOORGERECHTEN (fris en makkelijk op te dienen)",
             dishes: [
-                { name: "Scampi’s in roomsausje met look en fijne kruiden", price: 14 },
-                { name: "Sint-Jacobsnootjes in de schelp op Oma’s wijze", price: 17.5 },
-                { name: "Sint-Jacobsnootjes gebakken met room van boschampignons", price: 17.5 },
-                {
-                    name: "Gegratineerd vispannetje ‘Royale’ (zeewolf, zalm, garnalen en Sint-Jacobsn.)",
-                    price: 17.5
-                },
-                { name: "Warme Oléron oesters (6) met prei en champagne", price: 21, unit: "per 6" },
-                { name: "Gebakken ganzenlever met gekarameliseerde appel", price: 22.5 }
+                { name: "Carpaccio van wit-blauw rund, parmezaan en truffel", price: 18 },
+                { name: "Gebrande Schotse zalm met cruditeiten", price: 18.5 },
+                { name: "Gerookte zalm met zure room en z’n garnituur", price: 21.5 },
+                { name: "Klassieke cocktail met handgepelde Nieuwpoortse garnalen", price: 32 },
+                { name: "Vitello tonnato", price: 21.5 }
             ]
         },
         {
-            name: "Kreeft (volledige kreeften van 450 à 500gr uit Canada)",
+            name: "WARME VOORGERECHTEN (onze feestelijke klassiekers)",
             dishes: [
-                { name: "Klassieke Kreeft ‘Belle Vue’", price: 41.5, unit: "450–500g" },
-                {
-                    name: "Kreeft lookboter en tuinkruiden en tagliatelle",
-                    price: 41.5,
-                    unit: "450–500g"
-                },
-                { name: "Kreeft met Florentine saus en groene asperges", price: 41.5, unit: "450–500g" }
+                { name: "Gegratineerd vispannetje Royale", price: 18, description: "zeewolf, zalm, garnalen, kabeljauw" },
+                { name: "Scampi’s in lookroom en tuinkruiden", price: 16 },
+                { name: "Sint-Jacobsnootjes, gebakken met room van boschampignons", price: 18 },
+                { name: "Sint-Jacobsnootjes, in de schelp op Oma’s wijze", price: 18 },
+                { name: "Truffelravioli met morilles", price: 18.5 },
+                { name: "Warme burrata met tomaat", price: 16 },
+                { name: "Warme Oléron n° 3 oesters met prei en champagne", price: 23, description: "6 stuks" }
             ]
         },
         {
-            name: "Visbereidingen (geserveerd met puree van bintjes en prei)",
+            name: "KREEFT (volledige kreeften van 450-500 gram uit Canada)",
             dishes: [
-                { name: "Wit van zeewolf met fijne groenten", price: 20 },
-                { name: "Zalm met Florentine saus en groene asperges", price: 22.5 },
-                {
-                    name: "Gegratineerd vispannetje ‘Royale’ (zeewolf, zalm, garnalen en Sint-Jacobsn.)",
-                    price: 22.5
-                },
-                {
-                    name: "Gebakken wilde zeebaars met risotto van groene asperges en kreeftensaus",
-                    price: 27.5
-                },
-                { name: "Tongrolletjes met witte wijn saus en Nieuwpoortse garnalen", price: 28.5 }
+                { name: "Klassieke Kreeft 'Belle Vue'", price: 41 },
+                { name: "Kreeft lookboter en tuinkruiden, met tagliatelle", price: 41 },
+                { name: "Kreeft op z’n Italiaans", price: 41, description: "tomaat, oregano, look, salie" }
             ]
         },
         {
-            name: "Vlees en wild bereidingen (stevige winterse gerechten vol smaak)",
+            name: "VISBEREIDINGEN (geserveerd met puree van bintjes en prei)",
             dishes: [
-                { name: "Voor de kleinsten: Balletjes in tomatensaus en puree", price: 10 },
-                { name: "Wit van kalkoen met portosaus, wintergroenten en gratin", price: 14.5 },
-                { name: "Varkenshaasje met room van boschampignons, wintergroenten en gratin", price: 16.5 },
-                { name: "Blanket van fazant met calvados, eindejaarsgarnituur en selderpuree", price: 16.5 },
-                { name: "Civet van hert, eindejaarsgarnituur en selderpuree", price: 17.5 },
-                {
-                    name: "Koude Tataki van wit blauw rund met Oosterse garnituren en noedelsalade",
-                    price: 21.5
-                },
-                { name: "Hoeveparelhoen ‘fine champagne’, eindejaarsgarnituur en gratin", price: 22.5 },
-                { name: "Hazenrug zwarte pepersaus, eindejaarsgarnituur en selderpuree", price: 31.5 },
-                { name: "Filet van edelhert ‘Grand Veneur’, eindejaarsgarnituur en selderpuree", price: 33.5 }
+                { name: "Gegratineerd vispannetje Royale", price: 24.5, description: "zeewolf, zalm, garnalen, kabeljauw" },
+                { name: "Gebakken wilde zeebaars op Toscaanse wijze, met tagliatelle", price: 29.5 },
+                { name: "Kabeljauwhaasje met fijne groentjes en lichte curry", price: 21.5 },
+                { name: "Tarbotfilet in witte wijnsaus en bladspinazie", price: 38.5 },
+                { name: "Tongrolletjes met witte wijnsaus en Nieuwpoortse garnalen", price: 32.5 },
+                { name: "Zalm met dillesaus en venkel", price: 21.5 }
             ]
         },
         {
-            name: "Vegetarische bereidingen",
+            name: "VLEES en WILD BEREIDINGEN (winterse gerechten vol smaak)",
             dishes: [
-                { name: "Quiche met boschampignons en truffel", price: 15 },
-                { name: "Risotto met groene asperges en parmezaan", price: 15 },
-                { name: "Pinsa met Brugse brokkel kaas, zoete aardappel, knolselder en honing", price: 15 }
+                { name: "Blanket van fazant met Calvados, met eindejaarsgarnituur en selderpuree", price: 19.5 },
+                { name: "Civet van hert, met eindejaarsgarnituur en selderpuree", price: 21.5 },
+                { name: "Filet van edelhert ‘Grand Veneur’, met eindejaarsgarnituur en selderpuree", price: 33.5 },
+                { name: "Hoeveparelhoen fine champagne, met eindejaarsgarnituur en gratin", price: 24.5 },
+                { name: "Kalkoen met portosaus, wintergroenten en gratin", price: 16.5 },
+                { name: "Varkenshaasje met room van boschampignons, wintergroenten en gratin", price: 18.5 },
+                { name: "Balletjes in tomatensaus met aardappelpuree (voor de kleinsten)", price: 10 }
             ]
         },
         {
-            name: "Nagerechten (om feestelijk af te sluiten, onze zoete ideetjes)",
+            name: "VEGETARISCHE BEREIDINGEN",
             dishes: [
-                { name: "De Italiaanse klassieker, tiramisu met koffie en amaretto", price: 5 },
-                { name: "Fris citroentaartje met meringue", price: 5 },
-                {
-                    name: "Ons onweerstaanbaar gebakje met lava van zwarte chocolade (moelleux)",
-                    price: 5
-                },
-                { name: "Onze selectie van verfijnde mini dessertjes voor bij de koffie", price: 5 },
-                { name: "Buche met zijdezachte chocolade", price: 5.5 }
+                { name: "Warme burrata met tomaat", price: 16 },
+                { name: "Quiche met boschampignons en truffel", price: 17 },
+                { name: "Rouillade van aubergine", price: 15 },
+                { name: "Truffelravioli met morilles", price: 18.5 }
+            ]
+        },
+        {
+            name: "NAGERECHTEN (om feestelijk af te sluiten)",
+            dishes: [
+                { name: "Buche van chocolade", price: 5.5 },
+                { name: "Tiramisu met speculoos", price: 5.5 },
+                { name: "Fris citroentaartje met meringue", price: 5.5 }
             ]
         }
     ],
@@ -169,159 +146,116 @@ const MENU_NL: Menu = {
 };
 
 const MENU_FR: Menu = {
-    description: "Suggestions de fin d’année 2025",
+    description: "Suggestions de fin d’année 2026 \n\nPassez votre commande via info@capecod.be. \nVotre commande sera définitive après notre confirmation. \nNOËL: commandez avant le 20/12 à 12 h \nFIN D’ANNÉE: commandez avant le 27/12 à 12 h\nRetrait les 24/12 et 31/12 de 13 h 30 à 17 h ou les 25/12 et 01/01 de 9 h à 11 h.",
+
     dishSets: [
         {
-            name: "Amuse-bouches",
+            name: "AMUSES-BOUCHES",
             dishes: [
-                { name: "Assortiment de 4 amuse-bouches froids", price: 7.5 },
-                { name: "Assortiment de 4 amuse-bouches chauds", price: 7.5 },
-                { name: "Assortiment de 4 amuse-bouches de luxe", price: 15 }
+                { name: "Assortiment de 4 amuse-bouches froids", price: 8.5 },
+                { name: "Assortiment de 4 amuse-bouches chauds", price: 8.5 },
+                { name: "Assortiment de 4 amuse-bouches festifs de luxe", price: 15 }
             ]
         },
         {
-            name: "À partager",
+            name: "QUICHES à partager (4-6 personnes)",
             dishes: [
-                { name: "Quiche classique au lard et poireaux", price: 12 },
-                { name: "Quiche festive aux champignons des bois et truffe", price: 15 },
-                { name: "Quiche relevée au chorizo et céleri-rave", price: 15 },
-                { name: "Pinsa aux champignons des bois, coppa et mozzarella", price: 15 },
-                {
-                    name: "Pinsa au vieux fromage de Bruges, patate douce, céleri-rave et miel",
-                    price: 15
-                }
+                { name: "Quiche aux champignons des bois et à la truffe", price: 17 },
+                { name: "Quiche au chorizo et au céleri-rave", price: 17 },
+                { name: "Quiche aux lardons et aux poireaux", price: 15 },
+                { name: "Quiche au saumon fumé et au fromage Mimolette", price: 17 }
             ]
         },
         {
-            name: "Huîtres, caviar, foie gras, croquettes…",
+            name: "HUÎTRES, CAVIAR, FOIE GRAS et CROQUETTES",
             dishes: [
-                { name: "Huîtres Marennes d’Oléron n°3", price: 2.75, unit: "pièce" },
-                { name: "Huîtres Irlandaises Oisri n°3", price: 3, unit: "pièce" },
-                { name: "Huîtres Gilardeau n°3", price: 4.25, unit: "pièce" },
+                { name: "Huîtres Gillardeau n° 3", price: 4.5, unit: "pièce" },
+                { name: "Huîtres de Marennes-Oléron n° 3", price: 3, unit: "pièce" },
+                { name: "Huîtres chaudes d’Oléron n° 3, aux poireaux et au champagne", price: 23, description: "6 pièces" },
                 {
-                    name: "Caviar “Heritage” Oscietra et Beluga",
-                    description: "Disponible en 30, 50 ou 125 g"
+                    name: "Caviar “Heritage” Osciètre et Béluga",
+                    description: "disponibles en portions de 30, 50 ou 125 grammes"
                 },
-                {
-                    name: "Nos terrines de foie gras maison, croquettes de crevettes et de fromage"
-                }
+                { name: "Terrines de foie gras maison" },
+                { name: "Croquettes de crevettes" }
             ]
         },
         {
-            name: "Entrées froides",
+            name: "POTAGES",
             dishes: [
-                { name: "Carpaccio de bœuf blanc-bleu, parmesan", price: 12.5 },
-                { name: "Carpaccio de bœuf blanc-bleu, parmesan et truffe", price: 16.5 },
-                { name: "Tataki de bœuf blanc-bleu aux garnitures Orientales", price: 16.5 },
-                { name: "Saumon Ecossais légèrement brûlé, salade hivernale", price: 17.5 },
-                {
-                    name: "Cocktail classique aux crevettes de Nieuport décortiquées à la main",
-                    price: 32
-                },
-                { name: "Cocktail classique au homard Canadien", price: 32 }
+                { name: "Velouté d’asperges", price: 9 },
+                { name: "Velouté de champignons des bois", price: 9 },
+                { name: "Bisque de homard, éclats de homard et Armagnac", price: 18 }
             ]
         },
         {
-            name: "Soupes",
+            name: "ENTRÉES FROIDES",
             dishes: [
-                { name: "Crème d’asperges", price: 9 },
-                { name: "Crème de champignons des bois", price: 9 },
-                { name: "Soupe de poisson avec rouille et croûtons", price: 12 },
-                { name: "Bisque de homard avec morceaux de homard et armagnac", price: 17 }
+                { name: "Carpaccio de bœuf blanc-bleu, parmesan et truffe", price: 18 },
+                { name: "Saumon écossais snacké, accompagné de crudités", price: 18.5 },
+                { name: "Saumon fumé, crème aigre et ses garnitures", price: 21.5 },
+                { name: "Cocktail classique aux crevettes grises de Nieuport, décortiquées à la main", price: 32 },
+                { name: "Vitello tonnato", price: 21.5 }
             ]
         },
         {
-            name: "Entrées chaudes",
+            name: "ENTRÉES CHAUDES",
             dishes: [
-                { name: "Scampis à la crème, ail et fines herbes", price: 14 },
-                { name: "Noix de Saint-Jacques dans leur coquille “grand-mère”", price: 17.5 },
-                { name: "Noix de Saint-Jacques poêlées, crème de champignons des bois", price: 17.5 },
-                {
-                    name: "Gratin de poisson “Royale” (loup de mer, saumon, crevettes et Saint-Jacques)",
-                    price: 17.5
-                },
-                { name: "Huîtres d’Oléron chaudes (6) aux poireaux et champagne", price: 21, unit: "6 pcs" },
-                { name: "Foie gras poêlé, pomme caramélisée", price: 22.5 }
+                { name: "Gratinée de poissons Royale", price: 18, description: "lotte, saumon, crevettes et cabillaud" },
+                { name: "Scampis à la crème d’ail et aux herbes fraîches", price: 16 },
+                { name: "Noix de Saint-Jacques poêlées, crème de champignons des bois", price: 18 },
+                { name: "Noix de Saint-Jacques en coquille, préparées à l’ancienne, façon grand-mère", price: 18 },
+                { name: "Ravioles à la truffe et aux morilles", price: 18.5 },
+                { name: "Burrata chaude à la tomate", price: 16 },
+                { name: "Huîtres chaudes d’Oléron n° 3, aux poireaux et au champagne", price: 23, description: "6 pièces" }
             ]
         },
         {
-            name: "Homard (450 à 500gr du Canada)",
+            name: "HOMARDS (homards entiers du Canada de 450 à 500 grammes)",
             dishes: [
-                { name: "Homard classique “Belle Vue”", price: 41.5, unit: "450–500g" },
-                { name: "Homard au beurre d’ail et fines herbes, tagliatelles", price: 41.5, unit: "450–500g" },
-                { name: "Homard sauce Florentine et asperges vertes", price: 41.5, unit: "450–500g" }
+                { name: "Homard « Belle-Vue » à la façon classique", price: 41 },
+                { name: "Homard au beurre à l’ail et aux herbes fraîches, accompagné de tagliatelles", price: 41 },
+                { name: "Homard à l’italienne", price: 41, description: "tomate, origan, ail et sauge" }
             ]
         },
         {
-            name: "Poissons (servis avec purée de pommes de terre et poireaux)",
+            name: "POISSONS (servis avec une purée de pommes de terre Bintje et de poireaux)",
             dishes: [
-                { name: "Blanc de loup de mer aux petits légumes", price: 20 },
-                { name: "Saumon sauce Florentine et asperges vertes", price: 22.5 },
-                {
-                    name: "Gratin de poisson “Royale” (loup de mer, saumon, crevettes et Saint-Jacques)",
-                    price: 22.5
-                },
-                {
-                    name: "Bar sauvage poêlé, risotto aux asperges vertes et sauce au homard",
-                    price: 27.5
-                },
-                { name: "Filets de sole, sauce au vin blanc et crevettes de Nieuport", price: 28.5 }
+                { name: "Gratinée de poissons Royale", price: 24.5, description: "lotte, saumon, crevettes et cabillaud" },
+                { name: "Bar sauvage poêlé à la toscane, accompagné de tagliatelles", price: 29.5 },
+                { name: "Dos de cabillaud, petits légumes et sauce légère au curry", price: 21.5 },
+                { name: "Filet de turbot, sauce au vin blanc et épinards en feuilles", price: 38.5 },
+                { name: "Roulades de sole, sauce au vin blanc et crevettes grises de Nieuport", price: 32.5 },
+                { name: "Saumon, sauce à l’aneth et fenouil", price: 21.5 }
             ]
         },
         {
-            name: "Viande et gibiers (garnitures comprises)",
+            name: "VIANDES et GIBIERS",
             dishes: [
-                { name: "Pour les plus jeunes : Boulettes sauce tomate, purée", price: 10 },
-                { name: "Blanc de dinde sauce porto, légumes d’hiver et gratin", price: 14.5 },
-                {
-                    name: "Filet mignon de porc, crème de champignons des bois, légumes d’hiver et gratin",
-                    price: 16.5
-                },
-                {
-                    name: "Blanquette de faisan au calvados, garniture de fin d’année et purée de céleri",
-                    price: 16.5
-                },
-                { name: "Civet de cerf, garniture de fin d’année et purée de céleri", price: 17.5 },
-                {
-                    name: "FROID Tataki de bœuf blanc-bleu, garnitures Orientales et salade de nouilles",
-                    price: 21.5
-                },
-                {
-                    name: "Pintade fermière “fine champagne”, garniture de fin d’année et gratin",
-                    price: 22.5
-                },
-                {
-                    name: "Rable de lièvre, sauce au poivre noir, garniture de fin d’année et purée de céleri",
-                    price: 31.5
-                },
-                {
-                    name: "Filet de cerf ‘Grand Veneur’, garniture de fin d’année et purée de céleri",
-                    price: 33.5
-                }
+                { name: "Blanquette de faisan en sauce crémeuse au Calvados, garniture de fêtes et purée de céleri-rave", price: 19.5 },
+                { name: "Civet de cerf, garniture de fêtes et purée de céleri-rave", price: 21.5 },
+                { name: "Filet de cerf « Grand Veneur », garniture de fêtes et purée de céleri-rave", price: 33.5 },
+                { name: "Pintade fermière à la Fine Champagne, garniture de fêtes et gratin", price: 24.5 },
+                { name: "Dinde, sauce au porto, légumes d’hiver et gratin", price: 16.5 },
+                { name: "Filet mignon de porc, crème de champignons des bois, légumes d’hiver et gratin", price: 18.5 },
+                { name: "Boulettes de viande à la sauce tomate et de la purée de pommes de terre (pour les enfants)", price: 10 }
             ]
         },
         {
-            name: "Plats végétariens",
+            name: "PLATS VÉGÉTARIENS",
             dishes: [
-                { name: "Quiche aux champignons des bois et truffe", price: 15 },
-                { name: "Risotto aux asperges vertes et parmesan", price: 15 },
-                {
-                    name: "Pinsa au fromage de Bruges, patate douce, céleri-rave et miel",
-                    price: 15
-                }
+                { name: "Burrata chaude à la tomate", price: 16 },
+                { name: "Quiche aux champignons des bois et à la truffe", price: 17 },
+                { name: "Rouillade d’aubergines", price: 15 },
+                { name: "Ravioles à la truffe et aux morilles", price: 18.5 }
             ]
         },
         {
             name: "Desserts",
             dishes: [
-                { name: "Tiramisu au café et à l’amaretto", price: 5 },
-                { name: "Tartelette au citron et meringue", price: 5 },
-                { name: "Notre irrésistible moelleux au chocolat noir", price: 5 },
-                {
-                    name: "Notre sélection de mini-desserts raffinés pour accompagner le café",
-                    price: 5
-                },
-                { name: "Bûche au chocolat", price: 5.5 }
+                { name: "Bûche au chocolat", price: 5.5 },
+                { name: "Tiramisu au spéculoos", price: 5.5 },
+                { name: "Petite tarte au citron et à la meringue", price: 5.5 }
             ]
         }
     ],

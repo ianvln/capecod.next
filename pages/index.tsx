@@ -60,7 +60,7 @@ const Home: NextPage = () => {
         </section>
 
         {SHOW_MENU && (
-          <section id="menu" className={styles.section} aria-labelledby="menu-title">
+          <section id="menu" className={`${styles.section} ${styles.menuSection}`} aria-labelledby="menu-title">
             <div className={styles.container}>
               <Reveal className={styles.sectionHeader}>
                 <p className="eyebrow">{t.offer.eyebrow}</p>

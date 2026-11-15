@@ -5,12 +5,23 @@ import DishMenuCard from "./DishMenuCard";
 import DishSetCard from "./DishSetCard";
 import styles from './MenuCard.module.scss';
 
+const isEmailAddress = /^[^\s@]+@[A-Za-z0-9-]+(?:\.[A-Za-z0-9-]+)+$/;
+const emailAddressPattern = /([^\s@]+@[A-Za-z0-9-]+(?:\.[A-Za-z0-9-]+)+)/g;
+
 const MenuCard = ({ menu }: { menu: Menu }) => {
     const { t } = useTranslation();
 
     return (
         <div className={styles.menu}>
-            {menu.description && <p className={styles.description}>{menu.description}</p>}
+            {menu.description && (
+                <p className={styles.description}>
+                    {menu.description.split(emailAddressPattern).map((part, i) =>
+                        isEmailAddress.test(part)
+                            ? <a key={i} className={styles.descriptionLink} href={`mailto:${part}`}>{part}</a>
+                            : part
+                    )}
+                </p>
+            )}
 
             {menu.dishSets.map((ds, i) => (
                 <Reveal key={`dish-set-${i}`}>

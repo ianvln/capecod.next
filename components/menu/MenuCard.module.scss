@@ -7,8 +7,15 @@
 
 .description {
     text-align: center;
-    color: $text-muted;
+    color: rgba($ink-color, 0.7);
     font-size: 1.15rem;
+    white-space: pre-line;
+}
+
+.descriptionLink {
+    color: $ink-color;
+    text-decoration: underline;
+    text-underline-offset: 0.15em;
 }
 
 .menusTitle {

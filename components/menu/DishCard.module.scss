@@ -17,25 +17,25 @@
 .leader {
     flex: 1 1 2rem;
     min-width: 1rem;
-    border-bottom: 1px dotted rgba($primary-color, 0.55);
+    border-bottom: 1px dotted rgba(darken($primary-color, 18%), 0.55);
     transform: translateY(-0.3rem);
 }
 
 .price {
     flex-shrink: 0;
-    color: $primary-color;
+    color: darken($primary-color, 18%);
     font-variant-numeric: tabular-nums;
     white-space: nowrap;
 }
 
 .unit {
-    color: $text-muted;
+    color: rgba($ink-color, 0.7);
     font-size: 0.85em;
 }
 
 .description {
     margin-top: 0.2rem;
-    color: $text-muted;
+    color: rgba($ink-color, 0.7);
     font-size: 0.9rem;
     font-style: italic;
 }
